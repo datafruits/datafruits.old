@@ -1,0 +1,16 @@
+<div class="clearfix">
+  <div id="posts">
+    <% @posts.sort{|a,b| a.date <=> b.date}.reverse.each do |article| %>
+      <div class="post">
+        <% if article.image.url(:thumb) %>
+          <%= link_to(image_tag(article.image.url(:thumb)), article) %>
+          <br />
+        <% end %>
+        <%= link_to article.title, article, class: 'blog-title' %>
+        <br />
+        <%= article.summary %>
+        <br />
+      </div>
+    <% end %>
+  </div>
+</div>

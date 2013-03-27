@@ -1,0 +1,697 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require 'normalize'
+ *= require_self
+ *= require_tree .
+ */
+
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+$green:  #82ffa5;
+$yellow: #fff94f;
+$pink: #e992ff;
+$blue:  #00b4ff;
+
+@mixin border-radius($radii) {
+  -moz-border-radius: $radii;
+  -webkit-border-radius: $radii;
+  -o-border-radius: $radii;
+  -ms-border-radius: $radii;
+  border-radius: $radii;
+}
+
+@mixin linear-gradient($one, $two, $three, $four) {
+  background: url("/assets/data_galaxy.png") repeat-x, $one;
+  background: url("/assets/data_galaxy.png") repeat-x, -moz-linear-gradient(to bottom, $one, $two, $three, $four);
+  background: url("/assets/data_galaxy.png") repeat-x, -o-linear-gradient(top, $one, $two, $three, $four);
+  background: url("/assets/data_galaxy.png") repeat-x, -webkit-linear-gradient(top, $one, $two, $three, $four);
+  background: url("/assets/data_galaxy.png") repeat-x, -ms-linear-gradient(top, $one, $two, $three, $four);
+  background: url("/assets/data_galaxy.png") repeat-x, linear-gradient(top, $one, $two, $three, $four);
+}
+
+@mixin stripes($color,$angle:-45deg) {
+  background-color: $color;
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+    transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+    transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+    transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+    transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+    transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+    transparent 75%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+    transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+    transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+    transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+    transparent 75%, transparent);
+  -webkit-background-size: 20px 20px;
+  -moz-background-size: 20px 20px;
+  -o-background-size: 20px 20px;
+  -ms-background-size: 20px 20px;
+  background-size: 20px 20px;
+}
+
+@keyframes fade {
+  from {
+    background: $green;
+  }
+  30% {
+    background: $yellow;
+  }
+  60% {
+    background: $pink;
+  }
+  90% {
+    background: $blue;
+  }
+  to {
+    background: $green;
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    background: url("/assets/data_galaxy.png") , $green;
+  }
+  30% {
+    background: url("/assets/data_galaxy.png") , $yellow;
+  }
+  60% {
+    background: url("/assets/data_galaxy.png") , $pink;
+  }
+  90% {
+    background: url("/assets/data_galaxy.png") , $blue;
+  }
+  to {
+    background: url("/assets/data_galaxy.png") , $green;
+  }
+}
+@-moz-keyframes fade {
+  from {
+    background: $green;
+  }
+  30% {
+    background: $yellow;
+  }
+  60% {
+    background: $pink;
+  }
+  90% {
+    background: $blue;
+  }
+  to {
+    background: $green;
+  }
+}
+@-ms-keyframes fade {
+  from {
+    background: $green;
+  }
+  30% {
+    background: $yellow;
+  }
+  60% {
+    background: $pink;
+  }
+  90% {
+    background: $blue;
+  }
+  to {
+    background: $green;
+  }
+}
+@-o-keyframes fade {
+  from {
+    background: $green;
+  }
+  30% {
+    background: $yellow;
+  }
+  60% {
+    background: $pink;
+  }
+  90% {
+    background: $blue;
+  }
+  to {
+    background: $green;
+  }
+}
+
+body {
+  @include linear-gradient($green, $blue, $yellow, $pink);
+  animation: fade 30s infinite;
+  -webkit-animation: fade 30s infinite;
+  -moz-animation: fade 30s infinite;
+  -o-animation: fade 30s infinite;
+  -ms-animation: fade 30s infinite;
+  font-family:'Helvetica Neue', Helvetica, Arial !important;
+  font-size:14pt;
+  font-weight:bold;
+  color:white;
+  text-shadow:2px 2px 0px #555;
+  text-align:center;
+}
+
+pre {
+  font-size:14pt;
+  font-weight:normal;
+  color:white;
+  text-shadow:2px 2px 0px #555;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $yellow;
+}
+
+a:visited {
+  color: $green;
+}
+
+#container{
+  background-color:black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 202px;
+  min-height:100%;
+  width:1050px;
+  padding-top: 50px;
+}
+a.small-player-play,
+a.small-player-pause{
+  width:32px;
+  height:29px;
+  display:inline-block;
+  background: transparent url("/assets/small_player_sprite.png") 0 0 no-repeat;
+}
+#logo a{
+  float:left;
+  width:342px;
+  height:202px;
+  background: transparent url("/assets/df_new_logo.png") -342px 0 no-repeat;
+  opacity: 1;
+  transition:opacity 100ms linear;
+  -webkit-transition:opacity 100ms linear;
+  -moz-transition:opacity 100ms linear;
+  -o-transition:opacity 100ms linear;
+  -ms-transition:opacity 100ms linear;
+}
+#logo a:hover {
+  float:left;
+  background: transparent url("/assets/df_new_logo.png") 0 0 no-repeat;
+  opacity: 1;
+}
+#logo a:hover:after {
+  opacity: 1;
+}
+nav {
+  position:absolute;
+  background:$pink;
+  width:100%;
+  z-index:1;
+  height:40px;
+  bottom:0;
+  left:0;
+}
+nav li{
+  float:left;
+  padding:5px;
+}
+/* ~________~ */
+nav ul{
+  margin-top:0;
+  padding-left:0;
+}
+
+.right {
+  float:right;
+  width:30%;
+}
+.one {
+  text-align:center;
+  padding:2px 2px 2px 2px;
+}
+#footer {
+}
+#header {
+  padding: 0 0 15px 0;
+}
+.clearfix {
+  clear:both;
+}
+li {
+  list-style:none;
+}
+
+.blog-title {
+  font-size:32px;
+  text-transform:uppercase;
+}
+.blog-time {
+  font-size:16px;
+}
+#posts {
+  width:90%;
+  margin:0px auto;
+}
+.post {
+  width:280px;
+  background:#222;
+  @include border-radius(10px 10px 10px 10px);
+  float:left;
+  padding:5px;
+  margin:5px;
+}
+.post:hover {
+  background:#111;
+}
+
+#timetable {
+  font-size:16px;
+}
+
+#podcasts-table {
+  text-align:left;
+}
+
+#top {
+  @include stripes(#ddd);
+  position:fixed;
+  height:240px;
+  width:100%;
+  top:0;
+  left:0;
+  z-index:10;
+}
+
+#jp_container{
+  width:50%;
+  margin:0px auto;
+}
+
+#now_playing, #loading {
+}
+
+#twitter {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* jplayer stuff */
+/*#jp_container{
+  position:fixed;
+  height:93px;
+  width:100%;
+  background:$pink;
+  opacity:1;
+  z-index:10;
+  box-shadow: inset 0 0 10px #000;
+  -webkit-box-shadow: inset 0 0 10px #000;
+  -moz-box-shadow: inset 0 0 10px #000;
+  -o-box-shadow: inset 0 0 10px #000;
+  -ms-box-shadow: inset 0 0 10px #000;
+}
+*/
+a.jp-play,
+a.jp-pause{
+  width:87px;
+  height:77px;
+  margin-top:10px;
+  display:inline-block;
+}
+a.jp-play {
+  background: url("/assets/new_player_sprite.png") 0 0 no-repeat;
+}
+a.jp-pause {
+  background: url("/assets/new_player_sprite.png") -87px 0 no-repeat;
+}
+.masonry,
+.masonry .masonry-brick .post {
+  -webkit-transition-duration: 0.7s;
+     -moz-transition-duration: 0.7s;
+       -o-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+.masonry {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.masonry .masonry-brick .post {
+  -webkit-transition-property: left, right, top;
+     -moz-transition-property: left, right, top;
+       -o-transition-property: left, right, top;
+          transition-property: left, right, top;
+}
+
+.twtr-widget {
+  text-shadow: none !important;
+}
+
+/* user panel */
+
+#user-panel {
+  float: right;
+  margin-top: -14px;
+  margin-right: 20px;
+}
+
+
+/* scaffolding crap */
+#notice {
+  color: $green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: $pink;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid $pink;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow:none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

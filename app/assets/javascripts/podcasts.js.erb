@@ -1,0 +1,13 @@
+$('[data-controller=application][data-action=podcast]').ready(function(){
+  <% if @items %>
+    var podcasts = [<%= @items.map{|item| '{ title: "%s", mp3: "%s" }' % [item[:title], item[:url]] }.join(", \n") %>];
+    $('.small-player-play').click( function(){
+      var podcast = podcasts[$(this).data('index')];
+      var url = podcast.mp3;
+      var title = podcast.title;
+      $('#radio-player').jPlayer("setMedia", {mp3: url});
+      $('#radio-player').jPlayer("play");
+      $('.jp-title').html(podcast.title);
+    });
+  <% end %>
+});

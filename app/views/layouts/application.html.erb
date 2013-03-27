@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta keywords="skweee radio garage 2step club juke notdubstep podcast netradio netlabel pineapples datafruits">
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <title>D A T A F R U I T S . F M</title>
+  </head>
+  <body data-controller="<%= controller.controller_path %>" data-action="<%= controller.action_name %>">
+    <div id="radio-player"></div>
+    <div id="top">
+      <div id="logo">
+        <a href="/"></a>
+      </div>
+      <div id="jp_container">
+        <a class="jp-play" href="javascript:;" tabindex="1"></a>
+        <a class="jp-pause" href="javascript:;" tabindex="1"></a>
+        <br />
+        <marquee scrollamount="12" behavior="alternate" direction="right" class="jp-title" width="350">loading...</marquee>
+        <div id="stream-title" style="display:none;"></div>
+      </div>
+      <div id="twitter">
+        <%= render :partial => 'layouts/twitter_widget' %>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="/listen">Listen →</a>
+          </li>
+          <li>
+            <a href="/podcasts">Podcasts →</a>
+          </li>
+          <li>
+            <a href="/schedule">Live Schedule →</a>
+          </li>
+          <li>
+            <a href="http://releases.datafruits.fm/" target="_blank">Label →</a>
+          </li>
+          <li>
+            <a href="http://chat.datafruits.fm" target="_blank">Chatroom →</a>
+          </li>
+        </ul>
+        <% flash.each do |name, msg| %>
+          <div id="<%= name %>">
+            <%= msg %>
+          </div>
+        <% end %>
+        <%= render :partial => "layouts/user_panel" %>
+      </nav>
+    </div>
+    <div id="container">
+      <div id="header">
+      </div>
+      <div class="clearfix"></div>
+      <%= yield %>
+      <div id="footer">
+        <h2>CONTACT:</h2>
+        <em>info@datafruits.fm</em>
+      </div>
+    </div>
+  <!-- JavaScript at the bottom for fast page loading -->
+  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+       mathiasbynens.be/notes/async-analytics-snippet -->
+  <script>
+    var _gaq=[['_setAccount','UA-28868734-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  </body>
+</html>

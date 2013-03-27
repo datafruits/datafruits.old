@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>datafruits.fm</title>
+    <link>http://www.datafruits.fm</link>
+    <description>datafruits.fm podcast j-pop chip garage skweee</description>
+    <language>en-us</language>
+    <copyright/>
+    <lastBuildDate>Wed, 27 Mar 2013 12:58:20 PDT</lastBuildDate>
+    <ttl>1</ttl>
+    <atom:link href="http://www.datafruits.fm/podcast.xml" rel="self" type="application/rss+xml"/>
+    <itunes:image href="http://www.datafruits.fm/img/podcast.jpg"/>
+    <itunes:summary>
+      DATAFRUITS.FM podcast latest mixes from datafruits.fm internet radio station
+    </itunes:summary>
+    <itunes:category text="Music" />
+    <itunes:explicit>No</itunes:explicit>
+    <itunes:owner>
+      <itunes:name>Various Artists</itunes:name>
+      <itunes:email>info@datafruits.fm (Tony Miller)</itunes:email>
+    </itunes:owner>
+    <item>
+      <title>the j-men +-+-+ crunchy biscuits and gravy mix</title>
+      <description>
+        Firedrill and Ovenrake bring you nearly an hour of skweee'd out crunchiness. All your favorite skweee tunes covered in sweet gameboy gravy sauce.
+      </description>
+      <pubDate>Sat, 18 Feb 2012 09:55:22 GMT</pubDate>
+      <enclosure url="http://s3.amazonaws.com/datafruits.fm/J-MenCrunchyBiscuitsNGravyMix.mp3" length="" type="audio/mpeg"/>
+      <guid>http://s3.amazonaws.com/datafruits.fm/J-MenCrunchyBiscuitsNGravyMix.mp3</guid>
+    </item>
+    <item>
+      <title>freedrull with @bradyking February 22 2012</title>
+      <description/>
+      <pubDate>Wed, 22 Feb 2012 09:55:22 GMT</pubDate>
+      <enclosure url="http://s3.amazonaws.com/datafruits.fm/FiredrillWithBradyKing02222012.mp3" length="" type="audio/mpeg"/>
+      <guid>http://s3.amazonaws.com/datafruits.fm/FiredrillWithBradyKing02222012.mp3</guid>
+    </item>
+    <item>
+      <title>freedrull March 28 2012</title>
+      <description/>
+      <pubDate>Wed, 28 Mar 2012 09:55:22 GMT</pubDate>
+      <enclosure url="http://s3.amazonaws.com/datafruits.fm/Firedrill03282012.mp3" length="" type="audio/mpeg"/>
+      <guid>http://s3.amazonaws.com/datafruits.fm/Firedrill03282012.mp3</guid>
+    </item>
+    <item>
+      <title>the curios show w/ guest mix by decktonic hosted by radio scotvoid March 30 2012</title>
+      <description/>
+      <pubDate>Fri, 30 Mar 2012 09:55:22 GMT</pubDate>
+      <enclosure url="http://s3.amazonaws.com/datafruits.fm/Scotvoid03302012.mp3" length="" type="audio/mpeg"/>
+      <guid>http://s3.amazonaws.com/datafruits.fm/Scotvoid03302012.mp3</guid>
+    </item>
+    <item>
+      <title>the curios show w/ robotsexmusic, active knowledge,  dmg'd presented by radio scotvoid April 6 2012</title>
+      <description/>
+      <pubDate>Fri, 06 Apr 2012 09:55:22 GMT</pubDate>
+      <enclosure url="http://s3.amazonaws.com/datafruits.fm/The+Curios+Show+%5BPAXeast+Special%5D+w.+RobotSexMusic%2C+Active+Knowledge+%26+DMG%27d+LIVE_04062012.mp3" length="" type="audio/mpeg"/>
+      <guid>http://s3.amazonaws.com/datafruits.fm/The+Curios+Show+%5BPAXeast+Special%5D+w.+RobotSexMusic%2C+Active+Knowledge+%26+DMG%27d+LIVE_04062012.mp3</guid>
+    </item>
+    <item>
+      <title>freedrull w/ ovenrake and MC easystreet April 4 2012</title>
+      <description/>
+      <pubDate>Wed, 11 Apr 2012 09:55:22 GMT</pubDate>
+      <enclosure url="http://s3.amazonaws.com/datafruits.fm/FiredrillOvenrakeMCEasyStreet04112012.mp3" length="" type="audio/mpeg"/>
+      <guid>http://s3.amazonaws.com/datafruits.fm/FiredrillOvenrakeMCEasyStreet04112012.mp3</guid>
+    </item>
+    <item>
+      <title>the curios show with guest mix by dj puffin hosted by radio scotvoid april 13 2012</title>
+      <description/>
+      <pubDate>Fri, 13 Apr 2012 09:55:22 GMT PST</pubDate>
+      <enclosure url="http://s3.amazonaws.com/datafruits.fm/RadioScotvoidDJPuffinGuestMix04132012.mp3" length="" type="audio/mpeg"/>
+      <guid>http://s3.amazonaws.com/datafruits.fm/RadioScotvoidDJPuffinGuestMix04132012.mp3</guid>
+    </item>
+    <item>
+      <title>dj zyme april 27 2012</title>
+      <description/>
+      <pubDate>Fri, 27 Apr 2012 00:00:00 +00:00 PST</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/Zyme04272012.mp3" length="" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/Zyme04272012.mp3</guid>
+    </item>
+    <item>
+      <title>freedrull w/guest mix by lootcanal May 2 2012</title>
+      <description/>
+      <pubDate>Wed, 02 May 2012 00:00:00 +00:00 PST</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/FiredrillGuestMixLootcanal05022012.mp3" length="" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/FiredrillGuestMixLootcanal05022012.mp3</guid>
+    </item>
+    <item>
+      <title>dj zyme May 4 2012</title>
+      <description/>
+      <pubDate>Fri, 04 May 2012 00:00:00 +00:00 PST</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/Zyme05042012.mp3" length="" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/Zyme05042012.mp3</guid>
+    </item>
+    <item>
+      <title>the curios show w/ guest mix by rpg-h8r hosted by radio scotvoid May 11 2012</title>
+      <description/>
+      <pubDate>Fri, 11 May 2012 00:00:00 +00:00 PST</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixRPG-H8R05112012.mp3" length="" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixRPG-H8R05112012</guid>
+    </item>
+    <item>
+      <title>the curios show w/ guest mix by ra malone hosted by radio scotvoid May 18 2012</title>
+      <description/>
+      <pubDate>Fri, 18 May 2012 00:00:00 +00:00 PST</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/ScotVoidAndRaMalone05182012.mp3" length="" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/ScotVoidAndRaMalone05182012.mp3</guid>
+    </item>
+    <item>
+      <title>the curios show w/ guest mix by dkstr hosted by radio scotvoid July 13 2012</title>
+      <description/>
+      <pubDate>Sun, 15 Jul 2012 00:00:00 +00:00 PDT</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/ScotVoidGuestMixDkstr071312.mp3" length="168546566" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/ScotVoidGuestMixDkstr071312.mp3</guid>
+    </item>
+    <item>
+      <title>freedrull w/ guest mix by starpause July 18 2012</title>
+      <description/>
+      <pubDate>Thu, 19 Jul 2012 00:00:00 +00:00 PDT</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/FreedrullGuestMixStarpause07182012.mp3" length="136616403" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/FreedrullGuestMixStarpause07182012.mp3</guid>
+    </item>
+    <item>
+      <title>the curios show w/ guest mix by rabbi bananas and beem hosted by radio scotvoid July 20 2012</title>
+      <description/>
+      <pubDate>Mon, 23 Jul 2012 00:00:00 +00:00 PDT</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixRabbiBananasAndBEEM07202012.mp3" length="127045522" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixRabbiBananasAndBEEM07202012.mp3</guid>
+    </item>
+    <item>
+      <title>freedrull w/ guest mix by yoshino yoshikawa July 25 2012</title>
+      <description>with guest mix of 50 mins of jpop electro sounds from Yoshino Yoshikawa soundcloud.com/yosshibox twitter.com/yosshibox</description>
+      <pubDate>Wed, 08 Aug 2012 00:00:00 +00:00 PDT</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/FreedrullGuestMixYoshinoYoshikawa07252012.mp3" length="100657747" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/FreedrullGuestMixYoshinoYoshikawa07252012.mp3</guid>
+    </item>
+    <item>
+      <title>freedrull w/ guest mix by CRZKNY August 1 2012</title>
+      <description>guest mix of 30 mins of JUKE/FOOTWORK from CRZKNY soundcloud.com/crzkny</description>
+      <pubDate>Wed, 08 Aug 2012 00:00:00 +00:00 PDT</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/FreedrullGuestMixCRZYKNY08012012.mp3" length="135944360" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/FreedrullGuestMixCRZYKNY08012012.mp3</guid>
+    </item>
+    <item>
+      <title>the curios show feat coco bryce hosted by radio scotvoid Aug 3 2012</title>
+      <description/>
+      <pubDate>Fri, 10 Aug 2012 00:00:00 +00:00 PDT</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/RadioScotvoidGuestMixCocoBryce08032012.mp3" length="299932417" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/RadioScotvoidGuestMixCocoBryce08032012.mp3</guid>
+    </item>
+    <item>
+      <title>the curios show feat. guest mix by DaddyLongLegs hosted by radio scotvoid August 10 2012</title>
+      <description/>
+      <pubDate>Tue, 04 Sep 2012 00:00:00 +00:00 PDT</pubDate>
+      <enclosure url="http://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixDaddyLongLegs08102012.mp3" length="110871829" type="audio/mpeg"/>
+      <guid>http://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixDaddyLongLegs08102012.mp3</guid>
+    </item>
+    <item>
+      <title>the curios show feat. guest mix by porno uzi hosted by radio scotvoid August 17 2012</title>
+      <description/>
+      <pubDate>Tue, 04 Sep 2012 00:00:00 +00:00 PDT</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixPornoUzi08172012.mp3" length="125774760" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixPornoUzi08172012.mp3</guid>
+    </item>
+    <item>
+      <title>the curios show with MESAK live from berlin hosted by radio scotvoid August 24 2012</title>
+      <description/>
+      <pubDate>Tue, 04 Sep 2012 00:00:00 +00:00 PDT</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMESAKLiveFromBerlin08242012.mp3" length="143428284" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMESAKLiveFromBerlin08242012.mp3</guid>
+    </item>
+    <item>
+      <title>the curios show with General Motor and Stuart Simpson hosted by radio scotvoid August 31 2012</title>
+      <description/>
+      <pubDate>Wed, 05 Sep 2012 00:00:00 +00:00 PDT</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixGeneralMotorAndStuartSimpson08312012.mp3" length="125280360" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixGeneralMotorAndStuartSimpson08312012.mp3</guid>
+    </item>
+    <item>
+      <title>Firedrill with Guest Mixes by Smoked Meat Fax Machine and BOOMA, live interview with @chrissyann</title>
+      <description/>
+      <pubDate>Sat, 20 Oct 2012 00:00:00 +00:00 PST</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/FiredrillGuestMixSMFM_BOOMA_chrissyann_interview_2012_October10.mp3" length="289448937" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/FiredrillGuestMixSMFM_BOOMA_chrissyann_interview_2012_October10.mp3</guid>
+    </item>
+    <item>
+      <title>Chrissy Valentine Jan 24 2013</title>
+      <description>Chrissy Valentine Jan 24 2013</description>
+      <pubDate>Sun, 03 Feb 2013 00:00:00 +00:00 PST</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/ChrissyValentine01242013.mp3" length="88021959" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/ChrissyValentine01242013.mp3</guid>
+    </item>
+    <item>
+      <title>Firedrill Jan 31 2013</title>
+      <description>Firedrill Jan 31 2013</description>
+      <pubDate>Sun, 03 Feb 2013 00:00:00 +00:00 PST</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/Firedrill01312013.mp3" length="121685941" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/Firedrill01312013.mp3</guid>
+    </item>
+    <item>
+      <title>the curios show with RPG-H8R and James Primate hosted by radio scotvoid</title>
+      <description>the curios show with RPG-H8R and James Primate hosted by radio scotvoid</description>
+      <pubDate>Mon, 04 Feb 2013 00:00:00 +00:00 PST</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixRPG-H8RAndJamesPrimate.mp3" length="124241267" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixRPG-H8RAndJamesPrimate</guid>
+    </item>
+    <item>
+      <title>the curios show with daddy long legs and decktonic hosted by radio scotvoid Feb 2nd 2013</title>
+      <description>the curios show with daddy long legs and decktonic hosted by radio scotvoid Feb 2nd 2013</description>
+      <pubDate>Fri, 15 Feb 2013 00:00:00 +00:00 PST</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixDaddyLongLegsAndDecktonic02102013.mp3" length="122382658" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixDaddyLongLegsAndDecktonic02102013.mp3</guid>
+    </item>
+    <item>
+      <title>firedrill Feb 14th 2013</title>
+      <description>firedrill Feb 14th 2013</description>
+      <pubDate>Sat, 16 Feb 2013 00:00:00 +00:00 PST</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/Firedrill02142013.mp3" length="95451626" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/Firedrill02142013.mp3</guid>
+    </item>
+    <item>
+      <title>the curios show WTF is Swag special with mojo goro and parallel concept hosted by radio scotvoid</title>
+      <description>the curios show WTF is Swag special with mojo goro and parallel concept hosted by radio scotvoid</description>
+      <pubDate>Sun, 17 Feb 2013 00:00:00 +00:00 PST</pubDate>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/ScotvoidWTFISSWAGSpecial02172013.mp3" length="122833575" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/ScotvoidWTFISSWAGSpecial02172013.mp3</guid>
+    </item>
+    <item>
+      <title>Chrissy Valentine Feb 21 2013</title>
+      <description>Chrissy Valentine Feb 21 2013</description>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/ChrissyValentine02212013.mp3" length="83393696" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/ChrissyValentine02212013.mp3</guid>
+      <pubDate>Thu, 21 Feb 2013 00:00:00 +00:00 PST</pubDate>
+    </item>
+    <item>
+      <title>the curios show with guest mixes by Quanteyes and Kid Logic hosted by radio skotvoid</title>
+      <description>the curios show with guest mixes by Quanteyes and Kid Logic hosted by radio skotvoid</description>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixQuanteyesKidLogic02242013.mp3" length="121267172" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixQuanteyesKidLogic02242013.mp3</guid>
+      <pubDate>Tue, 26 Feb 2013 00:00:00 +00:00 PST</pubDate>
+    </item>
+    <item>
+      <title>Chrissy Valentine Mar 7 2013</title>
+      <description>Chrissy Valentine Mar 7 2013</description>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/ChrissyValentine03102013.mp3" length="96538034" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/ChrissyValentine03102013.mp3</guid>
+      <pubDate>Sun, 10 Mar 2013 00:00:00 +00:00 PDT</pubDate>
+    </item>
+    <item>
+      <title>the curios show skweee special with Kanttoripoika DKSTR and Johnny Superglu Mar 10 2013</title>
+      <description>the curios show skweee special with Kanttoripoika DKSTR and Johnny Superglu Mar 10 2013</description>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixKanttoripoikaDKSTRJohnnySuperglu03102013.mp3" length="123550595" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixKanttoripoikaDKSTRJohnnySuperglu03102013.mp3</guid>
+      <pubDate>Wed, 13 Mar 2013 00:00:00 +00:00 PDT</pubDate>
+    </item>
+    <item>
+      <title>Firedrill March 14 2013</title>
+      <description>Firedrill March 14 2013</description>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/Firedrill03142013.mp3" length="89660782" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/Firedrill03142013.mp3</guid>
+      <pubDate>Tue, 26 Mar 2013 00:00:00 +00:00 PDT</pubDate>
+    </item>
+    <item>
+      <title>Chrissy Valentine March 21 2013</title>
+      <description>Chrissy Valentine March 21 2013</description>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/ChrissyValentine03212013.mp3" length="108367631" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/ChrissyValentine03212013.mp3</guid>
+      <pubDate>Wed, 27 Mar 2013 00:00:00 +00:00 PDT</pubDate>
+    </item>
+    <item>
+      <title>the curios show hosted by radio scotvoid with guest mixes by Zemauno and Digital Norman Mar 17 2013</title>
+      <description>the curios show italy v. germany special</description>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixZemaunoDigitalNorman03172013.mp3" length="57416273" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixZemaunoDigitalNorman03172013.mp3</guid>
+      <pubDate>Wed, 27 Mar 2013 00:00:00 +00:00 PDT</pubDate>
+    </item>
+  </channel>
+</rss>

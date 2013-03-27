@@ -1,0 +1,30 @@
+<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: 'datafruits',
+  interval: 3000,
+  title: '',
+  subject: 'twittah',
+  width: 290,
+  height: 50,
+  theme: {
+    shell: {
+      background: '#e992ff',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#000',
+      links: '#82ffa5'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script>
