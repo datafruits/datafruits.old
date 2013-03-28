@@ -45,6 +45,7 @@ When /^I submit a new blog post$/ do
   visit '/posts/new'
   fill_in :post_title, with: "new title"
   fill_in :post_body, with: "new body"
+  attach_file :post_image, File.expand_path("spec/fixtures/test.png")
   click_on "submit"
 end
 

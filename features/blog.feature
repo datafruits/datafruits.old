@@ -12,6 +12,7 @@ Feature: Blogging
     When I delete the post
     Then I should not see that blog post
 
+  @vcr
   Scenario: Creating a new post
     Given I am signed in as a user with the 'blogger' role
     When I submit a new blog post
