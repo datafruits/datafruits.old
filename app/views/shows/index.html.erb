@@ -1,25 +1,4 @@
-<table>
-  <tr>
-    <th>Title</th>
-    <th>User</th>
-    <th>Time</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @shows.each do |show| %>
-  <tr>
-    <td><%= show.title %></td>
-    <td><%= show.user_id %></td>
-    <td><%= show.time %></td>
-    <td><%= link_to 'Show', show %></td>
-    <td><%= link_to 'Edit', edit_show_path(show) %></td>
-    <td><%= link_to 'Destroy', show, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<%= calendar @shows, {:prev_text=>"prev", :next_text=>"next"} do |show| %>
+  <h4><%= link_to show.user.username, show.user %></h4>
+  <p><%= link_to show.title, show %></p>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Show', new_show_path %>

@@ -9,8 +9,11 @@ gem 'pg'
 gem 'high_voltage'
 gem 'devise'
 gem 'nokogiri'
+gem 'aws-sdk'
 gem 'paperclip'
 gem 'cancan'
+
+gem "simple_calendar", "~> 0.1.5"
 
 group :development do
   gem 'sqlite3'

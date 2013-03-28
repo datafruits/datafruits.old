@@ -468,6 +468,25 @@ a.jp-pause {
   margin-right: 20px;
 }
 
+/* calendar */
+.calendar td { 
+  height: 100px; 
+  width: 14.28%; 
+  text-transform:uppercase;
+}
+.calendar p {
+}
+
+.calendar h4 {
+  border-bottom: 1px dotted $green;
+}
+
+.previous-month,.next-month {
+  padding:5px;
+}
+
+td:nth-child(even) { background-color: $blue; }
+td:nth-child(odd) { background-color: $pink; }
 
 /* scaffolding crap */
 #notice {
