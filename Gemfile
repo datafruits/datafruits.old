@@ -41,4 +41,5 @@ group :test do
   # database_cleaner is not required, but highly recommended
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'timecop'
 end
