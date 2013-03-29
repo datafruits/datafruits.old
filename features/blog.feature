@@ -2,7 +2,7 @@ Feature: Blogging
 
   Scenario: Viewing a post
     Given I am a visitor to the site
-    And a blog post exists
+    And some blog posts exist
     When I visit the front page
     Then I should see some blog posts
 

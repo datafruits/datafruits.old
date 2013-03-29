@@ -12,9 +12,18 @@ Given /^a blog post exists$/ do
   Post.create :title => "a blog post", :body => "doot doot doooo"
 end
 
+Given /^some blog posts exist$/ do
+  Timecop.travel(Date.new(2013,3,21))
+  Post.create :title => "a blog post", :body => "doot doot doooo"
+  Timecop.travel(Date.new(2013,3,23))
+  Post.create :title => "another post ", :body => "doot doot doooo deeeeee"
+end
+
 Then /^I should see some blog posts$/ do
   page.should have_content "a blog post"
   page.should have_content "doot doot doooo"
+  page.should have_content "another post "
+  page.should have_content "doot doot doooo deeeeee"
 end
 
 Given /^I am signed in as a user with the 'blogger' role$/ do
