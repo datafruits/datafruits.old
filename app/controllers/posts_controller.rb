@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    @posts.sort_by!{|p| p.created_at}
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
