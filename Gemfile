@@ -12,6 +12,8 @@ gem 'nokogiri'
 gem 'aws-sdk'
 gem 'paperclip'
 gem 'cancan'
+gem 'html-pipeline'
+gem 'gemoji'
 
 gem "simple_calendar", "~> 0.1.5"
 

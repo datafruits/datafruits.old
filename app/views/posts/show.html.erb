@@ -1,14 +1,8 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
-
-<p>
-  <b>Body:</b>
-  <%= @post.body %>
-</p>
+<%= @post.title %>
+<%= image_tag @post.image.url %>
+<pre>
+  <%= html_pipeline(@post.body) %>
+</pre>
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
