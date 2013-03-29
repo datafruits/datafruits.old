@@ -1,6 +1,8 @@
 <%= image_tag @post.image.url %>
 <br/>
-<%= @post.title %>
+<span class="blog-title">
+  <%= @post.title %>
+</span>
 <br/>
 <pre>
   <%= html_pipeline(show_body(@post)) %>
