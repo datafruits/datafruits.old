@@ -14,6 +14,7 @@ class Ability
       can :manage, Show, :user_id => user.id
     else
       can :read, Show
+      can :read, Post
     end
   end
 end
