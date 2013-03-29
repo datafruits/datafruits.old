@@ -8,6 +8,6 @@
   <%= html_pipeline(show_body(@post)) %>
 </pre>
 
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<% if can? :edit, @show %>
+  <%= link_to 'Edit', edit_show_path(@show) %>
+<% end %>
