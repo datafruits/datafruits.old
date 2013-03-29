@@ -7,14 +7,11 @@ class Ability
       can :manage, :all
     elsif user.blogger?
       can :manage, Post
-      can :manage, User, :id => user.id
       can :manage, Show, :user_id => user.id
     elsif user.dj?
-      can :manage, User, :id => user.id
       can :manage, Show, :user_id => user.id
-    else
-      can :read, Show
-      can :read, Post
     end
+    can :read, Show
+    can :read, Post
   end
 end
