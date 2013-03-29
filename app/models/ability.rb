@@ -13,5 +13,6 @@ class Ability
     end
     can :read, Show
     can :read, Post
+    can :read, User
   end
 end
