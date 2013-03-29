@@ -1,7 +1,9 @@
-<%= @post.title %>
 <%= image_tag @post.image.url %>
+<br/>
+<%= @post.title %>
+<br/>
 <pre>
-  <%= html_pipeline(@post.body) %>
+  <%= html_pipeline(show_body(@post) %>
 </pre>
 
 
