@@ -13,9 +13,7 @@ Given /^a blog post exists$/ do
 end
 
 Given /^some blog posts exist$/ do
-  Timecop.travel(Date.new(2013,3,21))
   Post.create :title => "a blog post", :body => "doot doot doooo"
-  Timecop.travel(Date.new(2013,3,23))
   Post.create :title => "another post ", :body => "doot doot doooo deeeeee"
 end
 

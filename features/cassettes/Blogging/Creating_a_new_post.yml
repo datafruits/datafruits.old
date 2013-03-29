@@ -3140,9 +3140,9 @@ http_interactions:
       User-Agent:
       - aws-sdk-ruby/1.8.5 ruby/1.9.3 i686-linux
       Date:
-      - Thu, 28 Mar 2013 20:27:04 GMT
+      - Fri, 29 Mar 2013 04:20:42 GMT
       Authorization:
-      - AWS AKIAJY4U2BCOB43YGOQA:RJD6pZYl9z6f3IkdbbPv55KMGiI=
+      - AWS AKIAJY4U2BCOB43YGOQA:t/CXbzyFWWyc2w4PfF7s+pCv65s=
       Accept:
       - ! '*/*'
   response:
@@ -3151,11 +3151,11 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - LlP1wVzotJ8TvW49npiueIqvVxulZ0Lvn6OKjduKVYlsZ3th3EDWxProJUg1bw3N
+      - E2qQb4JoRKN4EZiH9pK4YJ6DFlcj5IMuynovPnjfLbvMOHlXLMECsSYTRTZ4jJkC
       X-Amz-Request-Id:
-      - 28AAEE79CEAF6AC7
+      - 76DEBA0F08354CBB
       Date:
-      - Thu, 28 Mar 2013 20:27:05 GMT
+      - Fri, 29 Mar 2013 04:20:43 GMT
       Etag:
       - ! '"329956af86f419441aae0f8277196f05"'
       Content-Length:
@@ -3166,7 +3166,7 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     http_version: 
-  recorded_at: Thu, 28 Mar 2013 20:27:05 GMT
+  recorded_at: Fri, 29 Mar 2013 04:20:43 GMT
 - request:
     method: put
     uri: https://s3.amazonaws.com/datafruits.fm/posts/images/000/000/001/thumb/test.png
@@ -3637,9 +3637,9 @@ http_interactions:
         AmREBXJFjp67jhGP+WhsilEsFikVNWVbY9txAswnmf0ZluinbF9KprQPpbyo
         StcRGE6eoeRe7OIiEukqsrlOykUoFA3s/Auk0gcp5o+Tzw9StFMoF5Qqo927
         KZRHcMrV5PNpikUHu5xCq++itYPrmpTtHI4NrvME5bJixZ+u9ZQiWs8ayDRX
-        s+T/B9TNXcM9f0UwAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEzLTAzLTI4VDEz
-        OjI3OjAyLTA3OjAwARyeIwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMy0wMy0y
-        OFQxMzoyNzowMi0wNzowMHBBJp8AAAAASUVORK5CYII=
+        s+T/B9TNXcM9f0UwAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEzLTAzLTI4VDIx
+        OjIwOjQwLTA3OjAw7CgKGQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMy0wMy0y
+        OFQyMToyMDo0MC0wNzowMJ11sqUAAAAASUVORK5CYII=
     headers:
       Content-Type:
       - image/png
@@ -3650,9 +3650,9 @@ http_interactions:
       User-Agent:
       - aws-sdk-ruby/1.8.5 ruby/1.9.3 i686-linux
       Date:
-      - Thu, 28 Mar 2013 20:27:05 GMT
+      - Fri, 29 Mar 2013 04:20:43 GMT
       Authorization:
-      - AWS AKIAJY4U2BCOB43YGOQA:U3BgjunRIcNIJaFZ/ztagL1J5uo=
+      - AWS AKIAJY4U2BCOB43YGOQA:nUf8xZqpCKUgTDxtMMFqBIbPkJI=
       Accept:
       - ! '*/*'
   response:
@@ -3661,13 +3661,13 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - O+4bdOB+om22vR756YND7RRqxvyezdlxVwPMUdH9uUCdlUdy/rs4wU97df7NGz/S
+      - 8FcUzHi8OqZsZcnk0gszsdIDxkDusNK1Hk1pr8D+B4Y7iFd50G3PQt9lglVreSRR
       X-Amz-Request-Id:
-      - 6C6B8EBF35342326
+      - DC891DB2FC67808C
       Date:
-      - Thu, 28 Mar 2013 20:27:06 GMT
+      - Fri, 29 Mar 2013 04:20:44 GMT
       Etag:
-      - ! '"e522e39e5328d4c5119943e1dfcf2c6e"'
+      - ! '"a04bb664225e32ee3050558983a80492"'
       Content-Length:
       - '0'
       Server:
@@ -3676,5 +3676,5 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     http_version: 
-  recorded_at: Thu, 28 Mar 2013 20:27:05 GMT
+  recorded_at: Fri, 29 Mar 2013 04:20:43 GMT
 recorded_with: VCR 2.4.0
