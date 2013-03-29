@@ -73,7 +73,7 @@ $(document).ready(function(){
     cssSelectorAncestor: "#jp_container"
   });
 
-  setInterval(function(){
+/*  setInterval(function(){
     $.get("/metadata",function(data){
       console.log("got data: "+data);
       $(".jp-title").html(data);
@@ -83,7 +83,7 @@ $(document).ready(function(){
         $(".jp-title").removeClass("crazy");
       }
     });
-  },5000);
+  },5000); */
 });
 
 window.onerror = function(message, url, line) {
