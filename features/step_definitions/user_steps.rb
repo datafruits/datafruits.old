@@ -131,3 +131,11 @@ end
 Then /^I should see an account edited message$/ do
   page.should have_content "You updated your account successfully."
 end
+
+When /^I sign in with valid credentials using username instead of email$/ do
+  create_visitor
+  visit '/users/sign_in'
+  fill_in "user_login", :with => @visitor[:username]
+  fill_in "user_password", :with => @visitor[:password]
+  click_button "Sign in"
+end

@@ -8,8 +8,8 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me,
-                  :password_hash, :password_salt, :username, :role, :avatar
-  attr_accessor :avatar_file_name
+                  :password_hash, :password_salt, :username, :role, :avatar, :login
+  attr_accessor :avatar_file_name, :login
 
   has_many :shows
   has_attached_file :avatar, styles: { :thumb => "140x#" },
@@ -37,6 +37,15 @@ class User < ActiveRecord::Base
   ROLES.each do |r|
     define_method "#{r}?" do
       role == r 
+    end
+  end
+
+  def self.find_first_by_auth_conditions(warden_conditions)
+    conditions = warden_conditions.dup
+    if login = conditions.delete(:login)
+      where(conditions).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
+    else
+      where(conditions).first
     end
   end
 

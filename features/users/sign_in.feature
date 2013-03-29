@@ -14,9 +14,15 @@ Feature: Sign in
       And I am not logged in
       When I sign in with a wrong email
       Then I should not be signed in
-      
+
     Scenario: User enters wrong password
       Given I exist as a user
       And I am not logged in
       When I sign in with a wrong password
       Then I should not be signed in
+
+    Scenario: User can sign in with username instead of email
+      Given I exist as a user
+        And I am not logged in
+      When I sign in with valid credentials using username instead of email
+      Then I should be signed in
