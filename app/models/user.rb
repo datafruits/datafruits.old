@@ -8,9 +8,17 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me,
-                  :password_hash, :password_salt, :username, :role
+                  :password_hash, :password_salt, :username, :role, :avatar
+  attr_accessor :avatar_file_name
 
   has_many :shows
+  has_attached_file :avatar, styles: { :thumb => "140x#" },
+    storage: :s3,
+    s3_credentials: {
+      access_key_id: ENV['S3_KEY'],
+      secret_access_key: ENV['S3_SECRET']
+    },
+    bucket: 'datafruits.fm'
 
   validates_presence_of :username
   validates_uniqueness_of :username

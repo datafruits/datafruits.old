@@ -1,13 +1,14 @@
 Feature: Sign up
   In order to create a new user account
-  As an admin 
+  As an admin
   I want to be able to sign up a new user
 
+    @vcr
     Scenario: Signs up user with valid data
       Given I am logged in as an admin
       When I sign up with valid user data
       Then I should see a successful sign up message
-      
+
     Scenario: Signs up user with invalid email
       Given I am logged in as an admin
       When I sign up with an invalid email
