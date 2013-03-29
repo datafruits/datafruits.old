@@ -124,7 +124,6 @@ end
 When /^I edit my account details$/ do
   visit "/users/edit"
   fill_in "user_username", :with => "newname"
-  fill_in "user_current_password", :with => @visitor[:password]
   click_button "Update"
 end
 
