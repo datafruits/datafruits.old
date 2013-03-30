@@ -26,6 +26,11 @@
       <div id="twitter">
         <%= render :partial => 'layouts/twitter_widget' %>
       </div>
+      <% flash.each do |name, msg| %>
+        <div id="<%= name %>">
+          <%= msg %>
+        </div>
+      <% end %>
       <nav>
         <ul>
           <li>
@@ -44,11 +49,6 @@
             <a href="http://chat.datafruits.fm" target="_blank">Chatroom →</a>
           </li>
         </ul>
-        <% flash.each do |name, msg| %>
-          <div id="<%= name %>">
-            <%= msg %>
-          </div>
-        <% end %>
         <%= render :partial => "layouts/user_panel" %>
       </nav>
     </div>

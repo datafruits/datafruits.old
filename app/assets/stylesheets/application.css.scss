@@ -489,6 +489,10 @@ td:nth-child(odd) { background-color: $pink; }
   color: $green;
 }
 
+#alert {
+  color: $pink;
+}
+
 .field_with_errors {
   padding: 2px;
   background-color: $pink;
