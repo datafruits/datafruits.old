@@ -9,11 +9,13 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me,
                   :password_hash, :password_salt, :username, :role, :avatar, :login
-  attr_accessor :avatar_file_name, :login
+  attr_accessor :login
 
   has_many :shows
-  has_attached_file :avatar, styles: { :thumb => "140x#" },
+  has_attached_file :avatar,
+    styles: { :thumb => "140x#" },
     storage: :s3,
+    :path => "/:style/:filename",
     s3_credentials: {
       access_key_id: ENV['S3_KEY'],
       secret_access_key: ENV['S3_SECRET']
@@ -36,7 +38,7 @@ class User < ActiveRecord::Base
 
   ROLES.each do |r|
     define_method "#{r}?" do
-      role == r 
+      role == r
     end
   end
 

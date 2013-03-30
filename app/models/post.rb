@@ -1,7 +1,8 @@
 class Post < ActiveRecord::Base
   attr_accessible :body, :title, :image
 
-  has_attached_file :image, styles: { :thumb => "260x" },
+  has_attached_file :image,
+    styles: { :thumb => "260x" },
     storage: :s3,
     s3_credentials: {
       access_key_id: ENV['S3_KEY'],

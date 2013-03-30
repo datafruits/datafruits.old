@@ -124,11 +124,14 @@ end
 When /^I edit my account details$/ do
   visit "/users/edit"
   fill_in "user_username", :with => "newname"
+  attach_file :user_avatar, File.expand_path("spec/fixtures/test.png")
   click_button "Update"
 end
 
-Then /^I should see an account edited message$/ do
+Then /^I should see my account was edited$/ do
   page.should have_content "You updated your account successfully."
+  page.should have_content "newname"
+  page.find('img#avatar')['src'].include?('test.png').should be_true
 end
 
 When /^I sign in with valid credentials using username instead of email$/ do
