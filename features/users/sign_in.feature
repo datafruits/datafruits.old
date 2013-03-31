@@ -5,7 +5,7 @@ Feature: Sign in
 
     Scenario: User signs in successfully
       Given I exist as a user
-        And I am not logged in
+      And I am not logged in
       When I sign in with valid credentials
       Then I should be signed in
 
@@ -23,6 +23,6 @@ Feature: Sign in
 
     Scenario: User can sign in with username instead of email
       Given I exist as a user
-        And I am not logged in
+      And I am not logged in
       When I sign in with valid credentials using username instead of email
       Then I should be signed in

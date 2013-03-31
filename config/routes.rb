@@ -1,6 +1,6 @@
 DatafruitsRails::Application.routes.draw do
   resources :shows
-  devise_for :users, :controllers => { :registrations => "registrations" }
+  devise_for :users, :controllers => { :registrations => "registrations", :sessions => "sessions" }
   scope "/admin" do
     resources :users
   end
@@ -13,9 +13,9 @@ DatafruitsRails::Application.routes.draw do
   get '/listen' => 'high_voltage/pages#show', :id => 'listen'
   
   as :user do
-    get "/login" => "devise/sessions#new"
-    post "/login" => "devise/sessions#create"
-    delete "/logout" => "devise/sessions#destroy"
+    get "/login" => "sessions#new"
+    post "/login" => "sessions#create"
+    delete "/logout" => "sessions#destroy"
   end
 
 
