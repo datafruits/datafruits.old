@@ -66,3 +66,26 @@ Then /^I should see the list of upcoming broadcasts$/ do
   page.should have_content 'Testy McUserton'
   page.should have_content 'the modern sounds'
 end
+
+Given /^a user with the 'dj' role exists$/ do
+  create_user
+end
+
+When /^I create a show and fill in the user id$/ do
+  visit '/shows/new'
+  fill_in :show_title, with: "the modern sounds"
+  select "Testy McUserton", from: :show_user_id
+  select '2013', from: 'show_time_1i'
+  select 'March', from: 'show_time_2i'
+  select '30', from: 'show_time_3i'
+  select '10', from: 'show_time_4i'
+  select '00', from: 'show_time_5i'
+  click_on 'submit'
+  page.should have_content "Show was successfully created."
+end
+
+Then /^I should see that show for that user appear on the schedule$/ do
+  visit "/schedule"
+  page.should have_content 'Testy McUserton'
+  page.should have_content 'the modern sounds'
+end

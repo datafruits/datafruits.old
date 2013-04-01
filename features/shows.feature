@@ -8,6 +8,12 @@ Feature: Scheduling shows
     When I create a new show
     Then I should see my show appear on the schedule
 
+  Scenario: Admin creates show for other user
+    Given I am logged in as an admin
+    And a user with the 'dj' role exists
+    When I create a show and fill in the user id
+    Then I should see that show for that user appear on the schedule
+
   Scenario: Signed in user cancels their show
     Given I am signed in as a user with the 'dj' role
     And a show exists
