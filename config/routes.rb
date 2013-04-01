@@ -9,6 +9,7 @@ DatafruitsRails::Application.routes.draw do
 
   match '/podcasts' => 'application#podcast', :via => :get
   match '/podcast' => 'application#podcast', :via => :get
+  match '/metadata' => 'application#metadata', :via => :get
   match '/schedule' => 'shows#index'
   get '/listen' => 'high_voltage/pages#show', :id => 'listen'
   

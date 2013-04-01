@@ -57,3 +57,32 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
+REDIS_PID = "#{Rails.root}/tmp/pids/redis-test.pid"
+REDIS_CACHE_PATH = "#{Rails.root}/tmp/cache/"
+
+ENV['REDIS_HOST'] = "localhost"
+
+Before('@redis') do
+  redis_options = {
+    "daemonize"     => 'yes',
+    "pidfile"       => REDIS_PID,
+    "port"          => 6379,
+    "timeout"       => 300,
+    "save 900"      => 1,
+    "save 300"      => 1,
+    "save 60"       => 10000,
+    "dbfilename"    => "dump.rdb",
+    "dir"           => REDIS_CACHE_PATH,
+    "loglevel"      => "debug",
+    "logfile"       => "stdout",
+    "databases"     => 16
+  }.map { |k, v| "#{k} #{v}" }.join("\n")
+  `echo '#{redis_options}' | redis-server -`
+end
+
+After('@redis') do
+  %x{
+    cat #{REDIS_PID} | xargs kill -QUIT
+    rm -f #{REDIS_CACHE_PATH}dump.rdb
+  }
+end

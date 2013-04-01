@@ -11,6 +11,15 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def metadata
+    song = $redis.get "currentsong"
+    respond_to do |format|
+      format.json {
+        render :json => {:currentsong => song}
+      }
+    end
+  end
+
   rescue_from CanCan::AccessDenied do |exception|
     render_error 404, exception
   end

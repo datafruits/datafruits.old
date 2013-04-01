@@ -14,6 +14,7 @@ gem 'paperclip'
 gem 'cancan'
 gem 'html-pipeline'
 gem 'gemoji'
+gem 'redis'
 
 gem "simple_calendar", "~> 0.1.5"
 

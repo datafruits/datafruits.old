@@ -73,17 +73,16 @@ $(document).ready(function(){
     cssSelectorAncestor: "#jp_container"
   });
 
-/*  setInterval(function(){
+  setInterval(function(){
     $.get("/metadata",function(data){
-      console.log("got data: "+data);
-      $(".jp-title").html(data);
+      $(".jp-title").html(data.currentsong);
       if(data.indexOf('LIVE') == 0) {
         $(".jp-title").addClass("crazy");
       } else {
         $(".jp-title").removeClass("crazy");
       }
     });
-  },5000); */
+  },5000);
 });
 
 window.onerror = function(message, url, line) {
