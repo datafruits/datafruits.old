@@ -15,6 +15,11 @@
   <%= @show.time %>
 </p>
 
+<p>
+  <b>Description:</b>
+  <%= @show.description %>
+</p>
+
 <% if can? :edit, @show %>
   <%= link_to 'Edit', edit_show_path(@show) %>
 <% end %>

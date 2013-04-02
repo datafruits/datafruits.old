@@ -23,6 +23,7 @@ When /^I create a new show$/ do
   select '30', from: 'show_time_3i'
   select '10', from: 'show_time_4i'
   select '00', from: 'show_time_5i'
+  fill_in :show_description, with: "omg wut a cool show!"
   click_on 'submit'
 end
 
@@ -34,7 +35,7 @@ end
 
 Given /^a show exists$/ do
   create_dj unless User.first
-  Show.create title: 'the modern sounds', user_id: User.first.id, time: Time.current
+  Show.create title: 'the modern sounds', description: "omg wut a cool show!", user_id: User.first.id, time: Time.current
 end
 
 When /^I cancel my show$/ do
@@ -50,6 +51,7 @@ end
 When /^I edit my show's details$/ do
   visit "/shows/#{Show.first.id}/edit"
   fill_in :show_title, with: 'the not modern sounds'
+  fill_in :show_description, with: "omg not that cool show!"
   click_on 'submit'
 end
 
@@ -80,6 +82,7 @@ When /^I create a show and fill in the user id$/ do
   select '30', from: 'show_time_3i'
   select '10', from: 'show_time_4i'
   select '00', from: 'show_time_5i'
+  fill_in :show_description, with: "omg wut a cool show!"
   click_on 'submit'
   page.should have_content "Show was successfully created."
 end

@@ -19,6 +19,10 @@
     <%= f.label :time %><br />
     <%= f.datetime_select :time %>
   </div>
+  <div class="field">
+    <%= f.label "Description (optional)" %>
+    <%= f.text_field :description %>
+  </div>
 
   <% if current_user.admin? %>
     <%= f.label :dj %>

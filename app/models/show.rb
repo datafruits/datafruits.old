@@ -1,5 +1,5 @@
 class Show < ActiveRecord::Base
-  attr_accessible :time, :title, :user_id
+  attr_accessible :time, :title, :user_id, :description
 
   belongs_to :user
 
