@@ -12,7 +12,7 @@
 </p>
 
 <p>
-  <%= @show.description %>
+  <%= html_pipeline(@show.description) %>
 </p>
 
 <% if can? :edit, @show %>
