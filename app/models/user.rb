@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  ROLES = %w[admin blogger dj user]
+  ROLES = %w[admin blogger dj]
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
