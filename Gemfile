@@ -16,6 +16,10 @@ gem 'html-pipeline'
 gem 'gemoji'
 gem 'redis'
 
+group :production do
+  gem 'thin'
+end
+
 gem "simple_calendar", "~> 0.1.5"
 
 group :development do
