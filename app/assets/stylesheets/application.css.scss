@@ -522,9 +522,11 @@ td:nth-child(odd) { background-color: $pink; }
   }
 }
 
-
-
-
+#next-show {
+  margin-left:auto;
+  margin-right:auto;
+  width:50%;
+}
 
 
 /* ==========================================================================

@@ -11,4 +11,8 @@ module ApplicationHelper
     result = pipeline.call(text)
     result[:output].to_s.html_safe
   end
+
+  def next_scheduled_show
+    show = Show.where("time >= ?", Time.current).order("time ASC").first
+  end
 end
