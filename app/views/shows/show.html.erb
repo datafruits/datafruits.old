@@ -1,13 +1,9 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
+<h2>
   <%= @show.title %>
-</p>
+</h2>
 
 <p>
-  <b>User:</b>
-  <%= @show.user_id %>
+  Hosted by:<%= @show.user.username %>
 </p>
 
 <p>
@@ -16,7 +12,6 @@
 </p>
 
 <p>
-  <b>Description:</b>
   <%= @show.description %>
 </p>
 
