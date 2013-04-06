@@ -28,6 +28,7 @@ def sign_up
   fill_in "user_username", :with => @visitor[:username]
   fill_in "user_password", :with => @visitor[:password]
   fill_in "user_password_confirmation", :with => @visitor[:password_confirmation]
+  select '(GMT-08:00) Pacific Time (US & Canada)', from: 'user_time_zone'
   attach_file :user_avatar, File.expand_path("spec/fixtures/test.png")
   click_on "submit"
   find_user
