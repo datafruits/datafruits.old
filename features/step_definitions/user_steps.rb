@@ -1,4 +1,5 @@
 require_relative './util'
+include MailerMacros
 
 Given /^I exist as a user$/ do
   create_user
@@ -140,4 +141,19 @@ When /^I sign in with valid credentials using username instead of email$/ do
   fill_in "user_login", :with => @visitor[:username]
   fill_in "user_password", :with => @visitor[:password]
   click_button "Sign in"
+end
+
+Given /^a user exists$/ do
+  create_user
+end
+
+Given /^she clicks the forgotten password link$/ do
+  visit '/login'
+  click_link 'Forgot your password?'
+  fill_in 'user_email', with: @visitor[:email]
+  click_button 'submit'
+end
+
+Then /^she should recieve an email to reset their password$/ do
+  last_email.to.should include(User.first.email)
 end
