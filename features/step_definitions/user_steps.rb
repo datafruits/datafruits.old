@@ -152,6 +152,7 @@ Given /^she clicks the forgotten password link$/ do
   click_link 'Forgot your password?'
   fill_in 'user_email', with: @visitor[:email]
   click_button 'submit'
+  page.should have_content 'You will receive an email with instructions about how to reset your password in a few minutes.'
 end
 
 Then /^she should recieve an email to reset their password$/ do
