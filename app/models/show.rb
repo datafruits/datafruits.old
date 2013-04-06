@@ -3,7 +3,7 @@ class Show < ActiveRecord::Base
 
   belongs_to :user
 
-  validates_presence_of :time,:title,:user_id
+  validates_presence_of :time,:user_id
 
   def start_time
     time
