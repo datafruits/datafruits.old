@@ -38,3 +38,8 @@ Feature: Sign up
       Given I am logged in as a dj
       When I access the sign up page
       Then I should see be denied access
+
+    Scenario: Signs up user with multiple roles
+      Given I am logged in as an admin
+      When I create a user with multiple roles
+      Then I should see a successful sign up message

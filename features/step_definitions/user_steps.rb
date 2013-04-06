@@ -158,3 +158,18 @@ end
 Then /^she should recieve an email to reset their password$/ do
   last_email.to.should include(User.first.email)
 end
+
+When /^I create a user with multiple roles$/ do
+  create_visitor
+  delete_user
+  visit '/admin/users/new'
+  fill_in "user_email", :with => @visitor[:email]
+  fill_in "user_username", :with => @visitor[:username]
+  fill_in "user_password", :with => @visitor[:password]
+  fill_in "user_password_confirmation", :with => @visitor[:password_confirmation]
+  check 'user_role_ids_blogger'
+  check 'user_role_ids_dj'
+
+  click_on "submit"
+  find_user
+end

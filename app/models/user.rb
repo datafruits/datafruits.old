@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me,
-                  :password_hash, :password_salt, :username, :role, :avatar, :login
+                  :password_hash, :password_salt, :username, :role, :avatar, :login, :role_ids
   attr_accessor :login
 
   has_many :shows
@@ -31,15 +31,37 @@ class User < ActiveRecord::Base
   validate :valid_role
 
   def valid_role
-    if !ROLES.include?(role)
-      errors.add :role, "is not a valid role."
+    if !role.to_s.blank?
+      self.roles.each do |r|
+        if !ROLES.include?(r)
+          errors.add :role, "is not a valid role."
+        end
+      end
     end
+  end
+
+  def role_ids=(roles)
+    role_string = ""
+    roles.each do |r|
+      role_string << "#{r} "
+    end
+    role_string.strip!
+    self.update_attribute :role, role_string
+    self.save!
   end
 
   ROLES.each do |r|
     define_method "#{r}?" do
-      role == r
+      has_role? r
     end
+  end
+
+  def roles
+    self.role.to_s.split(' ')
+  end
+
+  def has_role?(r)
+    roles.include?(r)
   end
 
   def self.find_first_by_auth_conditions(warden_conditions)
