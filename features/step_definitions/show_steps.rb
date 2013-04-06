@@ -23,6 +23,7 @@ When /^I create a new show$/ do
   select '30', from: 'show_time_3i'
   select '10', from: 'show_time_4i'
   select '00', from: 'show_time_5i'
+  select '(GMT-08:00) Pacific Time (US & Canada)', from: 'show_time_zone'
   fill_in :show_description, with: "omg wut a cool show!"
   click_on 'submit'
 end
