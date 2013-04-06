@@ -1,6 +1,10 @@
 <% show = next_scheduled_show %>
 <% if show %>
-  NEXT LIVE SHOW: <%= "#{show.title || show.user.username} - #{show.time.strftime("%A %H:%M %Z")}" %>
+  <% if !show.title.blank? %>
+    NEXT LIVE SHOW: <%= "#{show.title} - #{show.time.strftime("%A %H:%M %Z")}" %>
+  <% else %>
+    NEXT LIVE SHOW: <%= "#{show.user.username} - #{show.time.strftime("%A %H:%M %Z")}" %>
+  <% end %>
   <% if show.user.avatar %>
     <% image_tag show.user.avatar %>
   <% end %>
