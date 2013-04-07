@@ -12,8 +12,8 @@ DatafruitsRails::Application.routes.draw do
   match '/metadata' => 'application#metadata', :via => :get
   match '/schedule' => 'shows#index'
   get '/listen' => 'high_voltage/pages#show', :id => 'listen'
-  get '/about' => 'high_voltage/pages#about', :id => 'listen'
-  get '/contact' => 'high_voltage/pages#about', :id => 'listen'
+  get '/about' => 'high_voltage/pages#show', :id => 'about'
+  get '/contact' => 'high_voltage/pages#show', :id => 'about'
   
   as :user do
     get "/login" => "sessions#new"
