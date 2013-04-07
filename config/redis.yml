@@ -1,2 +1,3 @@
 host: <%= ENV['REDIS_HOST'] %>
+password: <%= ENV['REDIS_PASSWORD'] %>
 port: 6379
