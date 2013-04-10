@@ -85,6 +85,16 @@ $(document).ready(function(){
       }
     });
   },5000);
+
+
+  $("#user-menu").hover(
+    function(){
+      $(this).addClass('open');
+    },
+    function(){
+      $(this).removeClass('open');
+    }
+  );
 });
 
 window.onerror = function(message, url, line) {

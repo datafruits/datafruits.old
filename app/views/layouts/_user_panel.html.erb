@@ -1,19 +1,24 @@
-<div id='user-panel'>
-  <% if user_signed_in? %>
-    Logged in as <%= link_to current_user.username, current_user %> |
-    <% if can? :create, Show %>
-      <%= link_to "New show", new_show_path %> |
-    <% end %>
-    <% if can? :create, Post %>
-      <%= link_to "New post", new_post_path %> |
-    <% end %>
-    <% if can? :create, User %>
-      <%= link_to "New user", "/admin/users/new" %> |
-    <% end %>
-    <%= link_to "Edit profile", "/users/edit" %> |
-    <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to 'Log in', new_user_session_path %> |
-    <%= link_to 'Sign up', new_user_registration_path %>
-  <% end %>
-</div>
+<ul class="nav nav-pills" id="user-panel">
+<% if user_signed_in? %>
+  <li>Logged in as </li>
+  <li><%= link_to current_user.username, current_user %></li>
+  <li id='user-menu'><a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu</a>
+    <ul class="dropdown-menu nav-pills pull-right" role="menu" aria-labelledby="dropdownMenu">  
+      <% if can? :create, Show %>
+        <li><%= link_to "New show", new_show_path %></li>
+      <% end %>
+      <% if can? :create, Post %>
+        <li><%= link_to "New post", new_post_path %></li>
+      <% end %>
+      <% if can? :create, User %>
+        <li><%= link_to "New user", "/admin/users/new" %></li>
+      <% end %>
+      <li><%= link_to "Edit profile", "/users/edit" %></li>
+    </ul>
+  </li>
+  <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+<% else %>
+  <li><%= link_to 'Log in', new_user_session_path %></li>
+  <li><%= link_to 'Sign up', new_user_registration_path %></li>
+<% end %>
+<ul>
