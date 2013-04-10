@@ -14,6 +14,7 @@ DatafruitsRails::Application.routes.draw do
   get '/listen' => 'high_voltage/pages#show', :id => 'listen'
   get '/about' => 'high_voltage/pages#show', :id => 'about'
   get '/contact' => 'high_voltage/pages#show', :id => 'about'
+  get '/help' => 'high_voltage/pages#show', :id => 'help'
   
   as :user do
     get "/login" => "sessions#new"
