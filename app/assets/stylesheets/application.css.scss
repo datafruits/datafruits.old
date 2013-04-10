@@ -9,9 +9,11 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require 'normalize'
+ *= require 'bootstrap.min'
  *= require_self
- *= require_tree .
  */
+
+@import "bourbon";
 
 /*
  * HTML5 Boilerplate
@@ -121,7 +123,7 @@ $blue:  #00b4ff;
   border-radius: $radii;
 }
 
-@mixin linear-gradient($one, $two, $three, $four) {
+@mixin galaxy-gradient($one, $two, $three, $four) {
   background: url("/assets/data_galaxy.png") repeat-x, $one;
   background: url("/assets/data_galaxy.png") repeat-x, -moz-linear-gradient(to bottom, $one, $two, $three, $four);
   background: url("/assets/data_galaxy.png") repeat-x, -o-linear-gradient(top, $one, $two, $three, $four);
@@ -242,7 +244,7 @@ $blue:  #00b4ff;
 }
 
 body {
-  @include linear-gradient($green, $blue, $yellow, $pink);
+  @include galaxy-gradient($green, $blue, $yellow, $pink);
   animation: fade 30s infinite;
   -webkit-animation: fade 30s infinite;
   -moz-animation: fade 30s infinite;
@@ -532,7 +534,19 @@ td:nth-child(odd) { background-color: $pink; }
 #submit {
   padding: 5px;
 }
-
+.nav>li>a:hover, .nav>li>a:focus {
+  text-decoration: none;
+  @include linear-gradient($yellow, $blue);
+}
+.dropdown-menu>li>a {
+  color: $green;
+  font-weight:bold;
+}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a {
+  text-decoration: none;
+  color: $yellow;
+  @include linear-gradient($yellow, $blue);
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
