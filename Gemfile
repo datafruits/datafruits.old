@@ -37,6 +37,8 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+
+  gem 'detect_timezone_rails'
 end
 
 gem 'rspec-rails', :group => [:development, :test]

@@ -15,6 +15,8 @@
 //= require modernizr-2.0.6
 //= require jquery.jplayer.min
 //= require jquery.masonry.min
+//= require detect_timezone
+//= require jquery.detect_timezone
 //= require_tree .
 //
 $(document).ready(function(){
