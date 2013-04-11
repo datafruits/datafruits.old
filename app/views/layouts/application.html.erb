@@ -20,15 +20,14 @@
         <a class="jp-play" href="javascript:;" tabindex="1"></a>
         <a class="jp-pause" href="javascript:;" tabindex="1"></a>
         <br />
-        <marquee scrollamount="12" behavior="alternate" direction="right" class="jp-title" width="350">loading...</marquee>
-        <div id="stream-title" style="display:none;"></div>
+        <div class="jp-title" width="350">loading...</div>
       </div>
       <div id="next-show">
         <%= render :partial => 'layouts/next_show' %>
       </div>
-      <!-- <div id="twitter">
+      <div id="twitter">
         <%= render :partial => 'layouts/twitter_widget' %>
-      </div> -->
+      </div>
       <% flash.each do |name, msg| %>
         <div id="<%= name %>">
           <%= msg %>
