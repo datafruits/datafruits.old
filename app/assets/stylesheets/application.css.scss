@@ -156,25 +156,7 @@ $blue:  #00b4ff;
   background-size: 20px 20px;
 }
 
-@keyframes fade {
-  from {
-    background: $green;
-  }
-  30% {
-    background: $yellow;
-  }
-  60% {
-    background: $pink;
-  }
-  90% {
-    background: $blue;
-  }
-  to {
-    background: $green;
-  }
-}
-
-@-webkit-keyframes fade {
+@include keyframes(fade) {
   from {
     background: url("/assets/data_galaxy.png") , $green;
   }
@@ -191,65 +173,10 @@ $blue:  #00b4ff;
     background: url("/assets/data_galaxy.png") , $green;
   }
 }
-@-moz-keyframes fade {
-  from {
-    background: $green;
-  }
-  30% {
-    background: $yellow;
-  }
-  60% {
-    background: $pink;
-  }
-  90% {
-    background: $blue;
-  }
-  to {
-    background: $green;
-  }
-}
-@-ms-keyframes fade {
-  from {
-    background: $green;
-  }
-  30% {
-    background: $yellow;
-  }
-  60% {
-    background: $pink;
-  }
-  90% {
-    background: $blue;
-  }
-  to {
-    background: $green;
-  }
-}
-@-o-keyframes fade {
-  from {
-    background: $green;
-  }
-  30% {
-    background: $yellow;
-  }
-  60% {
-    background: $pink;
-  }
-  90% {
-    background: $blue;
-  }
-  to {
-    background: $green;
-  }
-}
 
 body {
   @include galaxy-gradient($green, $blue, $yellow, $pink);
-  animation: fade 30s infinite;
-  -webkit-animation: fade 30s infinite;
-  -moz-animation: fade 30s infinite;
-  -o-animation: fade 30s infinite;
-  -ms-animation: fade 30s infinite;
+  @include animation(fade 30s infinite);
   font-family:'Helvetica Neue', Helvetica, Arial !important;
   font-size:14pt;
   font-weight:bold;
@@ -550,6 +477,7 @@ td:nth-child(odd) { background-color: $pink; }
 li#loggedinas {
   margin-top:4px;
 }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
