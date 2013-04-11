@@ -325,7 +325,7 @@ ul#main-nav {
 }
 ul#user-panel {
   float:right;
-  margin-top: -50px;
+  margin-top: -54px;
 }
 ul.dropdown-menu {
   background:$pink;
@@ -546,6 +546,9 @@ td:nth-child(odd) { background-color: $pink; }
   text-decoration: none;
   color: $yellow;
   @include linear-gradient($yellow, $blue);
+}
+li#loggedinas {
+  margin-top:4px;
 }
 /* ==========================================================================
    Helper classes

@@ -1,6 +1,6 @@
 <ul class="nav nav-pills" id="user-panel">
 <% if user_signed_in? %>
-  <li>Logged in as </li>
+  <li id="loggedinas">Logged in as </li>
   <li><%= link_to current_user.username, current_user %></li>
   <li id='user-menu'><a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu</a>
     <ul class="dropdown-menu nav-pills pull-right" role="menu" aria-labelledby="dropdownMenu">  
