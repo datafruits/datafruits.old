@@ -286,18 +286,18 @@
       <pubDate>Sun, 07 Apr 2013 00:00:00 +00:00PDT</pubDate>
     </item>
     <item>
-      <title>Firedrill with Guest Mixes by CRZKNY and &#x98DF;&#x54C1;&#x307E;&#x3064;&#x308A; aka FOODMAN Apr 11 2013</title>
-      <description>Firedrill with Guest Mixes by CRZKNY and &#x98DF;&#x54C1;&#x307E;&#x3064;&#x308A; aka FOODMAN Apr 11 2013</description>
-      <enclosure url="https://s3.amazonaws.com/datafruits.fm/FiredrillGuestMixCRZNYAndFOODMAN04112013.mp3" length="132391347" type="audio/mpeg"/>
-      <guid>https://s3.amazonaws.com/datafruits.fm/FiredrillGuestMixCRZNYAndFOODMAN04112013.mp3</guid>
-      <pubDate>Tue, 16 Apr 2013 00:00:00 +00:00 PDT</pubDate>
-    </item>
-    <item>
       <title>the curios show hosted by radio scotvoid guest mixes by DJ Puffin and Fitzroy North April 07 2013</title>
       <description>the curios show hosted by radio scotvoid guest mixes by DJ Puffin and Fitzroy North April 07 2013</description>
       <enclosure url="https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixDJPuffinAndFitzroyNorth04072013.mp3" length="122761018" type="audio/mpeg"/>
       <guid>https://s3.amazonaws.com/datafruits.fm/ScotvoidGuestMixDJPuffinAndFitzroyNorth04072013.mp3</guid>
       <pubDate>Wed, 17 Apr 2013 00:00:00 +00:00 PDT</pubDate>
+    </item>
+    <item>
+      <title>Firedrill with Guest Mixes by CRZKNY and &#x98DF;&#x54C1;&#x307E;&#x3064;&#x308A; aka FOODMAN Apr 11 2013</title>
+      <description>Firedrill with Guest Mixes by CRZKNY and &#x98DF;&#x54C1;&#x307E;&#x3064;&#x308A; aka FOODMAN Apr 11 2013</description>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/FiredrillGuestMixCRZNYAndFOODMAN04112013.mp3" length="132391347" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/FiredrillGuestMixCRZNYAndFOODMAN04112013.mp3</guid>
+      <pubDate>Tue, 16 Apr 2013 00:00:00 +00:00 PDT</pubDate>
     </item>
   </channel>
 </rss>
