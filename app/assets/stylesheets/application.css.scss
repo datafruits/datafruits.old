@@ -465,6 +465,16 @@ td:nth-child(odd) { background-color: $pink; }
   text-decoration: none;
   @include linear-gradient($yellow, $blue);
 }
+
+.dropdown-menu {
+  top:90%;
+}
+
+.dropdown-menu.pull-right {
+  left:auto;
+  right:auto;
+}
+
 .dropdown-menu>li>a {
   color: $green;
   font-weight:bold;
