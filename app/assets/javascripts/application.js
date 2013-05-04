@@ -95,19 +95,20 @@ $(document).ready(function(){
       $(this).removeClass('open');
     }
   );
+
+  $(window).onerror = function(message, url, line) {
+    //http://jsfiddle.net/phms/GAyrK/
+    if (typeof(_gaq) === "object") {
+      _gaq.push([
+        "_trackEvent",
+        "JS Exception Error",
+        message,
+        (url + " (" + line + ")"),
+        0, true
+        ]);
+    }
+
+   return true;
+  };
 });
 
-window.onerror = function(message, url, line) {
-  //http://jsfiddle.net/phms/GAyrK/
-  if (typeof(_gaq) === "object") {
-    _gaq.push([
-      "_trackEvent",
-      "JS Exception Error",
-      message,
-      (url + " (" + line + ")"),
-      0, true
-      ]);
-  }
-
- return true;
-};
