@@ -477,22 +477,23 @@ li#loggedinas {
 }
 
 /* mini player */
-#mini-player {
+#jp_container.mini-player {
+  width:50px;
   position:fixed;
   background: $pink;
   top:40px;
   z-index:1;
 }
-a.mini-jp-play,
-a.mini-jp-pause{
+a.jp-play.mini,
+a.jp-pause.mini{
   width:32px;
   height:29px;
   display:inline-block;
 }
-a.mini-jp-play {
+a.jp-play.mini {
   background: url("/assets/small_player_sprite.png") 0 0 no-repeat;
 }
-a.mini-jp-pause {
+a.jp-pause.mini {
   background: url("/assets/small_player_sprite.png") -32px 0 no-repeat;
 }
 

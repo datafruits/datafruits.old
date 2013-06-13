@@ -22,15 +22,11 @@
 function small_top(){
   $("nav").addClass("sticky");
   $("#mini-player").show();
-  $("#radio-player").jPlayer("option", "cssSelectorAncestor", "#mini-player");
-  $("#radio-player").jPlayer("option", "cssSelector", {play: ".mini-jp-play", pause: ".mini-jp-pause"});
 }
 
 function big_top(){
   $("nav").removeClass("sticky");
   $("#mini-player").hide();
-  $("#radio-player").jPlayer("option", "cssSelectorAncestor", "#jp_container");
-  $("#radio-player").jPlayer("option", "cssSelector", {play: ".jp-play", pause: ".jp-pause"});
 }
 
 $(document).ready(function(){
