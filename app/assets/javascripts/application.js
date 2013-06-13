@@ -19,6 +19,20 @@
 //= require jquery.detect_timezone
 //= require_tree .
 //
+function small_top(){
+  $("nav").addClass("sticky");
+  $("#mini-player").show();
+  $("#radio-player").jPlayer("option", "cssSelectorAncestor", "#mini-player");
+  $("#radio-player").jPlayer("option", "cssSelector", {play: ".mini-jp-play", pause: ".mini-jp-pause"});
+}
+
+function big_top(){
+  $("nav").removeClass("sticky");
+  $("#mini-player").hide();
+  $("#radio-player").jPlayer("option", "cssSelectorAncestor", "#jp_container");
+  $("#radio-player").jPlayer("option", "cssSelector", {play: ".jp-play", pause: ".jp-pause"});
+}
+
 $(document).ready(function(){
   var $container = $("#posts");
   $container.imagesLoaded(function(){
@@ -110,5 +124,31 @@ $(document).ready(function(){
 
    return true;
   };
+
+  // grab the initial top offset of the navigation 
+  var sticky_navigation_offset_top = $('nav').offset().top;
+  console.log('sticky_navigation_offset_top: '+sticky_navigation_offset_top);
+
+  var sticky_navigation = function(){
+    var scroll_top = $(window).scrollTop();
+    console.log(scroll_top);
+
+    if (scroll_top > sticky_navigation_offset_top) {
+      console.log('small top');
+      small_top();
+    } else {
+      console.log('big top');
+      big_top();
+    }
+  };
+
+  // run on load
+  sticky_navigation();
+
+  // and on every scroll
+  $(window).scroll(function(){
+    sticky_navigation();
+  });
+
 });
 

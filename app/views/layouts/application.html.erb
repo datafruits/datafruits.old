@@ -33,29 +33,33 @@
           <%= msg %>
         </div>
       <% end %>
-      <nav>
-        <ul class="nav nav-pills" id="main-nav">
-          <li>
-            <a href="/listen">Listen →</a>
-          </li>
-          <li>
-            <a href="/podcasts">Podcasts →</a>
-          </li>
-          <li>
-            <a href="/schedule">Live Schedule →</a>
-          </li>
-          <li>
-            <a href="http://releases.datafruits.fm/" target="_blank">Label →</a>
-          </li>
-          <li>
-            <a href="http://chat.datafruits.fm" target="_blank">Chatroom →</a>
-          </li>
-          <li>
-            <a href="/about">About/Contact →</a>
-          </li>
-        </ul>
-        <%= render :partial => "layouts/user_panel" %>
-      </nav>
+    </div>
+    <nav>
+      <ul class="nav nav-pills" id="main-nav">
+        <li>
+          <a href="/listen">Listen →</a>
+        </li>
+        <li>
+          <a href="/podcasts">Podcasts →</a>
+        </li>
+        <li>
+          <a href="/schedule">Live Schedule →</a>
+        </li>
+        <li>
+          <a href="http://releases.datafruits.fm/" target="_blank">Label →</a>
+        </li>
+        <li>
+          <a href="http://chat.datafruits.fm" target="_blank">Chatroom →</a>
+        </li>
+        <li>
+          <a href="/about">About/Contact →</a>
+        </li>
+      </ul>
+      <%= render :partial => "layouts/user_panel" %>
+    </nav>
+    <div id="mini-player" style="display:none;">
+      <a class="mini-jp-play" href="javascript:;" tabindex="1"></a>
+      <a class="mini-jp-pause" href="javascript:;" tabindex="1"></a>
     </div>
     <div id="container">
       <div id="header">

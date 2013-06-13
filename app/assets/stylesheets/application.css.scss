@@ -205,7 +205,6 @@ a:hover {
   background-color:black;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 202px;
   min-height:100%;
   width:1050px;
   padding-top: 50px;
@@ -243,8 +242,10 @@ nav {
   width:100%;
   z-index:1;
   height:40px;
-  bottom:0;
-  left:0;
+}
+nav.sticky {
+  top:0;
+  position:fixed;
 }
 ul#main-nav {
   margin-top: 3px;
@@ -314,8 +315,8 @@ li {
 
 #top {
   @include stripes(#ddd);
-  position:fixed;
-  height:240px;
+  position:relative;
+  height:202px;
   width:100%;
   top:0;
   left:0;
@@ -473,6 +474,26 @@ td:nth-child(odd) { background-color: $pink; }
 }
 li#loggedinas {
   margin-top:4px;
+}
+
+/* mini player */
+#mini-player {
+  position:fixed;
+  background: $pink;
+  top:40px;
+  z-index:1;
+}
+a.mini-jp-play,
+a.mini-jp-pause{
+  width:32px;
+  height:29px;
+  display:inline-block;
+}
+a.mini-jp-play {
+  background: url("/assets/small_player_sprite.png") 0 0 no-repeat;
+}
+a.mini-jp-pause {
+  background: url("/assets/small_player_sprite.png") -32px 0 no-repeat;
 }
 
 /* ==========================================================================
