@@ -437,9 +437,10 @@ td:nth-child(odd) { background-color: $pink; }
 }
 
 #next-show {
-  margin-left:auto;
-  margin-right:auto;
-  width:50%;
+  width:400px;
+  position: absolute;
+  top: 10px;
+  right: 25px;
 }
 
 .field {
