@@ -5,7 +5,8 @@
   <% else %>
     NEXT LIVE SHOW: <%= "#{show.user.username} - #{show.time.strftime("%A %H:%M %Z")}" %>
   <% end %>
+  <br/ >
   <% if !show.user.avatar.blank? %>
-    <% image_tag show.user.avatar %>
+    <%= image_tag show.user.avatar(:thumb) %>
   <% end %>
 <% end %>
