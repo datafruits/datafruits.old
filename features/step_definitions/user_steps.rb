@@ -173,3 +173,17 @@ When /^I create a user with multiple roles$/ do
   click_on "submit"
   find_user
 end
+
+When /^I edit that users account details without filling in their passwords$/ do
+  user = User.find_by_username "Testy McUserton"
+  visit edit_user_path(user.id)
+  fill_in "user_username", :with => "newname"
+  attach_file :user_avatar, File.expand_path("spec/fixtures/test.png")
+  click_button "submit"
+end
+
+Then /^I should see the account was edited$/ do
+  page.should have_content "User was successfully updated."
+  page.should have_content "newname"
+  page.find('img#avatar')['src'].include?('test.png').should be_true
+end
