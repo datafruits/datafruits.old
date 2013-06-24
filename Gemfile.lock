@@ -83,6 +83,8 @@ GEM
     erubis (2.7.0)
     escape_utils (0.3.2)
     eventmachine (1.0.3)
+    exception_notification (3.0.1)
+      actionmailer (>= 3.0.4)
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.5.0)
@@ -219,6 +221,7 @@ DEPENDENCIES
   database_cleaner
   detect_timezone_rails
   devise
+  exception_notification
   gemoji
   high_voltage
   html-pipeline

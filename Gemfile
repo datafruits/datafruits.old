@@ -15,6 +15,7 @@ gem 'cancan'
 gem 'html-pipeline'
 gem 'gemoji'
 gem 'redis'
+gem 'exception_notification'
 
 group :production do
   gem 'thin'
