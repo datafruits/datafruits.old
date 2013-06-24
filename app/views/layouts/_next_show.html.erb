@@ -1,10 +1,6 @@
 <% show = next_scheduled_show %>
 <% if show %>
-  <% if !show.title.blank? %>
-    NEXT LIVE SHOW: <%= "#{show.title} - #{show.time.strftime("%A %H:%M %Z")}" %>
-  <% else %>
-    NEXT LIVE SHOW: <%= "#{show.user.username} - #{show.time.strftime("%A %H:%M %Z")}" %>
-  <% end %>
+  NEXT ONAIR: <%= link_to_show show %>
   <br/ >
   <% if !show.user.avatar.blank? %>
     <%= image_tag show.user.avatar(:thumb) %>
