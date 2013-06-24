@@ -3,6 +3,7 @@ Feature: Scheduling shows
   Background:
     Given the date is 2013-03-28
 
+  @vcr
   Scenario: Signed in user creates a new show
     Given I am signed in as a user with the 'dj' role
     When I create a new show
