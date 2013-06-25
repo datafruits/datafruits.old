@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
 
   has_many :shows
   has_attached_file :avatar,
-    styles: { :thumb => "150x" },
+    styles: { :thumb => "120x" },
     storage: :s3,
     :path => "/:style/:filename",
     s3_credentials: {
