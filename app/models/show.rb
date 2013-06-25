@@ -3,7 +3,7 @@ class Show < ActiveRecord::Base
 
   belongs_to :user
   has_attached_file :image,
-    styles: { :thumb => "120x" },
+    styles: { :thumb => "x120" },
     storage: :s3,
     :path => "/:style/:filename",
     s3_credentials: {

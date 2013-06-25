@@ -2,7 +2,9 @@
 <% if show %>
   NEXT ONAIR: <%= link_to_show show %>
   <br/ >
-  <% if !show.user.avatar.blank? %>
+  <% if !show.image.blank? %>
+    <%= image_tag show.image(:thumb) %>
+  <% elsif !show.user.avatar.blank? %>
     <%= image_tag show.user.avatar(:thumb) %>
   <% end %>
 <% end %>

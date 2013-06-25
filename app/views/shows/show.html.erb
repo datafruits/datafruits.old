@@ -12,6 +12,10 @@
   <%= @show.time %>
 </p>
 
+<% if @show.image %>
+  <%= image_tag @show.image.url %>
+<% end %>
+
 <p>
   <%= html_pipeline(@show.description) %>
 </p>
