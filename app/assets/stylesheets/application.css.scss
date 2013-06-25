@@ -222,11 +222,11 @@ a.small-player-pause{
   height:202px;
   background: transparent url("/assets/df_new_logo.png") -342px 0 no-repeat;
   opacity: 1;
-  transition:background 100ms linear;
-  -webkit-transition:background 100ms linear;
-  -moz-transition:background 100ms linear;
-  -o-transition:background 100ms linear;
-  -ms-transition:background 100ms linear;
+  transition:background 200ms linear;
+  -webkit-transition:background 200ms linear;
+  -moz-transition:background 200ms linear;
+  -o-transition:background 200ms linear;
+  -ms-transition:background 200ms linear;
 }
 #logo a:hover {
   float:left;
