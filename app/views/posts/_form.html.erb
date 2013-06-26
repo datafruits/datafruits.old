@@ -26,3 +26,5 @@
     <%= f.submit 'Submit', id: 'submit' %>
   </div>
 <% end %>
+
+<%= link_to 'Delete', @post, data: { confirm: 'Are you sure you want to delete this post?' }, :method => :delete %> |

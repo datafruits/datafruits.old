@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '4.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
 gem 'high_voltage'
-gem 'devise'
+gem 'devise', :git => 'git://github.com/plataformatec/devise'
 gem 'nokogiri'
 gem 'aws-sdk'
 gem 'paperclip'
@@ -15,7 +15,9 @@ gem 'cancan'
 gem 'html-pipeline'
 gem 'gemoji'
 gem 'redis'
-gem 'exception_notification'
+gem 'exception_notification', '~> 4.0.0.rc1'
+
+gem 'protected_attributes'
 
 group :production do
   gem 'thin'
@@ -27,20 +29,16 @@ group :development do
   gem 'sqlite3'
 end
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'bourbon'
+gem 'sass-rails',   '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'bourbon'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+gem 'uglifier', '>= 1.0.3'
 
-  gem 'detect_timezone_rails'
-end
+gem 'detect_timezone_rails', :git => 'git://github.com/GermanDZ/detect_timezone_rails', :branch => 'rails4'
 
 gem 'rspec-rails', :group => [:development, :test]
 

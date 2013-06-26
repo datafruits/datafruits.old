@@ -7,11 +7,11 @@ DatafruitsRails::Application.routes.draw do
   resources :users
   resources :posts
 
-  match '/podcasts' => 'application#podcast', :via => :get
-  match '/podcast' => 'application#podcast', :via => :get
-  match '/metadata' => 'application#metadata', :via => :get
-  match '/schedule' => 'shows#index'
-  match '/timetable' => 'shows#index'
+  get '/podcasts', to: 'application#podcast'
+  get '/podcast', to: 'application#podcast'
+  get '/metadata', to: 'application#metadata'
+  get '/schedule', to: 'shows#index'
+  get '/timetable', to: 'shows#index'
   get '/listen' => 'high_voltage/pages#show', :id => 'listen'
   get '/about' => 'high_voltage/pages#show', :id => 'about'
   get '/contact' => 'high_voltage/pages#show', :id => 'about'

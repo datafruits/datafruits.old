@@ -83,4 +83,5 @@ DatafruitsRails::Application.configure do
     :sender_address => %{"Exception Notifier" <exception@datafruits.fm>},
     :exception_recipients => %w{info@datafruits.fm}
 
+  config.eager_load = true
 end

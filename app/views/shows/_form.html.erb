@@ -44,4 +44,4 @@
 <% end %>
 
 <br />
-<%= link_to 'Cancel show', @show, :method => :delete, :confirm => "Are you sure you want to cancel this broadcast?" %>
+<%= link_to 'Cancel show', @show, :method => :delete, data: { confirm: 'Are you sure you want to cancel this broadcast?' } %>
