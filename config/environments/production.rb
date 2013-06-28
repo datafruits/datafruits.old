@@ -74,10 +74,12 @@ DatafruitsRails::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.middleware.use ExceptionNotifier,
-    :email_prefix => "[Exception] ",
-    :sender_address => %{"Exception Notifier" <exception@datafruits.fm>},
-    :exception_recipients => %w{info@datafruits.fm}
+  config.middleware.use ExceptionNotification::Rack,
+    email: {
+    email_prefix: "[Exception] ",
+    sender_address: %{"Exception Notifier" <exception@datafruits.fm>},
+    exception_recipients: %w{info@datafruits.fm}
+  }
 
   config.eager_load = true
 end
