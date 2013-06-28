@@ -17,8 +17,6 @@ gem 'gemoji'
 gem 'redis'
 gem 'exception_notification', '~> 4.0.0.rc1'
 
-gem 'protected_attributes'
-
 group :production do
   gem 'thin'
 end

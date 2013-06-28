@@ -93,7 +93,7 @@ When /^I sign up without a password confirmation$/ do
 end
 
 Then /^I should see a missing password confirmation message$/ do
-  page.should have_content "Password doesn't match confirmation"
+  page.should have_content "Password confirmation doesn't match"
 end
 
 When /^I sign up with a mismatched password confirmation$/ do
@@ -103,7 +103,7 @@ When /^I sign up with a mismatched password confirmation$/ do
 end
 
 Then /^I should see a mismatched password message$/ do
-  page.should have_content "Password doesn't match confirmation"
+  page.should have_content "Password confirmation doesn't match"
 end
 
 When /^I access the sign up page$/ do

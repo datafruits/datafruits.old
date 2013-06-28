@@ -81,4 +81,10 @@ class ShowsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+  def show_params
+    params.require(:show).permit(:time, :title, :user_id, :description,
+                                 :time_zone, :image)
+  end
 end

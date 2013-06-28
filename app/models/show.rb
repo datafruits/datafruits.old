@@ -1,5 +1,5 @@
 class Show < ActiveRecord::Base
-  attr_accessible :time, :title, :user_id, :description, :time_zone, :image
+  #attr_accessible :time, :title, :user_id, :description, :time_zone, :image
 
   belongs_to :user
   has_attached_file :image,

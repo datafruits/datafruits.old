@@ -3,12 +3,12 @@ class RegistrationsController < Devise::RegistrationsController
     @user = User.find(current_user.id)
 
     successfully_updated = if needs_password?(@user, params)
-      @user.update_with_password(params[:user])
+      @user.update_with_password(user_params)
     else
       # remove the virtual current_password attribute, update_without_password
       # doesn't know how to ignore it
       params[:user].delete(:current_password)
-      @user.update_without_password(params[:user])
+      @user.update_without_password(user_params)
     end
 
     if successfully_updated
@@ -22,6 +22,13 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   private
+
+  def user_params
+    params.require(:user).permit(:email, :password, :password_confirmation,
+                                 :remember_me, :password_hash, :password_salt,
+                                 :username, :role, :avatar, :login, :role_ids,
+                                 :time_zone)
+  end
 
   # check if we need password to update user data
   # ie if password or email was changed
