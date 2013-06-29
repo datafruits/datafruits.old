@@ -124,12 +124,12 @@ $blue:  #00b4ff;
 }
 
 @mixin galaxy-gradient($one, $two, $three, $four) {
-  background: url("/assets/data_galaxy.png") repeat-x, $one;
-  background: url("/assets/data_galaxy.png") repeat-x, -moz-linear-gradient(to bottom, $one, $two, $three, $four);
-  background: url("/assets/data_galaxy.png") repeat-x, -o-linear-gradient(top, $one, $two, $three, $four);
-  background: url("/assets/data_galaxy.png") repeat-x, -webkit-linear-gradient(top, $one, $two, $three, $four);
-  background: url("/assets/data_galaxy.png") repeat-x, -ms-linear-gradient(top, $one, $two, $three, $four);
-  background: url("/assets/data_galaxy.png") repeat-x, linear-gradient(top, $one, $two, $three, $four);
+  background: image-url("/assets/data_galaxy.png") repeat-x, $one;
+  background: image-url("/assets/data_galaxy.png") repeat-x, -moz-linear-gradient(to bottom, $one, $two, $three, $four);
+  background: image-url("/assets/data_galaxy.png") repeat-x, -o-linear-gradient(top, $one, $two, $three, $four);
+  background: image-url("/assets/data_galaxy.png") repeat-x, -webkit-linear-gradient(top, $one, $two, $three, $four);
+  background: image-url("/assets/data_galaxy.png") repeat-x, -ms-linear-gradient(top, $one, $two, $three, $four);
+  background: image-url("/assets/data_galaxy.png") repeat-x, linear-gradient(top, $one, $two, $three, $four);
 }
 
 @mixin stripes($color,$angle:-45deg) {
@@ -158,19 +158,19 @@ $blue:  #00b4ff;
 
 @include keyframes(fade) {
   from {
-    background: url("/assets/data_galaxy.png") , $green;
+    background: image-url("/assets/data_galaxy.png") , $green;
   }
   30% {
-    background: url("/assets/data_galaxy.png") , $yellow;
+    background: image-url("/assets/data_galaxy.png") , $yellow;
   }
   60% {
-    background: url("/assets/data_galaxy.png") , $pink;
+    background: image-url("/assets/data_galaxy.png") , $pink;
   }
   90% {
-    background: url("/assets/data_galaxy.png") , $blue;
+    background: image-url("/assets/data_galaxy.png") , $blue;
   }
   to {
-    background: url("/assets/data_galaxy.png") , $green;
+    background: image-url("/assets/data_galaxy.png") , $green;
   }
 }
 
@@ -214,13 +214,13 @@ a.small-player-pause{
   width:32px;
   height:29px;
   display:inline-block;
-  background: transparent url("/assets/small_player_sprite.png") 0 0 no-repeat;
+  background: transparent image-url("/assets/small_player_sprite.png") 0 0 no-repeat;
 }
 #logo a{
   float:left;
   width:342px;
   height:202px;
-  background: transparent url("/assets/df_new_logo.png") -342px 0 no-repeat;
+  background: transparent image-url("/assets/df_new_logo.png") -342px 0 no-repeat;
   opacity: 1;
   transition:background 200ms linear;
   -webkit-transition:background 200ms linear;
@@ -230,7 +230,7 @@ a.small-player-pause{
 }
 #logo a:hover {
   float:left;
-  background: transparent url("/assets/df_new_logo.png") 0 0 no-repeat;
+  background: transparent image-url("/assets/df_new_logo.png") 0 0 no-repeat;
   opacity: 1;
 }
 #logo a:hover:after {
@@ -347,10 +347,10 @@ a.jp-pause{
   display:inline-block;
 }
 a.jp-play {
-  background: url("/assets/new_player_sprite.png") 0 0 no-repeat;
+  background: image-url("/assets/new_player_sprite.png") 0 0 no-repeat;
 }
 a.jp-pause {
-  background: url("/assets/new_player_sprite.png") -87px 0 no-repeat;
+  background: image-url("/assets/new_player_sprite.png") -87px 0 no-repeat;
 }
 .masonry,
 .masonry .masonry-brick .post {
@@ -492,10 +492,10 @@ a.jp-pause.mini{
   display:inline-block;
 }
 a.jp-play.mini {
-  background: url("/assets/small_player_sprite.png") 0 0 no-repeat;
+  background: image-url("/assets/small_player_sprite.png") 0 0 no-repeat;
 }
 a.jp-pause.mini {
-  background: url("/assets/small_player_sprite.png") -32px 0 no-repeat;
+  background: image-url("/assets/small_player_sprite.png") -32px 0 no-repeat;
 }
 
 /* ==========================================================================
