@@ -63,6 +63,9 @@ $(document).ready(function(){
         $(".jp-title").html("playing...");
       }
     },
+    playing: function(e) {
+      $(".jp-loading").hide();
+    },
     pause: function(e){
       $(this).jPlayer("clearMedia");
     },
@@ -87,13 +90,11 @@ $(document).ready(function(){
       $("jp-loading").hide();
     },
     waiting: function(e) {
-      console.log("waiting...");
       $(".jp-loading").show();
       $(".jp-play").hide();
       $(".jp-pause").hide();
     },
     loadeddata: function(e) {
-      console.log("loaded data...");
       $(".jp-loading").hide();
     },
     solution: "html, flash",
@@ -138,11 +139,9 @@ $(document).ready(function(){
 
   // grab the initial top offset of the navigation 
   var sticky_navigation_offset_top = $('nav').offset().top;
-  console.log('sticky_navigation_offset_top: '+sticky_navigation_offset_top);
 
   var sticky_navigation = function(){
     var scroll_top = $(window).scrollTop();
-    console.log(scroll_top);
 
     if (scroll_top > sticky_navigation_offset_top) {
       small_top();
