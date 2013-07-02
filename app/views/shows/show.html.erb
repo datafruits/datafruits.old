@@ -12,8 +12,10 @@
   <%= @show.time %>
 </p>
 
-<% if @show.image %>
+<% if @show.image? %>
   <%= image_tag @show.image.url %>
+<% elsif @show.user.avatar? %>
+  <%= image_tag @show.user.avatar.url %>
 <% end %>
 
 <p>
