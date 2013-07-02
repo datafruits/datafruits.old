@@ -219,7 +219,8 @@ a:hover {
   padding-top: 50px;
 }
 a.small-player-play,
-a.small-player-pause{
+a.small-player-pause,
+a.small-player-loading{
   width:32px;
   height:29px;
   display:inline-block;
@@ -258,7 +259,7 @@ nav.sticky {
 }
 ul#main-nav {
   margin-top: 3px;
-  margin-left: -15px;
+  margin-left: 6px;
 }
 ul#user-panel {
   float:right;
@@ -494,13 +495,15 @@ li#loggedinas {
 /* mini player */
 #jp_container.mini-player {
   width:50px;
+  height:20px;
   position:fixed;
   background: $pink;
-  top:40px;
+  top:0px;
   z-index:1;
 }
 a.jp-play.mini,
-a.jp-pause.mini{
+a.jp-pause.mini,
+a.jp-loading.mini{
   width:32px;
   height:29px;
   display:inline-block;
@@ -510,6 +513,9 @@ a.jp-play.mini {
 }
 a.jp-pause.mini {
   background: image-url("small_player_sprite.png") -32px 0 no-repeat;
+}
+a.jp-loading.mini {
+  background: image-url("small_player_sprite.png") -64px 0 no-repeat;
 }
 
 /* ==========================================================================

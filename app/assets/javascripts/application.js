@@ -21,11 +21,13 @@
 //
 function small_top(){
   $("nav").addClass("sticky");
+  $(".big-player").hide();
   $("#mini-player").show();
 }
 
 function big_top(){
   $("nav").removeClass("sticky");
+  $(".big-player").show();
   $("#mini-player").hide();
 }
 
@@ -90,9 +92,6 @@ $(document).ready(function(){
       $(".jp-play").hide();
       $(".jp-pause").hide();
     },
-    seeking: function(e) {
-      console.log('seeking...');
-    },
     loadeddata: function(e) {
       console.log("loaded data...");
       $(".jp-loading").hide();
@@ -146,10 +145,8 @@ $(document).ready(function(){
     console.log(scroll_top);
 
     if (scroll_top > sticky_navigation_offset_top) {
-      console.log('small top');
       small_top();
     } else {
-      console.log('big top');
       big_top();
     }
   };
