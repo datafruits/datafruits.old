@@ -69,7 +69,7 @@ $(document).ready(function(){
         // Setup the media stream again and play it.
         $(this).jPlayer("setMedia", stream).jPlayer("play");
       }else{
-        console.log("jPlayer error!");
+        console.log("jPlayer error: "+ event.jPlayer.error.type);
         if (typeof(_gaq) === "object") {
           _gaq.push([
             "_trackEvent",
@@ -80,6 +80,22 @@ $(document).ready(function(){
             ]);
         }
       }
+
+      $("jp-pause").hide();
+      $("jp-loading").hide();
+    },
+    waiting: function(e) {
+      console.log("waiting...");
+      $(".jp-loading").show();
+      $(".jp-play").hide();
+      $(".jp-pause").hide();
+    },
+    seeking: function(e) {
+      console.log('seeking...');
+    },
+    loadeddata: function(e) {
+      console.log("loaded data...");
+      $(".jp-loading").hide();
     },
     solution: "html, flash",
     cssSelectorAncestor: "#jp_container"
