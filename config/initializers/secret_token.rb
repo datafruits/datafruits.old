@@ -6,7 +6,7 @@
 # no regular words or you'll be exposed to dictionary attacks.
 if ENV['RAILS_ENV'] == 'production'
   DatafruitsRails::Application.config.secret_token = ENV['SECRET_TOKEN']
-  DatafruitsRails::Application.config.secret_key_base = ENV['SECRET_TOKEN']
+  DatafruitsRails::Application.config.secret_key_base = ENV['SECRET_KEY_BASE']
 else
   DatafruitsRails::Application.config.secret_token = '9f642a303ffebfe934c9534af35af22e9c704484a2d33aec7b8cb07e4f88ce1f8f9c7fc46d03413f2ab002e06c85d0497f450d0587276117a1ef5555e167be45'
   DatafruitsRails::Application.config.secret_key_base = '9f642a303ffebfe934c9534af35af22e9c704484a2d33aec7b8cb07e4f88ce1f8f9c7fc46d03413f2ab002e06c85d0497f450d0587276117a1ef5555e167be45'
