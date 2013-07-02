@@ -104,7 +104,7 @@ $(document).ready(function(){
   setInterval(function(){
     $.get("/metadata",function(data){
       $(".jp-title").html(data.currentsong);
-      if(data.indexOf('LIVE') == 0) {
+      if(data.currentsong.indexOf('LIVE') == 0) {
         $(".jp-title").addClass("crazy");
       } else {
         $(".jp-title").removeClass("crazy");
