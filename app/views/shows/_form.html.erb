@@ -20,9 +20,6 @@
     <%= f.datetime_select :time %>
   </div>
   <div class="field">
-    <%= f.time_zone_select :time_zone, ActiveSupport::TimeZone.all.sort, :default=>current_user.time_zone %>
-  </div>
-  <div class="field">
     <%= f.label "Description (optional)" %>
     <br/>
     <%= f.text_area :description %>
