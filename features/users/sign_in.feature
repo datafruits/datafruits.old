@@ -9,10 +9,10 @@ Feature: Sign in
       When I sign in with valid credentials
       Then I should be signed in
 
-    Scenario: User enters wrong email
+    Scenario: User enters wrong username
       Given I exist as a user
       And I am not logged in
-      When I sign in with a wrong email
+      When I sign in with a wrong username
       Then I should not be signed in
 
     Scenario: User enters wrong password

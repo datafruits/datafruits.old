@@ -6,6 +6,18 @@ def create_dj
   User.create @visitor.merge(:role => "dj")
 end
 
+def create_dj_from_tokyo
+  create_visitor
+  delete_user
+  User.create @visitor.merge(:role => "dj", :time_zone => "Tokyo")
+end
+
+def create_user_from_la
+  create_visitor
+  User.create @visitor.merge(username: "la_dudeguy", email: "hey@mail.com", :time_zone => "America/Los_Angeles",
+                             password: "changeme", password_confirmation: "changeme")
+end
+
 Given /^the date is (\d+)\-(\d+)\-(\d+)$/ do |year, month, day|
   Timecop.travel(Date.new(year.to_i,month.to_i,day.to_i))
 end
@@ -23,7 +35,6 @@ When /^I create a new show$/ do
   select '30', from: 'show_time_3i'
   select '10', from: 'show_time_4i'
   select '00', from: 'show_time_5i'
-  select '(GMT-08:00) Pacific Time (US & Canada)', from: 'show_time_zone'
   fill_in :show_description, with: "omg wut a cool show!"
   attach_file :show_image, File.expand_path("spec/fixtures/test.png")
   click_on 'submit'
@@ -93,4 +104,36 @@ Then /^I should see that show for that user appear on the schedule$/ do
   visit "/schedule"
   page.should have_content 'Testy McUserton'
   page.should have_content 'the modern sounds'
+end
+
+Given /^a user from Tokyo is signed in$/ do
+  create_dj_from_tokyo
+  sign_in
+end
+
+And /^creates a show$/ do
+  visit '/shows/new'
+  fill_in :show_title, with: "hoge"
+  select '2013', from: 'show_time_1i'
+  select 'March', from: 'show_time_2i'
+  select '30', from: 'show_time_3i'
+  select '10', from: 'show_time_4i'
+  select '00', from: 'show_time_5i'
+  fill_in :show_description, with: "omg wut a cool show!"
+  click_on 'submit'
+end
+
+Given /^I am a user from Los Angeles$/ do
+  visit '/users/sign_out'
+  create_user_from_la
+  sign_in({username: "la_dudeguy", password: @visitor[:password]})
+end
+
+When /^I see this show on the site$/ do
+  visit "/shows/#{User.first.shows.first.id}"
+end
+
+Then /^it should appear in my time zone$/  do
+  time = User.first.shows.first.time.in_time_zone("America/Los_Angeles").strftime("%A %H:%M %Z")
+  page.should have_content "#{time}"
 end

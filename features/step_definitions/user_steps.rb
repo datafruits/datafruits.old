@@ -18,8 +18,8 @@ When /^I return to the site$/ do
   visit '/'
 end
 
-When /^I sign in with a wrong email$/ do
-  @visitor = @visitor.merge(:email => "wrong@example.com")
+When /^I sign in with a wrong username/ do
+  @visitor = @visitor.merge(:username=> "wronguser")
   sign_in
 end
 

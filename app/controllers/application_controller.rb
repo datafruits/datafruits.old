@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  around_filter :user_time_zone, :if => :current_user
+
   before_filter do
     resource = controller_name.singularize.to_sym
     method = "#{resource}_params"
@@ -36,5 +38,9 @@ class ApplicationController < ActionController::Base
       format.html { render template: "errors/error_#{status}", layout: 'layouts/application', status: status }
       format.all { render nothing: true, status: status }
     end
+  end
+
+  def user_time_zone(&block)
+      Time.use_zone(current_user.time_zone, &block)
   end
 end

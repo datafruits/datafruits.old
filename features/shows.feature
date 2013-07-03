@@ -32,3 +32,11 @@ Feature: Scheduling shows
     Given the date is 2013-03-28
     When I visit '/schedule'
     Then I should see the list of upcoming broadcasts
+
+  Scenario: Shows appear in different user's respective timezones
+    Given a user from Tokyo is signed in
+    And creates a show
+    Given I am a user from Los Angeles
+    And the date is 2013-03-28
+    When I see this show on the site
+    Then it should appear in my time zone
