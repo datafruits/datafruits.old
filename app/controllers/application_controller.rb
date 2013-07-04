@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  around_filter :user_time_zone, :if => :current_user
+  around_filter :set_time_zone
 
   before_filter do
     resource = controller_name.singularize.to_sym
@@ -40,7 +40,17 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def user_time_zone(&block)
+  def set_time_zone(&block)
+    if current_user
       Time.use_zone(current_user.time_zone, &block)
+    elsif browser_timezone.present?
+      Time.use_zone(browser_timezone, &block)
+    else
+      yield
+    end
+  end
+
+  def browser_timezone
+    cookies["browser.timezone"]
   end
 end

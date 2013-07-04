@@ -17,6 +17,7 @@
 //= require jquery.masonry.min
 //= require detect_timezone
 //= require jquery.detect_timezone
+//= require jquery.cookie
 //= require_tree .
 //
 function small_top(){
@@ -137,7 +138,7 @@ $(document).ready(function(){
    return true;
   };
 
-  // grab the initial top offset of the navigation 
+  // grab the initial top offset of the navigation
   var sticky_navigation_offset_top = $('nav').offset().top;
 
   var sticky_navigation = function(){
@@ -158,5 +159,10 @@ $(document).ready(function(){
     sticky_navigation();
   });
 
+  window.BrowserTZone = {};
+  BrowserTZone.setCookie = function(){
+    $.cookie("browser.timezone", $().get_timezone(), { expires: 365, path: '/' });
+  }
+  BrowserTZone.setCookie()
 });
 
