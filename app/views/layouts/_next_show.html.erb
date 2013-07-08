@@ -7,4 +7,6 @@
   <% elsif !show.user.avatar.blank? %>
     <%= image_tag show.user.avatar(:thumb) %>
   <% end %>
+  <br />
+  <%= link_to_show_with_time(show) %>
 <% end %>
