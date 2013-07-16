@@ -102,6 +102,11 @@ GEM
       activesupport (>= 3.0.4)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (4.2.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.2.1)
+      factory_girl (~> 4.2.0)
+      railties (>= 3.0.0)
     gemoji (1.4.0)
     gherkin (2.12.0)
       multi_json (~> 1.3)
@@ -234,6 +239,7 @@ DEPENDENCIES
   detect_timezone_rails!
   devise!
   exception_notification (~> 4.0.0.rc1)
+  factory_girl_rails
   gemoji
   high_voltage
   html-pipeline

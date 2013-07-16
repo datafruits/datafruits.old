@@ -28,8 +28,10 @@ class User < ActiveRecord::Base
   validates_presence_of     :password, :if => :password_required?
   validates_confirmation_of :password, :if => :password_required?
   validates_length_of :password, :within => Devise.password_length, :allow_blank => true
+  validates_presence_of :time_zone
 
   validate :valid_role
+  validate :valid_timezone
 
   def valid_role
     if !role.to_s.blank?
@@ -38,6 +40,12 @@ class User < ActiveRecord::Base
           errors.add :role, "is not a valid role."
         end
       end
+    end
+  end
+
+  def valid_timezone
+    unless TZInfo::Timezone.all_identifiers.include? self.time_zone
+      errors.add :time_zone, "is not a valid time_zone."
     end
   end
 

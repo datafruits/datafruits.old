@@ -50,6 +50,7 @@ group :test do
   gem 'timecop'
   gem 'webmock'
   gem 'vcr'
+  gem 'factory_girl_rails'
 end
 
 gem 'rails_12factor'
