@@ -6,7 +6,7 @@
     <description>datafruits.fm podcast j-pop chip garage skweee</description>
     <language>en-us</language>
     <copyright/>
-    <lastBuildDate>Tue, 02 Jul 2013 15:24:37 PDT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jul 2013 11:54:39 PDT</lastBuildDate>
     <ttl>1</ttl>
     <atom:link href="http://www.datafruits.fm/podcast.xml" rel="self" type="application/rss+xml"/>
     <itunes:image href="http://www.datafruits.fm/assets/podcast.jpg"/>
@@ -333,6 +333,13 @@
       <enclosure url="https://s3.amazonaws.com/datafruits.fm/Velatix06272013.mp3" length="110580964" type="audio/mpeg"/>
       <guid>https://s3.amazonaws.com/datafruits.fm/Velatix06272013.mp3</guid>
       <pubDate>Tue, 02 Jul 2013 00:00:00 +00:00 PDT</pubDate>
+    </item>
+    <item>
+      <title>Velatix - Nemupoyo July 7 2013</title>
+      <description>Velatix - Nemupoyo July 7 2013</description>
+      <enclosure url="https://s3.amazonaws.com/datafruits.fm/Velatix07162013.mp3" length="82041524" type="audio/mpeg"/>
+      <guid>https://s3.amazonaws.com/datafruits.fm/Velatix07162013.mp3</guid>
+      <pubDate>Tue, 16 Jul 2013 00:00:00 +00:00 PDT</pubDate>
     </item>
   </channel>
 </rss>
