@@ -18,6 +18,10 @@
   <div><%= f.label :time_zone %></br />
   <%= f.time_zone_select :time_zone, ActiveSupport::TimeZone.all.sort %></div>
 
+  <div class="field">
+    <%= f.file_field :avatar %>
+  </div>
+
   <div><%= f.submit "Sign up" %></div>
 <% end %>
 
