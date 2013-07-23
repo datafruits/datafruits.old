@@ -9,7 +9,7 @@ ruby "2.0.0"
 
 gem 'pg'
 gem 'high_voltage'
-gem 'devise', :git => 'git://github.com/plataformatec/devise'
+gem 'devise', '~> 3.0.0'
 gem 'nokogiri'
 gem 'aws-sdk'
 gem 'paperclip'
