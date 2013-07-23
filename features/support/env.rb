@@ -86,3 +86,5 @@ After('@redis') do
     rm -f #{REDIS_CACHE_PATH}dump.rdb
   }
 end
+
+include FactoryGirl::Syntax::Methods

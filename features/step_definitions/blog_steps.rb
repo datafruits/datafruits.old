@@ -27,8 +27,8 @@ end
 Given /^I am signed in as a user with the 'blogger' role$/ do
   create_visitor
   delete_user
-  User.create @visitor.merge(:role => "blogger")
-  sign_in
+  user = User.create @visitor.merge(:role => "blogger")
+  sign_in @visitor
 end
 
 When /^I edit the post$/ do

@@ -2,7 +2,7 @@
 
 def create_visitor
   @visitor ||= { :username => "Testy McUserton", :email => "example@example.com",
-    :password => "changeme", :password_confirmation => "changeme", :role => "dj" }
+    :password => "changeme", :password_confirmation => "changeme", :role => "dj", :time_zone => "Tokyo" }
 end
 
 def create_admin
@@ -41,9 +41,10 @@ end
 
 def sign_in(user=@visitor)
   visit '/users/sign_in'
-  fill_in "user_login", :with => user[:username]
-  fill_in "user_password", :with => user[:password]
+  fill_in "user_login", :with => user[:username] || user.username
+  fill_in "user_password", :with => user[:password] || user.password
   click_button "Sign in"
+  page.should have_content "Signed in successfully."
 end
 
 def fill_in_user_fields user=@visitor

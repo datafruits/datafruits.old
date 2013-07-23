@@ -12,12 +12,6 @@ def create_dj_from_tokyo
   User.create @visitor.merge(:role => "dj", :time_zone => "Tokyo")
 end
 
-def create_user_from_la
-  create_visitor
-  User.create @visitor.merge(username: "la_dudeguy", email: "hey@mail.com", :time_zone => "America/Los_Angeles",
-                             password: "changeme", password_confirmation: "changeme")
-end
-
 Given /^the date is (\d+)\-(\d+)\-(\d+)$/ do |year, month, day|
   Timecop.travel(Date.new(year.to_i,month.to_i,day.to_i))
 end
@@ -125,8 +119,8 @@ end
 
 Given /^I am a user from Los Angeles$/ do
   visit '/users/sign_out'
-  create_user_from_la
-  sign_in({username: "la_dudeguy", password: @visitor[:password]})
+  user = create :user, username: 'ladudeguy', email: 'dudeguy@la.com'
+  sign_in user
 end
 
 When /^I see this show on the site$/ do
@@ -134,6 +128,6 @@ When /^I see this show on the site$/ do
 end
 
 Then /^it should appear in my time zone$/  do
-  time = User.first.shows.first.time.in_time_zone("America/Los_Angeles").strftime("%A %H:%M %Z")
+  time = User.first.shows.first.time.in_time_zone("America/Los_Angeles").strftime("%A %m/%d %H:%M %Z")
   page.should have_content "#{time}"
 end
