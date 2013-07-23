@@ -52,3 +52,5 @@ group :test do
   gem 'vcr'
   gem 'factory_girl_rails'
 end
+
+gem 'rails_12factor'
