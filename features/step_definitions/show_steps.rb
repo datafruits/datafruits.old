@@ -119,7 +119,7 @@ end
 
 Given /^I am a user from Los Angeles$/ do
   visit '/users/sign_out'
-  user = create :user, username: 'ladudeguy', email: 'dudeguy@la.com'
+  user = FactoryGirl.create :user, username: 'ladudeguy', email: 'dudeguy@la.com'
   sign_in user
 end
 

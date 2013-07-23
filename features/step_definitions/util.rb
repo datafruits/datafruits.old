@@ -44,7 +44,6 @@ def sign_in(user=@visitor)
   fill_in "user_login", :with => user[:username] || user.username
   fill_in "user_password", :with => user[:password] || user.password
   click_button "Sign in"
-  page.should have_content "Signed in successfully."
 end
 
 def fill_in_user_fields user=@visitor
