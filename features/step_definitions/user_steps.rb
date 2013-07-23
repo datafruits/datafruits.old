@@ -55,21 +55,15 @@ Given /^I am logged in as an admin$/ do
   create_admin
   User.create @admin
   sign_in(@admin)
+  page.should have_content "Signed in successfully."
 end
 
-When /^I sign up with valid user data$/ do
-  create_visitor
-  sign_up
-end
+When /^I access the create user page$/ do
+  visit "/users/new"
+end 
 
 Then /^I should see a successful sign up message$/ do
-  page.should have_content "User was successfully created."
-end
-
-When /^I sign up with an invalid email$/ do
-  create_visitor
-  @visitor = @visitor.merge(:email => "notanemail")
-  sign_up
+  page.should have_content "You have signed up successfully."
 end
 
 Then /^I should see an invalid email message$/ do
@@ -107,7 +101,7 @@ Then /^I should see a mismatched password message$/ do
 end
 
 When /^I access the sign up page$/ do
-    visit "/admin/users/new"
+    visit "/users/sign_up"
 end
 
 Then /^I should see be denied access$/ do
@@ -162,7 +156,7 @@ end
 When /^I create a user with multiple roles$/ do
   create_visitor
   delete_user
-  visit '/admin/users/new'
+  visit '/users/new'
   fill_in "user_email", :with => @visitor[:email]
   fill_in "user_username", :with => @visitor[:username]
   fill_in "user_password", :with => @visitor[:password]
@@ -186,4 +180,50 @@ Then /^I should see the account was edited$/ do
   page.should have_content "User was successfully updated."
   page.should have_content "newname"
   page.find('img#avatar')['src'].include?('test.png').should be_true
+end
+ 
+When /^submit with valid user data$/ do
+  create_visitor
+  fill_in_user_fields
+  click_button "submit"
+end
+
+Then /^I should see a successful user created message$/ do
+  page.should have_content "User was successfully created."
+end
+
+When /^submit with an invalid email$/ do
+  create_visitor
+  @visitor = @visitor.merge(:email => "notanemail")
+  fill_in_user_fields
+  click_button "submit"
+end
+
+When /^submit without a password$/ do
+  create_visitor
+  @visitor = @visitor.merge(:password => "")
+  fill_in_user_fields
+  click_button "submit"
+end
+
+When /^submit without a password confirmation$/ do
+  create_visitor
+  @visitor = @visitor.merge(:password_confirmation => "")
+  fill_in_user_fields
+  click_button "submit"
+end
+
+When /^submit with a mismatched password confirmation$/ do
+  create_visitor
+  @visitor = @visitor.merge(:password_confirmation => "changeme123")
+  fill_in_user_fields
+  click_button "submit"
+end
+
+When /^submit with multiple roles$/ do
+  create_visitor
+  fill_in_user_fields
+  check 'user_role_ids_blogger'
+  check 'user_role_ids_dj'
+  click_button "submit"
 end
