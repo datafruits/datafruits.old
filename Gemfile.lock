@@ -245,6 +245,7 @@ DEPENDENCIES
   pg
   rails (= 4.0.0)
   rails_12factor
+  rake
   redis
   rspec-rails
   sass-rails (~> 4.0.0)

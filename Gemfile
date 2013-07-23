@@ -51,6 +51,7 @@ group :test do
   gem 'webmock'
   gem 'vcr'
   gem 'factory_girl_rails'
+  gem 'rake'
 end
 
 gem 'rails_12factor'
