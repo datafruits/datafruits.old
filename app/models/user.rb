@@ -31,7 +31,7 @@ class User < ActiveRecord::Base
   validates_presence_of :time_zone
 
   validate :valid_role
-  validate :valid_timezone
+  validates_inclusion_of :time_zone, :in => ActiveSupport::TimeZone.zones_map { |m| m.name }, :message => "is not a valid Time Zone"
 
   def valid_role
     if !role.to_s.blank?
@@ -40,12 +40,6 @@ class User < ActiveRecord::Base
           errors.add :role, "is not a valid role."
         end
       end
-    end
-  end
-
-  def valid_timezone
-    unless TZInfo::Timezone.all_identifiers.include? self.time_zone
-      errors.add :time_zone, "is not a valid time_zone."
     end
   end
 
