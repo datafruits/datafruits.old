@@ -1,1 +1,1 @@
-[![Build Status](https://secure.travis-ci.org/datafruits/podcast_updater.png?branch=master)](http://travis-ci.org/datafruits/podcast_updater)
+[![Build Status](https://travis-ci.org/datafruits/datafruits.png)](https://travis-ci.org/datafruits/datafruits)
