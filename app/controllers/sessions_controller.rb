@@ -12,6 +12,7 @@ class SessionsController < Devise::SessionsController
   end
   
   def sign_in_and_redirect(resource_or_scope, resource=nil)
+    ActiveSupport::Notifications.instrument("users.login", user: resource.login)
     scope = Devise::Mapping.find_scope!(resource_or_scope)
     resource ||= resource_or_scope
     sign_in(scope, resource) unless warden.user(scope) == resource
@@ -24,6 +25,10 @@ class SessionsController < Devise::SessionsController
         render :json => {:success => true, :redirect => stored_location_for(scope) || after_sign_in_path_for(resource)}
       }
     end
+  end
+
+  def destroy
+    super
   end
  
   def failure
