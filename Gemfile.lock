@@ -1,12 +1,4 @@
 GIT
-  remote: git://github.com/GermanDZ/detect_timezone_rails
-  revision: 0a1e2bb53dd961cbc4130c8c51012fcf6678408b
-  branch: rails4
-  specs:
-    detect_timezone_rails (0.0.5)
-      railties (>= 3.1)
-
-GIT
   remote: git://github.com/RyanScottLewis/jquery-cookie-rails
   revision: dd66bfd0a749ac0b448720441cc9ac8cdd9bb240
   specs:
@@ -83,6 +75,8 @@ GEM
       nokogiri (>= 1.5.0)
     daemons (1.1.9)
     database_cleaner (1.0.1)
+    detect_timezone_rails (0.0.5)
+      railties (>= 3.1)
     devise (3.0.0)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -231,7 +225,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   cucumber-rails
   database_cleaner
-  detect_timezone_rails!
+  detect_timezone_rails (~> 0.0.5)
   devise (~> 3.0.0)
   exception_notification (~> 4.0.0.rc1)
   factory_girl_rails

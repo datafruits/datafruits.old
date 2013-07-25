@@ -37,7 +37,7 @@ gem 'bourbon'
 # gem 'therubyracer', :platforms => :ruby
 
 gem 'uglifier', '>= 1.0.3'
-gem 'detect_timezone_rails', git: 'git://github.com/GermanDZ/detect_timezone_rails', branch: 'rails4'
+gem 'detect_timezone_rails', '~> 0.0.5'
 gem 'rspec-rails', :group => [:development, :test]
 gem 'jquery-rails'
 gem 'jquery-cookie-rails', git: 'git://github.com/RyanScottLewis/jquery-cookie-rails'
