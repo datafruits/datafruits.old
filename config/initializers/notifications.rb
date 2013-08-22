@@ -3,5 +3,6 @@
 #end
 
 ActiveSupport::Notifications.subscribe "users.login" do |name, start, finish, id, payload|  
+  Rails.logger.info name
   METRICS.increment('users.login')
 end
