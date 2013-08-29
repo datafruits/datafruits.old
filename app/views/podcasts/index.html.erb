@@ -1,0 +1,30 @@
+<script>
+  $(document).ready(function(){
+    var podcasts = <%= @podcasts.to_json.html_safe %>
+    $('.small-player-play').click( function(){
+      var podcast = podcasts[$(this).data('index')];
+      var url = podcast.url;
+      var title = podcast.title;
+      console.log(url);
+      console.log(title);
+      $('#radio-player').jPlayer("setMedia", {mp3: url});
+      $('#radio-player').jPlayer("play");
+      $('.jp-title').html(podcast.title);
+    });
+  });
+</script>
+<div class="one">
+  <p>
+  Download <a href="/podcast.xml">podcast feed</a>, or grab individual mp3s below.
+  </p>
+  <table id="podcasts-table" border="1">
+  <tbody>
+  <% @podcasts.each_with_index do |podcast,index| %>
+      <tr>
+        <td><a href="javascript:;" class="small-player-play" data-index="<%=index%>"></a></td>
+        <td><a href="<%= podcast.mp3.url %>"><%=podcast.title%></a></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
+</div>

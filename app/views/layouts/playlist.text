@@ -1,0 +1,3 @@
+<% Podcast.last(10).each do |podcast| %>
+  <%= podcast.url %>
+<% end %>

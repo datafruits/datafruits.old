@@ -6,6 +6,7 @@ DatafruitsRails::Application.routes.draw do
   end
   resources :users
   resources :posts
+  resources :podcasts
 
   get '/podcasts', to: 'application#podcast'
   get '/podcast', to: 'application#podcast'

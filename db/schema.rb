@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130703005613) do
+ActiveRecord::Schema.define(version: 20130828034545) do
+
+  create_table "podcasts", force: true do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.string   "mp3_file_name"
+    t.string   "mp3_content_type"
+    t.integer  "mp3_file_size"
+    t.datetime "mp3_updated_at"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "posts", force: true do |t|
     t.string   "title"
