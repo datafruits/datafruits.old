@@ -17,3 +17,4 @@
 *.rdb
 tags
 bin/
+public/assets/*
