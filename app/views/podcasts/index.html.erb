@@ -19,7 +19,7 @@
   </p>
   <table id="podcasts-table" border="1">
   <tbody>
-  <% @podcasts.each_with_index do |podcast,index| %>
+  <% @podcasts.order("pub_date DESC").each_with_index do |podcast,index| %>
       <tr>
         <td><a href="javascript:;" class="small-player-play" data-index="<%=index%>"></a></td>
         <td><a href="<%= podcast.mp3.url %>"><%=podcast.title%></a></td>
