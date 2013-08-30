@@ -30,6 +30,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def chatroom
+    respond_to do |format|
+      format.html { render "layouts/chatroom" }
+    end
+  end
+
   rescue_from CanCan::AccessDenied do |exception|
     render_error 404, exception
   end

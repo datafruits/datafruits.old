@@ -10,6 +10,8 @@ DatafruitsRails::Application.routes.draw do
   get '/podcasts', to: 'application#podcast'
   get '/podcast', to: 'application#podcast'
   get '/metadata', to: 'application#metadata'
+  get '/playlist', to: 'application#playlist'
+  get '/chatroom', to: 'application#chatroom'
   get '/schedule', to: 'shows#index'
   get '/timetable', to: 'shows#index'
   get '/listen' => 'high_voltage/pages#show', :id => 'listen'
