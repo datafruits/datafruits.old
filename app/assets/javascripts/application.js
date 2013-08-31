@@ -18,18 +18,19 @@
 //= require detect_timezone
 //= require jquery.detect_timezone
 //= require jquery.cookie
+//= require rainbow
 //= require_tree .
 //
 function small_top(){
   $("nav").addClass("sticky");
   $(".big-player").hide();
-  $("#mini-player").show();
+  $("#jp_container.mini-player").show();
 }
 
 function big_top(){
   $("nav").removeClass("sticky");
   $(".big-player").show();
-  $("#mini-player").hide();
+  $("#jp_container.mini-player").hide();
 }
 
 $(document).ready(function(){
@@ -164,5 +165,7 @@ $(document).ready(function(){
     $.cookie("browser.timezone", $().get_timezone(), { expires: 365, path: '/' });
   }
   BrowserTZone.setCookie()
+
+  $('.rainbow').rainbow({animate:true,animateInterval:50,pauseLength:500,pad:true,colors:['rgb(153, 204, 255);','rgb(173, 224, 255);','rgb(193, 244, 255);','rgb(213, 264, 255);','rgb(193, 244, 255);','rgb(173, 224, 255);','rgb(153, 204, 255);']});
 });
 

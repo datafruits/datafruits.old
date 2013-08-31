@@ -521,6 +521,12 @@ a.jp-loading.mini {
   font-size:40px;
 }
 
+#mc_embed_signup {
+  background:$pink;
+  height:30px;
+  padding:3px;
+}
+
 /* ligature symbols */
 @font-face {
   font-family: 'LigatureSymbols';
@@ -553,6 +559,7 @@ a.jp-loading.mini {
   margin-right:0.3em;
   font-size:130%;
 }
+
 
 /* ==========================================================================
    Helper classes
