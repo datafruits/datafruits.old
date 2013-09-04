@@ -8,8 +8,6 @@ DatafruitsRails::Application.routes.draw do
   resources :posts
   resources :podcasts
 
-  get '/podcasts', to: 'application#podcast'
-  get '/podcast', to: 'application#podcast'
   get '/metadata', to: 'application#metadata'
   get '/playlist', to: 'application#playlist'
   get '/chatroom', to: 'application#chatroom'

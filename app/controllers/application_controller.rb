@@ -11,16 +11,6 @@ class ApplicationController < ActionController::Base
   end
   before_filter :configure_devise_parameters, if: :devise_controller?
 
-  def podcast
-    @podcast = Nokogiri::XML(File.read("./public/podcast.xml"))
-    @items = @podcast.xpath("//item").map do |m|
-      { url: m.xpath("enclosure").first.get_attribute("url"), title: m.xpath("title").text }
-    end.reverse
-    respond_to do |format|
-      format.html { render "layouts/podcast" }
-    end
-  end
-
   def metadata
     song = $redis.get "currentsong"
     respond_to do |format|
