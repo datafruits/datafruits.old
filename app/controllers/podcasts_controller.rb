@@ -28,6 +28,15 @@ class PodcastsController < ApplicationController
 
   end
   def update
+    respond_to do |format|
+      if @podcast.update_attributes(podcast_params)
+        format.html { redirect_to @podcast, notice: 'Podcast was successfully created.' }
+        format.json { render json: @podcast, status: :created, location: @podcast }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @podcast.errors, status: :unprocessable_entity }
+      end
+    end
   end
   def destroy
 

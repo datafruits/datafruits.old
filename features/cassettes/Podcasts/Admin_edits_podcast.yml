@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: put
-    uri: https://s3.amazonaws.com/datafruits.fm/podcasts/mp3s/000/000/001/original/test.mp3
+    uri: https://s3.amazonaws.com/datafruits.fm/test.mp3
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -1320,9 +1320,9 @@ http_interactions:
       User-Agent:
       - aws-sdk-ruby/1.11.1 ruby/2.0.0 x86_64-linux
       Date:
-      - Thu, 29 Aug 2013 04:32:03 GMT
+      - Wed, 04 Sep 2013 01:36:51 GMT
       Authorization:
-      - AWS AKIAJY4U2BCOB43YGOQA:ZGGntLskdxYMWYnRvNUnxK7UJmA=
+      - AWS AKIAJY4U2BCOB43YGOQA:uEDURjN3R5IkbTKbGc9oHIOGico=
       Accept:
       - '*/*'
   response:
@@ -1331,11 +1331,11 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - KWzUiEtxPxuE8jqDrK3pv2J3JlpDlBr/piTBiZ3IUlkMMg58VWOnqZyljlr8/YlV
+      - nV9ef/+HmrtxUX82J5pPyX0Qv+qW3QN5OYMCfC1EqUe8EYDKMPTX7Iok3VMYpGQb
       X-Amz-Request-Id:
-      - 204A7625B1F16745
+      - C3572DAAAC9E4E98
       Date:
-      - Thu, 29 Aug 2013 04:32:04 GMT
+      - Wed, 04 Sep 2013 01:36:52 GMT
       Etag:
       - '"16e1a34eb99d64b46ad97259f96ac87b"'
       Content-Length:
@@ -1346,7 +1346,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Thu, 29 Aug 2013 04:32:03 GMT
+  recorded_at: Wed, 04 Sep 2013 01:36:52 GMT
 - request:
     method: put
     uri: https://s3.amazonaws.com/datafruits.fm/test.mp3
@@ -2667,9 +2667,9 @@ http_interactions:
       User-Agent:
       - aws-sdk-ruby/1.11.1 ruby/2.0.0 x86_64-linux
       Date:
-      - Wed, 04 Sep 2013 01:36:52 GMT
+      - Wed, 04 Sep 2013 01:40:21 GMT
       Authorization:
-      - AWS AKIAJY4U2BCOB43YGOQA:xibk4Fcp003iJEjIjSBJN4gV2Pw=
+      - AWS AKIAJY4U2BCOB43YGOQA:KRUjkPXPNNUMtCFcUskuohZ+n+M=
       Accept:
       - '*/*'
   response:
@@ -2678,11 +2678,11 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - p02s78VKyYaerojptL9zzlC2ejQtw4Fi1qHFXpADTw0pZNhhlfRdYaRxYoAcihMK
+      - ylrghzBuG6zlTt1KLTyVsC4vgqLf5WIVljwI/rLeUf9cDx9pTEW4Jb5CB6xs6iE4
       X-Amz-Request-Id:
-      - 165602E042A81B8F
+      - E52C41102B84FAEE
       Date:
-      - Wed, 04 Sep 2013 01:36:53 GMT
+      - Wed, 04 Sep 2013 01:40:22 GMT
       Etag:
       - '"16e1a34eb99d64b46ad97259f96ac87b"'
       Content-Length:
@@ -2693,5 +2693,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 04 Sep 2013 01:36:52 GMT
+  recorded_at: Wed, 04 Sep 2013 01:40:21 GMT
 recorded_with: VCR 2.5.0

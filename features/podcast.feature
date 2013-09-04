@@ -8,6 +8,13 @@ Feature: Podcasts
     Then I should see that show in the podcasts
 
   @vcr
+  Scenario: Admin edits podcast
+    Given I am logged in as an admin
+    And some podcasts exist
+    When I visit the podcast edit page and edit some details
+    Then I should see that updated show in the podcasts
+
+  @vcr
   Scenario: Download podcast xml
     Given I am a visitor to the site
     And some podcasts exist
