@@ -19,6 +19,7 @@ gem 'gemoji'
 gem 'redis'
 gem 'exception_notification', '~> 4.0.0.rc1'
 gem 'statsd-ruby'
+gem 'httparty'
 
 group :production do
   gem 'thin'

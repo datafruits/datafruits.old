@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   before_filter :configure_devise_parameters, if: :devise_controller?
 
   def metadata
-    song = $redis.get "currentsong"
+    song = HTTParty.get "http://radio.datafruits.fm/currentsong"
     respond_to do |format|
       format.json {
         render :json => {:currentsong => song}

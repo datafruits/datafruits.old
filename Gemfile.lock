@@ -110,6 +110,9 @@ GEM
       nokogiri (~> 1.4)
       rinku (~> 1.7)
       sanitize (~> 2.0)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.6.4)
     jquery-rails (3.0.1)
       railties (>= 3.0, < 5.0)
@@ -122,6 +125,7 @@ GEM
     mini_portile (0.5.0)
     minitest (4.7.5)
     multi_json (1.7.7)
+    multi_xml (0.5.5)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     orm_adapter (0.4.0)
@@ -233,6 +237,7 @@ DEPENDENCIES
   gemoji
   high_voltage
   html-pipeline
+  httparty
   jquery-cookie-rails!
   jquery-rails
   nokogiri
