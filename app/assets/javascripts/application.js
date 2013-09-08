@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require modernizr-2.0.6
-//= require jquery.jplayer.min
+//= require jquery.jplayer
 //= require jquery.masonry.min
 //= require detect_timezone
 //= require jquery.detect_timezone

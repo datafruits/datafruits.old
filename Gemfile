@@ -44,6 +44,8 @@ gem 'rspec-rails', :group => [:development, :test]
 gem 'jquery-rails'
 gem 'jquery-cookie-rails', git: 'git://github.com/RyanScottLewis/jquery-cookie-rails'
 
+gem 'jplayer-rails', git: 'git://github.com/mcfiredrill/jplayer-rails.git'
+
 group :test do
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
