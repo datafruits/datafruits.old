@@ -21,11 +21,14 @@ DatafruitsRails::Application.configure do
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
 
+  # wat
+  config.serve_static_assets = false
+
   # Do not compress assets
   config.assets.compress = false
 
   # Expands the lines which load the assets
-  config.assets.debug = true
+  config.assets.debug = false
 
   config.eager_load = false
 end
