@@ -9,6 +9,7 @@ class Podcast < ActiveRecord::Base
     bucket: 'datafruits.fm',
     path: '/:filename',
     preserve_files: true
+  validates_attachment_presence :mp3
 
   def set_file_as_attachment file
     s3 = AWS::S3.new
