@@ -1,3 +1,18 @@
+<script>
+  $(document).ready(function(){
+    var podcasts = <%= @podcasts.to_json.html_safe %>
+    $('.small-player-play').click( function(){
+      var podcast = podcasts[$(this).data('index')];
+      var url = podcast.url;
+      var title = podcast.title;
+      console.log(url);
+      console.log(title);
+      $('#radio-player').jPlayer("setMedia", {mp3: url});
+      $('#radio-player').jPlayer("play");
+      $('.jp-title').html(podcast.title);
+    });
+  });
+</script>
 <p>
   <b>Username:</b>
   <%= @user.username %>
@@ -7,5 +22,19 @@
   <%= image_tag @user.avatar.url(:thumb), id: 'avatar' %>
 </p>
 
+<h3>recent podcasts</h3>
+  <table id="podcasts-table" border="1">
+  <tbody>
+  <% @user.podcasts.order("pub_date DESC").each_with_index do |podcast,index| %>
+  <tr>
+    <td><a href="javascript:;" class="small-player-play" data-index="<%=index%>"></a></td>
+    <td><a href="<%= podcast.mp3.url %>"><%=podcast.title%></a></td>
+    <% if can? :edit, Podcast %>
+      <td><%= link_to "edit", edit_podcast_path(podcast) %></td>
+    <% end %>
+  </tr>
+  <% end %>
+  </tbody>
+  </table>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

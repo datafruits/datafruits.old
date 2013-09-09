@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
   attr_accessor :login
 
   has_many :shows
+  has_many :podcasts
   has_attached_file :avatar,
     styles: { :thumb => "x120" },
     storage: :s3,
