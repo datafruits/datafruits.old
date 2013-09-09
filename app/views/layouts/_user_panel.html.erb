@@ -11,6 +11,9 @@
       <% if can? :create, User %>
         <li><%= link_to "New user", "/admin/users/new" %></li>
       <% end %>
+      <% if can? :create, Podcast %>
+        <li><%= link_to "New podcast", "/podcasts/new" %></li>
+      <% end %>
       <li><%= link_to "Broadcasting Help", "/help" %></li>
       <li><%= link_to "Edit profile", "/users/edit" %></li>
     </ul>
