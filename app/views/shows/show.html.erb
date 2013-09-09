@@ -1,7 +1,7 @@
 <h2>
   <%= @show.title %>
 </h2>
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="datafruits" data-hashtags="datafruits" data-text="<%=@show.user.username%> is playing a show on @datafruits on  <%=@show.time.strftime("%m/%d %H:%M %Z")%>">Tweet</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="<%=tweet_text(@show)%>">Tweet</a>
 <div class="fb-like" data-href="http://www.datafruits.fm/<%= show_path @show  %>" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false"></div>
 <p>
   Hosted by: <%= link_to @show.user.username, @show.user %>
