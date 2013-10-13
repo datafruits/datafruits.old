@@ -1,3 +1,3 @@
-<% Podcast.last(10).each do |podcast| %>
-<%= podcast.mp3.url %>
+<% @tracks.each do |track| %>
+<%= track.mp3.url %>
 <% end %>

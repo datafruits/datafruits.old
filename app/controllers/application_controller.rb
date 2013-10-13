@@ -27,6 +27,10 @@ class ApplicationController < ActionController::Base
   end
 
   def playlist
+    podcasts = Podcast.last(10)
+    adverts = Advert.last(2).cycle.take(podcasts.length)
+    @tracks = podcasts.zip(adverts).flatten
+    logger.info @tracks.length
     respond_to do |format|
       format.text { render "layouts/playlist" }
     end
