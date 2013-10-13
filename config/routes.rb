@@ -1,4 +1,6 @@
 DatafruitsRails::Application.routes.draw do
+  resources :adverts
+
   resources :shows
   devise_for :users, :controllers => { :registrations => "registrations", :sessions => "sessions" }
   scope "/admin" do

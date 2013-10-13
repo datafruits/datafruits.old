@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130829234727) do
+ActiveRecord::Schema.define(version: 20130919191103) do
+
+  create_table "adverts", force: true do |t|
+    t.string   "title"
+    t.string   "mp3_file_name"
+    t.string   "mp3_content_type"
+    t.integer  "mp3_file_size"
+    t.datetime "mp3_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "podcasts", force: true do |t|
     t.string   "title"
