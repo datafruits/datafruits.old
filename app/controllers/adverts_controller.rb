@@ -53,6 +53,6 @@ class AdvertsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def advert_params
-      params[:advert]
+      params.require(:advert).permit(:title, :mp3)
     end
 end
