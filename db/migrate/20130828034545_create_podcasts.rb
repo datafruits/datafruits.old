@@ -7,6 +7,6 @@ class CreatePodcasts < ActiveRecord::Migration
       t.string :description
 
       t.timestamps
-    end
+    end unless ActiveRecord::Base.connection.table_exists? "podcasts"
   end
 end
