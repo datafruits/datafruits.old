@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<%= @advert.title %>
+<br />
+<%= link_to @advert.mp3.url, @advert.mp3.url %>
+<br />
+<br />
+
+<%= link_to 'Edit', edit_advert_path(@advert) %> |
+<%= link_to 'Back', adverts_path %>
