@@ -31,4 +31,6 @@ DatafruitsRails::Application.configure do
   config.assets.debug = false
 
   config.eager_load = false
+
+  config.log_level = :debug
 end
