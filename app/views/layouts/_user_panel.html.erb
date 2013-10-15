@@ -4,6 +4,7 @@
     <ul class="dropdown-menu nav-pills pull-right" role="menu" aria-labelledby="dropdownMenu">  
       <% if can? :create, Show %>
         <li><%= link_to "New show", new_show_path %></li>
+        <li><a href="/data_dayz_sign_up">DATA DAYZ SIGN UP</a></li>
       <% end %>
       <% if can? :create, Post %>
         <li><%= link_to "New post", new_post_path %></li>
