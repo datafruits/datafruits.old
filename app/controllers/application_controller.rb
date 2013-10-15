@@ -37,7 +37,6 @@ class ApplicationController < ActionController::Base
   end
 
   def data_dayz_sign_up
-    authorize! :create, Show
     @slots = []
     (0..20).step(2) do |n|
       start = Time.utc(2013,11,22,n).in_time_zone
@@ -60,8 +59,38 @@ class ApplicationController < ActionController::Base
       end
     end
 
+    if current_user
+      @confirm = "Sign up for this slot?"
+    else
+      @confirm = "You must be logged in to sign up for a slot!"
+    end
+
     respond_to do |format|
       format.html { render "layouts/data_dayz_sign_up" }
+    end
+  end
+
+  def data_dayz
+    @day_one = []
+    (0..20).step(2) do |n|
+      start = Time.utc(2013,11,22,n).in_time_zone
+      finish = Time.utc(2013,11,22,n+2).in_time_zone
+      show = Show.where(time: start, end_time: finish).first
+      if show
+        @day_one << show
+      end
+    end
+    @day_two = []
+    (0..20).step(2) do |n|
+      start = Time.utc(2013,11,23,n).in_time_zone
+      finish = Time.utc(2013,11,23,n+2).in_time_zone
+      show = Show.where(time: start, end_time: finish).first
+      if show
+        @day_two << show
+      end
+    end
+    respond_to do |format| 
+      format.html { render "/layouts/data_dayz", layout: false }
     end
   end
 

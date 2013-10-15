@@ -14,9 +14,11 @@
             <%= form_for slot, as: :show do |f| %>
               <%= f.hidden_field :time, value: slot.time %>
               <%= f.hidden_field :end_time, value: slot.end_time %>
-              <%= f.hidden_field :title, value: "DATA DAYZ - #{current_user.username}" %>
-              <%= f.hidden_field :user_id, value: current_user.id %>
-              <%= f.submit 'AVAILABLE SLOT', data: { confirm: "Sign up for this slot?" } %>
+              <% if current_user %>
+                <%= f.hidden_field :title, value: "DATA DAYZ - #{current_user.username}" %>
+                <%= f.hidden_field :user_id, value: current_user.id %>
+              <% end %>
+              <%= f.submit 'AVAILABLE SLOT', data: { confirm: @confirm } %>
             <% end %>
           </td>
         <% end %>
