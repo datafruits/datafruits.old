@@ -19,6 +19,7 @@ DatafruitsRails::Application.routes.draw do
   get '/about' => 'high_voltage/pages#show', :id => 'about'
   get '/contact' => 'high_voltage/pages#show', :id => 'about'
   get '/help' => 'high_voltage/pages#show', :id => 'help'
+  get '/data_dayz_sign_up' => 'application#data_dayz_sign_up'
   
   as :user do
     get "/login" => "sessions#new"

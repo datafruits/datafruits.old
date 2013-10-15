@@ -1,0 +1,26 @@
+<table>
+  <th>start</th>
+  <th>finish</th>
+  <th>dj</th>
+  <tbody>
+    <% @slots.each do |slot| %>
+      <tr>
+        <td><%= slot.time.strftime("%m/%d %H:%M %Z") %></td>
+        <td><%= slot.end_time.strftime("%m/%d %H:%M %Z") %></td>
+        <% if slot.persisted? %>
+          <td><%= slot.user.username %></td>
+        <% else %>
+          <td>
+            <%= form_for slot, as: :show do |f| %>
+              <%= f.hidden_field :time, value: slot.time %>
+              <%= f.hidden_field :end_time, value: slot.end_time %>
+              <%= f.hidden_field :title, value: "DATA DAYZ - #{current_user.username}" %>
+              <%= f.hidden_field :user_id, value: current_user.id %>
+              <%= f.submit 'AVAILABLE SLOT', data: { confirm: "Sign up for this slot?" } %>
+            <% end %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
