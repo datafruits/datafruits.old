@@ -8,7 +8,7 @@
         <td><%= slot.time.strftime("%m/%d %H:%M %Z") %></td>
         <td><%= slot.end_time.strftime("%m/%d %H:%M %Z") %></td>
         <% if slot.persisted? %>
-          <td><%= slot.user.username %></td>
+          <td><%= link_to slot.user.username,slot %></td>
         <% else %>
           <td>
             <%= form_for slot, as: :show do |f| %>
