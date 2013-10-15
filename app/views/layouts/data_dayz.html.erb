@@ -1,0 +1,28 @@
+<h1>DATADAYZ</H1>
+
+
+<h3>DAY ONE 11/22</h3>
+<table>
+  <tbody>
+  <% @day_one.each do |show| %>
+    <tr>
+      <td><%= "#{show.time.strftime("%H:%M")} - " %></td>
+      <td><%= show.end_time.strftime("%H:%M %Z") %></td>
+      <td><%= show.user.username %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<h3>DAY TWO 11/23</h3>
+<table>
+  <tbody>
+  <% @day_two.each do |show| %>
+    <tr>
+      <td><%= "#{show.time.strftime("%H:%M")} - " %></td>
+      <td><%= show.end_time.strftime("%H:%M %Z") %></td>
+      <td><%= show.user.username %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
