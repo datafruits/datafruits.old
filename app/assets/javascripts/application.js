@@ -115,7 +115,7 @@ $(document).ready(function(){
   },5000);
 
 
-  $("#user-menu").hover(
+  $("#user-menu").click(
     function(){
       $(this).addClass('open');
     },
