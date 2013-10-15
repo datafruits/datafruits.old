@@ -19,6 +19,9 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
+  <div><%= f.label :time_zone %></br />
+  <%= f.time_zone_select :time_zone, ActiveSupport::TimeZone.all.sort %></div>
+
   <h3>change password<h3>
   <div><%= f.label :password %> <br />
   <%= f.password_field :password, :autocomplete => "off" %></div>
