@@ -16,8 +16,12 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :time %><br />
+    <%= f.label :start_time %><br />
     <%= f.datetime_select :time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br />
+    <%= f.datetime_select :end_time %>
   </div>
   <div class="field">
     <%= f.label "Description (optional)" %>
