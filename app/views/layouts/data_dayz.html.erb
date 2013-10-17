@@ -1,5 +1,20 @@
+
+
+<%= stylesheet_link_tag "data_dayz" %>
+
+<div id="spreadsheet">
+  <img src="/images/spreadsheet_scrot.png">
+</div>
+
 <h1>DATADAYZ</H1>
 
+<ul id="lineup">
+  <% (@day_one+@day_two).map{|m| m.user.username}.uniq.each do |name| %>
+    <li><%=name.upcase%></li>
+  <% end %>
+</ul>
+
+<h1 style="float:right;">DATADAYZ</H1>
 
 <h3>DAY ONE 11/22</h3>
 <table>
@@ -26,3 +41,5 @@
   <% end %>
   </tbody>
 </table>
+
+<h1 id="floater">DATADAYZ</H1>
