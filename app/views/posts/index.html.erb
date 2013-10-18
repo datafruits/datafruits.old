@@ -2,7 +2,7 @@
   <div id="posts">
     <% @posts.each do |article| %>
       <div class="post">
-        <% if article.image.url(:thumb) %>
+        <% if !article.image.blank? %>
           <%= link_to(image_tag(article.image.url(:thumb)), article) %>
           <br />
         <% end %>
