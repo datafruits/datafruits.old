@@ -26,20 +26,39 @@
 
 @include keyframes(move) {
   from {
-    left:-800px;
-  }
-  50% {
-    left:2000px;
   }
   to {
-    left:-800px;
+    @include transform(translate(2000px,2000px));
   }
 }
 
-#floater {
-  bottom:0px;
+@include keyframes(tweak) {
+  from {
+  }
+  50% {
+    @include transform(rotate(-5deg));
+  }
+  to {
+  }
+}
+
+#scroll-container {
+  z-index:-1000;
+  height:100%;
+  width:100%;
   position:absolute;
+  top:0;
+  left:0;
+  overflow:hidden;
+}
+
+#scroller {
+  z-index:-100;
+  position:absolute;
+  top:0;
+  left:0;
   @include animation(move 10s linear infinite);
+  color:#ff7ffd;
 }
 
 $green:  #82ffa5;
@@ -69,4 +88,8 @@ h1 {
   top: 0;
   left: 0;
   opacity: 0.3;
+}
+
+#branding {
+  @include animation(tweak 10s $ease-in-out-quad infinite);
 }

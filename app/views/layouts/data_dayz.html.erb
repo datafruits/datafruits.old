@@ -1,12 +1,11 @@
-
-
 <%= stylesheet_link_tag "data_dayz" %>
+<%= javascript_include_tag "data_dayz" %>
 
 <div id="spreadsheet">
   <img src="/images/spreadsheet_scrot.png">
 </div>
 
-<h1>DATADAYZ</H1>
+<img id="branding" src="/images/datadayz.png" alt='DATADAYZ'>
 
 <ul id="lineup">
   <% (@day_one+@day_two).map{|m| m.user.username}.uniq.each do |name| %>
@@ -42,4 +41,5 @@
   </tbody>
 </table>
 
-<h1 id="floater">DATADAYZ</H1>
+<div id="scroll-container">
+</div>
