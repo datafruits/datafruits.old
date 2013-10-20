@@ -1,5 +1,10 @@
 @import "bourbon";
 
+$green:  #82ffa5;
+$yellow: #fff94f;
+$pink: #e992ff;
+$blue:  #00b4ff;
+
 @mixin stripes($color,$angle:-45deg) {
   background-color: $color;
   background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
@@ -26,9 +31,10 @@
 
 @include keyframes(move) {
   from {
+    background-position:0 0;
   }
   to {
-    @include transform(translate(2000px,2000px));
+    background-position:100% 100%;
   }
 }
 
@@ -43,6 +49,9 @@
 }
 
 #scroll-container {
+  background-image: url("/images/purple_star.png");
+  background-repeat:repeat;
+  background-position:0 0;
   z-index:-1000;
   height:100%;
   width:100%;
@@ -50,14 +59,15 @@
   top:0;
   left:0;
   overflow:hidden;
+  @include animation(move 30s linear infinite);
 }
 
-#scroller {
+.scroller {
   z-index:-100;
   position:absolute;
   top:0;
   left:0;
-  @include animation(move 10s linear infinite);
+  //@include animation(move 10s linear infinite);
   color:#ff7ffd;
 }
 
@@ -71,6 +81,16 @@ body {
   color:white;
   text-shadow:2px 2px 0px #555;
 }
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $yellow;
+}
+
 
 #lineup li {
   list-style:none;

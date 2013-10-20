@@ -1,45 +1,52 @@
-<%= stylesheet_link_tag "data_dayz" %>
-<%= javascript_include_tag "data_dayz" %>
+<html>
+  <head>
+    <title>DATADAYZ</title>
+    <%= stylesheet_link_tag "data_dayz" %>
+    <%= javascript_include_tag "data_dayz" %>
 
-<div id="spreadsheet">
-  <img src="/images/spreadsheet_scrot.png">
-</div>
+  </head>
+  <body>
+    <div id="spreadsheet">
+      <img src="/images/spreadsheet_scrot.png">
+    </div>
 
-<img id="branding" src="/images/datadayz.png" alt='DATADAYZ'>
+    <img id="branding" src="/images/datadayz.png" alt='DATADAYZ'>
 
-<ul id="lineup">
-  <% (@day_one+@day_two).map{|m| m.user.username}.uniq.each do |name| %>
-    <li><%=name.upcase%></li>
-  <% end %>
-</ul>
+    <ul id="lineup">
+      <% (@day_one+@day_two).map{|m| m.user }.uniq.each do |user| %>
+        <li><%= link_to user.username.upcase, user %></li>
+      <% end %>
+    </ul>
 
-<h1 style="float:right;">DATADAYZ</H1>
+    <h1 style="float:right;">DATADAYZ</H1>
 
-<h3>DAY ONE 11/22</h3>
-<table>
-  <tbody>
-  <% @day_one.each do |show| %>
-    <tr>
-      <td><%= "#{show.time.strftime("%H:%M")} - " %></td>
-      <td><%= show.end_time.strftime("%H:%M %Z") %></td>
-      <td><%= show.user.username %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+    <h3>DAY ONE 11/22</h3>
+    <table>
+      <tbody>
+      <% @day_one.each do |show| %>
+        <tr>
+          <td><%= "#{show.time.strftime("%H:%M")} - " %></td>
+          <td><%= show.end_time.strftime("%H:%M %Z") %></td>
+          <td><%= show.user.username %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
 
-<h3>DAY TWO 11/23</h3>
-<table>
-  <tbody>
-  <% @day_two.each do |show| %>
-    <tr>
-      <td><%= "#{show.time.strftime("%H:%M")} - " %></td>
-      <td><%= show.end_time.strftime("%H:%M %Z") %></td>
-      <td><%= show.user.username %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+    <h3>DAY TWO 11/23</h3>
+    <table>
+      <tbody>
+      <% @day_two.each do |show| %>
+        <tr>
+          <td><%= "#{show.time.strftime("%H:%M")} - " %></td>
+          <td><%= show.end_time.strftime("%H:%M %Z") %></td>
+          <td><%= show.user.username %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
 
-<div id="scroll-container">
-</div>
+    <div id="scroll-container">
+    </div>
+  </body>
+</html>
