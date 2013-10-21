@@ -3,24 +3,24 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
+  <div><%= f.label t('.email') %><br />
    <%= f.email_field :email, :autofocus => true %></div>
  
-   <div><%= f.label :username %><br />
+   <div><%= f.label t('.username') %><br />
      <%= f.text_field :username %></div>
 
 
-  <div><%= f.label :password %><br />
+  <div><%= f.label t('.password') %><br />
   <%= f.password_field :password %></div>
 
-  <div><%= f.label :password_confirmation %><br />
+  <div><%= f.label t('.password_confirmation') %><br />
   <%= f.password_field :password_confirmation %></div>
 
   <div><%= f.label :time_zone %></br />
   <%= f.time_zone_select :time_zone, ActiveSupport::TimeZone.all.sort %></div>
 
   <div class="field">
-    <%= f.label :avatar %>
+    <%= f.label t('.avatar') %>
     <%= f.file_field :avatar %>
   </div>
 
