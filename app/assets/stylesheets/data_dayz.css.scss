@@ -138,6 +138,11 @@ h1 {
   top: 0;
   right: 0;
   padding:15px;
+  @include transition (all 100ms ease-in-out);
+}
+
+#mute:hover {
+  color:$yellow;
 }
 
 table {
