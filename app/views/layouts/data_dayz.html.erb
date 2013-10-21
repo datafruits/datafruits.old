@@ -51,7 +51,11 @@
         <tr class="<%=cycle("even","odd")%>">
           <td><%= "#{show.time.strftime("%H:%M")} - " %></td>
           <td><%= show.end_time.strftime("%H:%M %Z") %></td>
-          <td><%= show.user.username %></td>
+          <% if !show.guests.blank? %>
+            <td><%= "#{show.user.username} - #{show.guests}" %></td>
+          <% else %>
+            <td><%= show.user.username %></td>
+          <% end %>
         </tr>
       <% end %>
       </tbody>
