@@ -10,6 +10,7 @@ ruby "2.0.0"
 gem 'pg'
 gem 'high_voltage'
 gem 'devise', '~> 3.0.0'
+gem 'devise-i18n-views'
 gem 'nokogiri'
 gem 'aws-sdk'
 gem 'paperclip'

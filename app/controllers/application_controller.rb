@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
 
   around_filter :set_time_zone
 
+  before_filter :set_locale
+
   # params for cancan and devise
   before_filter do
     resource = controller_name.singularize.to_sym
@@ -89,7 +91,7 @@ class ApplicationController < ActionController::Base
         @day_two << show
       end
     end
-    respond_to do |format| 
+    respond_to do |format|
       format.html { render "/layouts/data_dayz", layout: false }
     end
   end
@@ -99,6 +101,17 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+  def set_locale
+    I18n.locale = params[:locale] || extract_locale_from_accept_language_header || I18n.default_locale
+  end
+
+  def extract_locale_from_accept_language_header
+    if request.env['HTTP_ACCEPT_LANGUAGE']
+      request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
+    end
+  end
+
   def render_error(status, exception)
     respond_to do |format|
       format.html { render template: "errors/error_#{status}", layout: 'layouts/application', status: status }
