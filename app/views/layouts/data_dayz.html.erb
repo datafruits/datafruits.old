@@ -26,11 +26,11 @@
     <h1 style="float:right;">DATADAYZ</H1>
 
     <h3>DAY ONE 11/22</h3>
-    <table>
+    <table id="day_one" class="timetable">
       <tbody>
       <% @day_one.each do |show| %>
-        <tr>
-          <td><%= "#{show.time.strftime("%H:%M")} - " %></td>
+        <tr class="<%=cycle("even","odd")%>">
+          <td><%= "#{show.time.strftime("%H:%M %Z")}" %></td>
           <td><%= show.end_time.strftime("%H:%M %Z") %></td>
           <td><%= show.user.username %></td>
         </tr>
@@ -39,7 +39,7 @@
     </table>
 
     <h3>DAY TWO 11/23</h3>
-    <table>
+    <table id="day_two" class="timetable">
       <tbody>
       <% @day_two.each do |show| %>
         <tr>

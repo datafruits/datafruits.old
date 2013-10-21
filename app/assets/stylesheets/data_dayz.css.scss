@@ -122,3 +122,25 @@ h1 {
   right: 0;
   padding:15px;
 }
+
+table {
+  color:#000;
+  text-shadow:2px 2px 0px #ddd;
+  border-collapse:collapse;
+  box-shadow:2px 2px 3px #555;
+}
+
+table, td, th {
+}
+
+td {
+  border-style:solid;
+  padding:12px;
+}
+
+.even {
+  background-color:$yellow;
+}
+.odd {
+  background-color:$blue;
+}
