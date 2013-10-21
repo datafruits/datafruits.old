@@ -113,3 +113,12 @@ h1 {
 #branding {
   @include animation(tweak 10s $ease-in-out-quad infinite);
 }
+
+#mute {
+  cursor: pointer;
+  font-size: 106px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding:15px;
+}

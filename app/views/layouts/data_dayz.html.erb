@@ -6,11 +6,16 @@
 
   </head>
   <body>
+    <audio id="negi_trap" src="https://s3.amazonaws.com/datafruits.fm/negi_trap.mp3" autoplay loop>
+      Your browser does not support the <code>audio</code> element.
+    </audio>
     <div id="spreadsheet">
       <img src="/images/spreadsheet_scrot.png">
     </div>
 
     <img id="branding" src="/images/datadayz.png" alt='DATADAYZ'>
+
+    <div id="mute" alt="mute">♪</div>
 
     <ul id="lineup">
       <% (@day_one+@day_two).map{|m| m.user }.uniq.each do |user| %>
