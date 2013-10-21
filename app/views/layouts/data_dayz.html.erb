@@ -42,7 +42,7 @@
     <table id="day_two" class="timetable">
       <tbody>
       <% @day_two.each do |show| %>
-        <tr>
+        <tr class="<%=cycle("even","odd")%>">
           <td><%= "#{show.time.strftime("%H:%M")} - " %></td>
           <td><%= show.end_time.strftime("%H:%M %Z") %></td>
           <td><%= show.user.username %></td>
