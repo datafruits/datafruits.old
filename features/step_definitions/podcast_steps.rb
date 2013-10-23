@@ -2,6 +2,9 @@ When(/^I create a podcast and fill in the user id$/) do
   visit new_podcast_path
   fill_in "podcast_title", with: "my cool podcast"
   select User.first.username, from: 'podcast_user_id'
+  select '2013', from: 'podcast_pub_date_1i'
+  select 'March', from: 'podcast_pub_date_2i'
+  select '30', from: 'podcast_pub_date_3i'
   attach_file :podcast_mp3, File.expand_path("spec/fixtures/test.mp3")
   click_button "Submit"
 end

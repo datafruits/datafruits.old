@@ -1,7 +1,7 @@
 class PodcastsController < ApplicationController
   load_and_authorize_resource
   def index
-    @podcast = Podcast.all
+    @podcast = Podcast.all.order('pub_date DESC')
     respond_to do |format|
       format.html
       format.xml

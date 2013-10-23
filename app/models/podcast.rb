@@ -10,6 +10,7 @@ class Podcast < ActiveRecord::Base
     path: '/:filename',
     preserve_files: true
   validates_attachment_presence :mp3
+  validates_presence_of :pub_date
 
   def set_file_as_attachment file
     s3 = AWS::S3.new
