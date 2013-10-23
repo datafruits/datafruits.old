@@ -11,7 +11,10 @@ class PodcastsController < ApplicationController
 
   end
   def new
-
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @podcast }
+    end
   end
   def create
     respond_to do |format|
@@ -48,6 +51,6 @@ class PodcastsController < ApplicationController
   end
   private
   def podcast_params
-    params.require(:podcast).permit(:user_id, :mp3, :description, :title)
+    params.require(:podcast).permit(:user_id, :mp3, :description, :title, :pub_date)
   end
 end

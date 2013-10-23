@@ -7,6 +7,7 @@ When(/^I create a podcast and fill in the user id$/) do
   select '30', from: 'podcast_pub_date_3i'
   attach_file :podcast_mp3, File.expand_path("spec/fixtures/test.mp3")
   click_button "Submit"
+  page.should have_content('Podcast was successfully created.')
 end
 
 Then(/^I should see that show in the podcasts$/) do
@@ -15,7 +16,7 @@ Then(/^I should see that show in the podcasts$/) do
 end
 
 Given(/^some podcasts exist$/) do
-  Podcast.create title: "my cool podcast", mp3: File.open("spec/fixtures/test.mp3")
+  Podcast.create title: "my cool podcast", mp3: File.open("spec/fixtures/test.mp3"), pub_date: Date.current
 end
 
 When(/^I visit '\/podcast\.xml'$/) do

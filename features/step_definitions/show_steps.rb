@@ -47,6 +47,8 @@ end
 
 When /^I cancel my show$/ do
   visit "/shows/#{Show.first.id}/edit"
+  puts User.first.roles
+  puts page.html
   click_on "Cancel show"
 end
 
