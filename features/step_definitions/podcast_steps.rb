@@ -37,3 +37,13 @@ Then(/^I should see that updated show in the podcasts$/) do
   visit podcasts_path
   page.should have_content("my new cool podcast")
 end
+
+When(/^I visit the podcast edit page and click delete$/) do
+  visit edit_podcast_path Podcast.first
+  click_link "Delete"
+end
+
+Then(/^I should not see that show in the podcasts$/) do
+  visit podcasts_path
+  page.should_not have_content("my cool podcast")
+end

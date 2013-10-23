@@ -39,7 +39,12 @@ class PodcastsController < ApplicationController
     end
   end
   def destroy
+    @podcast.destroy
 
+    respond_to do |format|
+      format.html { redirect_to podcasts_url }
+      format.json { head :no_content }
+    end
   end
   private
   def podcast_params
