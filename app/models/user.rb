@@ -35,7 +35,9 @@ class User < ActiveRecord::Base
   validates_inclusion_of :time_zone, :in => ActiveSupport::TimeZone.zones_map { |m| m.name }, :message => "is not a valid Time Zone"
 
   after_create do |user|
-    user.update_attribute :role, "dj"
+    roles = user.roles
+    roles << "dj"
+    user.role_ids = roles
   end
 
   def valid_role
