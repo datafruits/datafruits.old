@@ -1,7 +1,7 @@
 World(Rack::Test::Methods)
 
-Given /^metadata is set in redis$/ do
-  $redis.set("currentsong", "a cool song")
+Given /^the radio server is up$/ do
+  stub_request(:get, 'http://radio.datafruits.fm/currentsong').to_return(body: 'a cool song')
 end
 
 When /^I request the metadata$/ do
