@@ -17,7 +17,7 @@
   <%= f.password_field :password_confirmation %></div>
 
   <div><%= f.label :time_zone %></br />
-  <%= f.time_zone_select :time_zone, ActiveSupport::TimeZone.all.sort %></div>
+  <%= f.time_zone_select :time_zone, ActiveSupport::TimeZone.all.sort, selected: Time.zone %></div>
 
   <div class="field">
     <%= f.label t('.avatar') %>
