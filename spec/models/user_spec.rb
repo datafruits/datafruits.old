@@ -26,4 +26,14 @@ describe User do
     u = build :user, time_zone: "New Burgerdelphia"
     u.should_not be_valid
   end
+
+  it "sets style" do
+    u = build :user, style: "lovely"
+    u.should be_valid
+  end
+
+  it "doesn't allow invalid style" do
+    u = build :user, style: "curry pan"
+    u.should_not be_valid
+  end
 end

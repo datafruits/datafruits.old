@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131021045244) do
+ActiveRecord::Schema.define(version: 20131023092642) do
 
   create_table "adverts", force: true do |t|
     t.string    "title"
@@ -82,6 +82,10 @@ ActiveRecord::Schema.define(version: 20131021045244) do
     t.integer   "avatar_file_size"
     t.timestamp "avatar_updated_at"
     t.string    "time_zone"
+    t.text      "likes"
+    t.text      "hates"
+    t.text      "favorite_food"
+    t.text      "style"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -33,6 +33,23 @@ class User < ActiveRecord::Base
 
   validate :valid_role
   validates_inclusion_of :time_zone, :in => ActiveSupport::TimeZone.zones_map { |m| m.name }, :message => "is not a valid Time Zone"
+  validates_inclusion_of :style, in: self.valid_styles, message: "Is not actually a style?"
+
+  def self.valid_styles
+    ["lovely",
+     "freaky",
+     "pretty",
+     "cutie",
+     "freestyle",
+     "no-style",
+     "funky",
+     "spooky",
+     "relaxy",
+     "hopeless",
+     "bored",
+     "sporty",
+     "worky"]
+  end
 
   after_create do |user|
     roles = user.roles
