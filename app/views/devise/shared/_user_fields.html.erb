@@ -1,0 +1,29 @@
+  <div><%= form.label t('.email') %><br />
+   <%= form.email_field :email, :autofocus => true %></div>
+ 
+   <div><%= form.label t('.username') %><br />
+     <%= form.text_field :username %></div>
+
+  <div><%= form.label :time_zone %></br />
+  <%= form.time_zone_select :time_zone, ActiveSupport::TimeZone.all.sort, selected: Time.zone %></div>
+
+  <div><%= form.label :style %><br />
+    <%= form.select :style, User.valid_styles %>
+  </div>
+
+  <div><%= form.label :likes %><br />
+    <%= form.text_field :likes %>
+  </div>
+
+  <div><%= form.label :hates %><br />
+    <%= form.text_field :hates %>
+  </div>
+
+  <div><%= form.label :favorite_food %><br />
+    <%= form.text_field :favorite_food %>
+  </div>
+
+  <div class="field">
+    <%= form.label t('.avatar') %>
+    <%= form.file_field :avatar %>
+  </div>

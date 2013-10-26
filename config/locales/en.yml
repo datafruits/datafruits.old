@@ -63,11 +63,6 @@ en:
         unhappy: "Unhappy"
       new:
         sign_up: "Sign up"
-        email: "Email"
-        username: "Username"
-        password: "Password"
-        password_confirmation: "Password confirmation"
-        avatar: "Avatar"
       destroyed: "Bye! Your account was successfully cancelled. We hope to see you again soon."
       signed_up: "Welcome! You have signed up successfully."
       signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
@@ -88,6 +83,12 @@ en:
         sign_in: "Sign in"
         sign_in_with_provider: "Sign in with %{provider}"
         sign_up: "Sign up"
+      user_fields:
+        email: "Email"
+        username: "Username"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        avatar: "Avatar"
     unlocks:
       new:
         resend_unlock_instructions: "Resend unlock instructions"
