@@ -7,6 +7,7 @@ FactoryGirl.define do
     password "changeme" 
     password_confirmation "changeme" 
     role "dj"
+    style "freestyle"
     time_zone "Pacific Time (US & Canada)"
   end
 end
