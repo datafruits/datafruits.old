@@ -41,6 +41,9 @@ ja:
         update: 更新
       new:
         sign_up: サインアップ
+        password: 
+        password: パスワード
+        password_confirmation: パスワードを再入力
     sessions:
       new:
         sign_in: サインイン
