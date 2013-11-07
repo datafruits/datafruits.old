@@ -28,7 +28,7 @@ describe User do
   end
 
   it "sets style" do
-    u = build :user, style: "lovely"
+    u = build :user, style: "freaky"
     u.should be_valid
   end
 

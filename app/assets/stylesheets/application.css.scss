@@ -566,6 +566,15 @@ a.jp-loading.mini {
 
 th, td { padding: 5px; }
 
+textarea#post_body {
+  resize: both;
+  width: 600px;
+  height: 300px;
+}
+textarea#post_title {
+  width: 300px;
+}
+
 
 /* ==========================================================================
    Helper classes

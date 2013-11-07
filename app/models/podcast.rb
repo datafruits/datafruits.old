@@ -23,4 +23,8 @@ class Podcast < ActiveRecord::Base
     puts "saving"
     self.save!
   end
+
+  def username
+    user.username
+  end
 end

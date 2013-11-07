@@ -2,7 +2,8 @@
 
 def create_visitor
   @visitor ||= { :username => "Testy McUserton", :email => "example@example.com",
-    :password => "changeme", :password_confirmation => "changeme", :role => "dj", :time_zone => "Tokyo" }
+    :password => "changeme", :password_confirmation => "changeme", :role => "dj", 
+    :time_zone => "Tokyo", style: 'freaky'}
 end
 
 def create_admin
@@ -52,5 +53,6 @@ def fill_in_user_fields user=@visitor
   fill_in "user_password", :with => user[:password]
   fill_in "user_password_confirmation", :with => user[:password_confirmation]
   select '(GMT-08:00) Pacific Time (US & Canada)', from: 'user_time_zone'
+  select user[:style], from: 'user_style'
   attach_file :user_avatar, File.expand_path("spec/fixtures/test.png")
 end
