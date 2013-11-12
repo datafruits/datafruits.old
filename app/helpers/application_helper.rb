@@ -17,17 +17,17 @@ module ApplicationHelper
   end
 
   def multiple_timezones(time)
-  timezones = {"PST" => "Pacific Time (US & Canada)",
-               "EST" => "Eastern Time (US & Canada)",
-               "UK"  => "London",
-               "EU"  => "Stockholm",
-               "日本"=> "Tokyo"}
-  time_string = ""
+    timezones = {"PST" => "Pacific Time (US & Canada)",
+                 "EST" => "Eastern Time (US & Canada)",
+                 "UK"  => "London",
+                 "EU"  => "Stockholm",
+                 "日本"=> "Tokyo"}
+    time_string = ""
 
-  timezones.each do |k,v|
-    time_string << "[#{Time.zone.parse(time.to_s).in_time_zone(v).strftime("%H:%M")} #{k}] "
-  end
+    timezones.each do |k,v|
+      time_string << "[#{Time.zone.parse(time.to_s).in_time_zone(v).strftime("%H:%M")} #{k}] "
+    end
 
-  time_string
+    time_string
   end
 end
