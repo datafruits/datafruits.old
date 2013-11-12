@@ -1,4 +1,4 @@
 <h2><%=@podcast.title%></h2>
 <span>by<%= link_to @podcast.username, @podcast.user %></span>
-<p><%= link_to "Download", podcast.mp3.url %></p>
+<p><%= link_to "Download", @podcast.mp3.url %></p>
 <p><%= @podcast.description %>
