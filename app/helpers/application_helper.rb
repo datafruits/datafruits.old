@@ -30,4 +30,29 @@ module ApplicationHelper
 
     time_string
   end
+
+  def data_dayz_slots
+    slots = []
+    (0..20).step(2) do |n|
+      start = Time.utc(2013,11,22,n).in_time_zone
+      finish = Time.utc(2013,11,22,n+2).in_time_zone
+      show = Show.where(time: start, end_time: finish).first
+      if show
+        slots << show
+      else
+        slots << Show.new(time: start, end_time: finish)
+      end
+    end
+    (0..20).step(2) do |n|
+      start = Time.utc(2013,11,23,n).in_time_zone
+      finish = Time.utc(2013,11,23,n+2).in_time_zone
+      show = Show.where(time: start, end_time: finish).first
+      if show
+        slots << show
+      else
+        slots << Show.new(time: start, end_time: finish)
+      end
+    end
+    slots
+  end
 end

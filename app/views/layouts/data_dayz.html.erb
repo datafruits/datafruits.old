@@ -31,8 +31,15 @@
     <div id="mute" alt="mute">♪</div>
 
     <ul id="lineup">
-      <% (@day_one+@day_two).map{|m| m.user }.uniq.each do |user| %>
+      <% @lineup.each do |user| %>
         <li><%= link_to user.username.upcase, user %></li>
+      <% end %>
+    </ul>
+
+    <h3>GUEST MIXES</h3>
+    <ul id="lineup">
+      <% @guest_mixes.each do |guest_mix| %>
+        <li><%= guest_mix.upcase %></li>
       <% end %>
     </ul>
 
@@ -41,29 +48,13 @@
 
     <h1 style="float:right;">DATADAYZ</H1>
 
-    <h3>DAY ONE 11/22</h3>
+    <h3>TIMETABLE</h3>
     <table id="day_one" class="timetable">
       <tbody>
-      <% @day_one.each do |show| %>
+      <% @slots.each do |show| %>
         <tr class="<%=cycle("even","odd")%>">
+          <td><%= show.time.strftime("%m月%d日") %></td>
           <td><%= "#{show.time.strftime("%H:%M %Z")}" %></td>
-          <td><%= show.end_time.strftime("%H:%M %Z") %></td>
-          <% if !show.guests.blank? %>
-            <td><%= "#{show.user.username} - #{show.guests}" %></td>
-          <% else %>
-            <td><%= show.user.username %></td>
-          <% end %>
-        </tr>
-      <% end %>
-      </tbody>
-    </table>
-
-    <h3>DAY TWO 11/23</h3>
-    <table id="day_two" class="timetable">
-      <tbody>
-      <% @day_two.each do |show| %>
-        <tr class="<%=cycle("even","odd")%>">
-          <td><%= "#{show.time.strftime("%H:%M")} - " %></td>
           <td><%= show.end_time.strftime("%H:%M %Z") %></td>
           <% if !show.guests.blank? %>
             <td><%= "#{show.user.username} - #{show.guests}" %></td>

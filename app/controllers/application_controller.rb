@@ -39,27 +39,7 @@ class ApplicationController < ActionController::Base
   end
 
   def data_dayz_sign_up
-    @slots = []
-    (0..20).step(2) do |n|
-      start = Time.utc(2013,11,22,n).in_time_zone
-      finish = Time.utc(2013,11,22,n+2).in_time_zone
-      show = Show.where(time: start, end_time: finish).first
-      if show
-        @slots << show
-      else
-        @slots << Show.new(time: start, end_time: finish)
-      end
-    end
-    (0..20).step(2) do |n|
-      start = Time.utc(2013,11,23,n).in_time_zone
-      finish = Time.utc(2013,11,23,n+2).in_time_zone
-      show = Show.where(time: start, end_time: finish).first
-      if show
-        @slots << show
-      else
-        @slots << Show.new(time: start, end_time: finish)
-      end
-    end
+    @slots = data_dayz_slots
 
     if current_user
       @confirm = "Sign up for this slot?"
@@ -73,24 +53,10 @@ class ApplicationController < ActionController::Base
   end
 
   def data_dayz
-    @day_one = []
-    (0..20).step(2) do |n|
-      start = Time.utc(2013,11,22,n).in_time_zone
-      finish = Time.utc(2013,11,22,n+2).in_time_zone
-      show = Show.where(time: start, end_time: finish).first
-      if show
-        @day_one << show
-      end
-    end
-    @day_two = []
-    (0..20).step(2) do |n|
-      start = Time.utc(2013,11,23,n).in_time_zone
-      finish = Time.utc(2013,11,23,n+2).in_time_zone
-      show = Show.where(time: start, end_time: finish).first
-      if show
-        @day_two << show
-      end
-    end
+    @slots = data_dayz_slots
+    @slots.select!{ |s| s.persisted? }
+    @lineup = @slots.map{|m| m.user }.uniq
+    @guest_mixes = @slots.select{|s| !s.guests.blank?}.map(&:guests).uniq.map{|m| m.gsub!(/guest mix by /i,'')}
     respond_to do |format|
       format.html { render "/layouts/data_dayz", layout: false }
     end
@@ -131,6 +97,31 @@ class ApplicationController < ActionController::Base
 
   def browser_timezone
     cookies["browser.timezone"]
+  end
+
+  def data_dayz_slots
+    slots = []
+    (0..20).step(2) do |n|
+      start = Time.utc(2013,11,22,n).in_time_zone
+      finish = Time.utc(2013,11,22,n+2).in_time_zone
+      show = Show.where(time: start, end_time: finish).first
+      if show
+        slots << show
+      else
+        slots << Show.new(time: start, end_time: finish)
+      end
+    end
+    (0..20).step(2) do |n|
+      start = Time.utc(2013,11,23,n).in_time_zone
+      finish = Time.utc(2013,11,23,n+2).in_time_zone
+      show = Show.where(time: start, end_time: finish).first
+      if show
+        slots << show
+      else
+        slots << Show.new(time: start, end_time: finish)
+      end
+    end
+    slots
   end
 
   protected
