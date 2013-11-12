@@ -49,7 +49,7 @@
     <h1 style="float:right;">DATADAYZ</H1>
 
     <h3>TIMETABLE</h3>
-    <table id="day_one" class="timetable">
+    <table id="timetable">
       <tbody>
       <% @slots.each do |show| %>
         <tr class="<%=cycle("even","odd")%>">
@@ -57,9 +57,9 @@
           <td><%= "#{show.time.strftime("%H:%M %Z")}" %></td>
           <td><%= show.end_time.strftime("%H:%M %Z") %></td>
           <% if !show.guests.blank? %>
-            <td><%= "#{show.user.username} - #{show.guests}" %></td>
+            <td><%= link_to "#{show.user.username} - #{show.guests}", show %></td>
           <% else %>
-            <td><%= show.user.username %></td>
+            <td><%= link_to show.user.username, show %></td>
           <% end %>
         </tr>
       <% end %>

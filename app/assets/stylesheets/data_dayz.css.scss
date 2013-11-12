@@ -108,6 +108,10 @@ a:hover {
   list-style:none;
 }
 
+#timetable a {
+  color:black;
+}
+
 h1 {
   font-size:80px;
   @include transform(rotate(-5deg));
