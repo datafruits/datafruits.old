@@ -27,7 +27,7 @@ class RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit(:email, :password, :password_confirmation,
                                  :remember_me, :password_hash, :password_salt,
                                  :username, :role, :avatar, :login, :role_ids,
-                                 :time_zone)
+                                 :time_zone, :likes, :hates, :style, :favorite_food)
   end
 
   # check if we need password to update user data

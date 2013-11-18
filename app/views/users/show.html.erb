@@ -23,7 +23,7 @@
 </p>
 
 <h3>recent podcasts</h3>
-  <table id="podcasts-table" border="1">
+<table id="podcasts-table" border="1">
   <tbody>
   <% @user.podcasts.order("pub_date DESC").each_with_index do |podcast,index| %>
   <tr>
@@ -35,7 +35,23 @@
   </tr>
   <% end %>
   </tbody>
-  </table>
+</table>
+<table id="tastes">
+  <tbody>
+  <tr>
+    <td>likes: <%= @user.likes %></td>
+  </tr>
+  <tr>
+    <td>hates: <%= @user.hates %></td>
+  </tr>
+  <tr>
+    <td>style: <%= @user.style%></td>
+  </tr>
+  <tr>
+    <td>favorite food: <%= @user.favorite_food%></td>
+  </tr>
+  </tbody>
+</table>
 <% if can? :edit, User %>
   <%= link_to 'Edit', edit_user_path(@user) %>
 <% end %>
