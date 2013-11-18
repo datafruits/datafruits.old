@@ -3,7 +3,6 @@ notifications:
   email:
   - mcfiredrill@gmail.com
 rvm:
-- 1.9.3
 - 2.0.0
 script: bundle exec rake
 before_script:
