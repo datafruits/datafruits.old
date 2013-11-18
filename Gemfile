@@ -30,6 +30,7 @@ group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'spring-commands-cucumber'
+  gem 'sqlite3'
 end
 
 gem "simple_calendar", "~> 0.1.5"
