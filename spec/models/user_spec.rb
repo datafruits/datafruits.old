@@ -31,9 +31,4 @@ describe User do
     u = build :user, style: "freaky"
     u.should be_valid
   end
-
-  it "doesn't allow invalid style" do
-    u = build :user, style: "curry pan"
-    u.should_not be_valid
-  end
 end
