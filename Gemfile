@@ -26,6 +26,12 @@ group :production do
   gem 'thin'
 end
 
+group :development do
+  gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'spring-commands-cucumber'
+end
+
 gem "simple_calendar", "~> 0.1.5"
 
 gem 'sass-rails',   '~> 4.0.0'
