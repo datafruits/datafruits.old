@@ -11,14 +11,8 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </div>
+  <%= render partial: 'devise/shared/user_fields', locals: {form: f } %>
+
   <div class="field">
     <%= f.label :password %><br />
     <%= f.text_field :password %>
@@ -27,8 +21,6 @@
     <%= f.label :password_confirmation %><br />
     <%= f.text_field :password_confirmation %>
   </div>
-  <div><%= f.label :time_zone %></br />
-  <%= f.time_zone_select :time_zone, ActiveSupport::TimeZone.all.sort %></div>
   <div class="field">
     <%= f.label :role %>
     <br />
@@ -37,9 +29,6 @@
       <%= check_box_tag "user[role_ids][]", r, @user.has_role?(r), id: "user_role_ids_#{r}" %>
       <br />
     <% end %>
-  </div>
-  <div class="field">
-    <%= f.file_field :avatar %>
   </div>
   <div class="actions">
     <%= f.submit 'Create user', id: 'submit' %>
