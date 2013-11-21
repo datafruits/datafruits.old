@@ -72,22 +72,8 @@ $(document).ready(function(){
       $(this).jPlayer("clearMedia");
     },
     error: function(event) {
-      if(ready && event.jPlayer.error.type === $.jPlayer.error.URL_NOT_SET) {
-        // Setup the media stream again and play it.
-        $(this).jPlayer("setMedia", stream).jPlayer("play");
-      }else{
-        console.log("jPlayer error: "+ event.jPlayer.error.type);
-        if (typeof(_gaq) === "object") {
-          _gaq.push([
-            "_trackEvent",
-            "jPlayer error!",
-            event.jPlayer.error.type,
-            "",
-            0, true
-            ]);
-        }
-        $(this).jPlayer("setMedia", stream).jPlayer("play");
-      }
+      console.log("jPlayer error: "+ event.jPlayer.error.type);
+      $(this).jPlayer("setMedia", stream).jPlayer("play");
 
       $("jp-pause").hide();
       $("jp-loading").hide();
