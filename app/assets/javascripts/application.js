@@ -86,6 +86,7 @@ $(document).ready(function(){
             0, true
             ]);
         }
+        $(this).jPlayer("setMedia", stream).jPlayer("play");
       }
 
       $("jp-pause").hide();
