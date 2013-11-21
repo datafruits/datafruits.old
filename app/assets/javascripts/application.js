@@ -70,6 +70,7 @@ $(document).ready(function(){
     },
     pause: function(e){
       $(this).jPlayer("clearMedia");
+      $(this).jPlayer("setMedia", stream);
     },
     error: function(event) {
       console.log("jPlayer error: "+ event.jPlayer.error.type);
