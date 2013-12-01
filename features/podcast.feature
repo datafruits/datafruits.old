@@ -1,6 +1,7 @@
 Feature: Podcasts
 
   @vcr
+  @javascript
   Scenario: Admin uploads a podcast
     Given I am logged in as an admin
     And a user with the 'dj' role exists

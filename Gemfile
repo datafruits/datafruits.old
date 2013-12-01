@@ -22,6 +22,8 @@ gem 'redis'
 gem 'exception_notification', '~> 4.0.0.rc1'
 gem 'statsd-ruby'
 gem 'httparty'
+gem 'carrierwave'
+gem 'fog'
 
 group :production do
   gem 'thin'
@@ -51,10 +53,13 @@ gem 'jquery-cookie-rails', git: 'git://github.com/RyanScottLewis/jquery-cookie-r
 
 gem 'jplayer-rails', git: 'git://github.com/mcfiredrill/jplayer-rails.git'
 
+gem 'jquery-fileupload-rails'
+
 group :test do
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
   gem 'capybara'
+  gem 'capybara-webkit'
   gem 'database_cleaner'
   gem 'timecop'
   gem 'webmock'

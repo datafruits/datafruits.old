@@ -26,6 +26,13 @@
     <%= f.file_field :mp3 %>
   </div>
   <div class="actions">
-    <%= f.submit 'Submit', id: 'submit' %>
+    <%= f.submit 'Save podcast', id: 'submit' %>
   </div>
 <% end %>
+
+<script id="template-upload" type="text/x-tmpl">
+<div class="upload">
+  {%=o.name%}
+  <div class="progress"><div class="bar" style="width: 0%;"></div></div>
+</div>
+</script>

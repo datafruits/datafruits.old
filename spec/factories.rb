@@ -10,4 +10,9 @@ FactoryGirl.define do
     style "freestyle"
     time_zone "Pacific Time (US & Canada)"
   end
+
+  factory :podcast do
+    pub_date Date.current
+  end
 end
+

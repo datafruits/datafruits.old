@@ -19,6 +19,8 @@
 //= require jquery.detect_timezone
 //= require jquery.cookie
 //= require rainbow
+//= require jquery-fileupload/basic
+//= require jquery-fileupload/vendor/tmpl
 //= require_tree .
 //
 function small_top(){
@@ -155,5 +157,31 @@ $(document).ready(function(){
   BrowserTZone.setCookie()
 
   $('.rainbow').rainbow({animate:true,animateInterval:50,pauseLength:500,pad:true,colors:['rgb(153, 204, 255);','rgb(173, 224, 255);','rgb(193, 244, 255);','rgb(213, 264, 255);','rgb(193, 244, 255);','rgb(173, 224, 255);','rgb(153, 204, 255);']});
-});
 
+  $("#podcast_mp3").fileupload({
+    dataType: "json",
+    maxNumberOfFiles: 1,
+    add: function(e, data){
+      console.log("add");
+      data.context = $(tmpl("template-upload", data.files[0]));
+      $('#new_podcast').append(data.context);
+      data.submit();
+    },
+    progress: function(e, data){
+      console.log("progress");
+      if(data.context){
+        progress = parseInt(data.loaded / data.total * 100, 10);
+        console.log("progress: "+progress);
+        data.context.find('.bar').css('width', progress + '%');
+      }
+    },
+    done: function(e, data){
+      console.log("complete!");
+      console.log(data.result);
+      console.log("id: "+data.result.id);
+      var id = data.result.id;
+      $(".new_podcast").attr("action", "/podcasts/"+id);
+      $(".new_podcast").append("<input name='_method' type='hidden' value='patch'>");
+    }
+  });
+});
