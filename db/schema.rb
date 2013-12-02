@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20131125140738) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "adverts", force: true do |t|
     t.string   "title"
     t.string   "mp3_file_name"
@@ -26,18 +29,21 @@ ActiveRecord::Schema.define(version: 20131125140738) do
   create_table "podcasts", force: true do |t|
     t.string   "title"
     t.integer  "user_id"
-    t.string   "description"
+    t.string   "mp3"
+    t.string   "mp3_content_type"
+    t.integer  "mp3_file_size"
+    t.datetime "mp3_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "pub_date"
-    t.string   "mp3"
+    t.string   "description"
   end
 
   create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -48,8 +54,8 @@ ActiveRecord::Schema.define(version: 20131125140738) do
     t.string   "title"
     t.integer  "user_id"
     t.datetime "time"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.text     "description"
     t.string   "image_file_name"
     t.string   "image_content_type"
@@ -61,8 +67,8 @@ ActiveRecord::Schema.define(version: 20131125140738) do
 
   create_table "users", force: true do |t|
     t.string   "username",               default: ""
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -85,7 +91,7 @@ ActiveRecord::Schema.define(version: 20131125140738) do
     t.text     "style"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
