@@ -47,6 +47,8 @@ ja:
     sessions:
       new:
         sign_in: サインイン
+        login_placeholder: ユーザー名またはメールアドレス
+        password_placeholder: パスワード
     shared:
       links:
         didn_t_receive_confirmation_instructions: 没有收到确认指令？
