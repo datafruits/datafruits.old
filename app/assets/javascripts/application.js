@@ -167,6 +167,9 @@ $(document).ready(function(){
       $('#new_podcast').append(data.context);
       data.submit();
     },
+    start: function(e, data){
+      $(".upload.status").html("uploading...");
+    },
     progress: function(e, data){
       console.log("progress");
       if(data.context){
@@ -182,6 +185,7 @@ $(document).ready(function(){
       var id = data.result.id;
       $(".new_podcast").attr("action", "/podcasts/"+id);
       $(".new_podcast").append("<input name='_method' type='hidden' value='patch'>");
+      $(".upload.status").html("upload complete!");
     }
   });
 });
