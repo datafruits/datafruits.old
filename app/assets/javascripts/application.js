@@ -19,8 +19,7 @@
 //= require jquery.detect_timezone
 //= require jquery.cookie
 //= require rainbow
-//= require jquery-fileupload/basic
-//= require jquery-fileupload/vendor/tmpl
+//= require s3_direct_upload
 //= require_tree .
 //
 function small_top(){
@@ -154,38 +153,33 @@ $(document).ready(function(){
   BrowserTZone.setCookie = function(){
     $.cookie("browser.timezone", $().get_timezone(), { expires: 365, path: '/' });
   }
-  BrowserTZone.setCookie()
+  BrowserTZone.setCookie();
 
   $('.rainbow').rainbow({animate:true,animateInterval:50,pauseLength:500,pad:true,colors:['rgb(153, 204, 255);','rgb(173, 224, 255);','rgb(193, 244, 255);','rgb(213, 264, 255);','rgb(193, 244, 255);','rgb(173, 224, 255);','rgb(153, 204, 255);']});
 
-  $("#podcast_mp3").fileupload({
-    dataType: "json",
-    maxNumberOfFiles: 1,
-    add: function(e, data){
-      console.log("add");
-      data.context = $(tmpl("template-upload", data.files[0]));
-      $('#new_podcast').append(data.context);
-      data.submit();
-    },
-    start: function(e, data){
-      $(".upload.status").html("uploading...");
-    },
-    progress: function(e, data){
-      console.log("progress");
-      if(data.context){
-        progress = parseInt(data.loaded / data.total * 100, 10);
-        console.log("progress: "+progress);
-        data.context.find('.bar').css('width', progress + '%');
-      }
+  $('#mp3-uploader').S3Uploader({
+    allow_multiple_files: false,
+    remove_completed_progress_bar: false,
+    additional_data: {"podcast[pub_date(1i)]":  $("#podcast_pub_date_1i").val(),
+                      "podcast[pub_date(2i)]":  $("#podcast_pub_date_2i").val(),
+                      "podcast[pub_date(3i)]":  $("#podcast_pub_date_3i").val()
     },
     done: function(e, data){
-      console.log("complete!");
-      console.log(data.result);
-      console.log("id: "+data.result.id);
-      var id = data.result.id;
-      $(".new_podcast").attr("action", "/podcasts/"+id);
-      $(".new_podcast").append("<input name='_method' type='hidden' value='patch'>");
-      $(".upload.status").html("upload complete!");
+      console.log("done!");
     }
   });
+
+  $('#mp3-uploader').on('s3_uploads_start', function(e){
+    console.log("Uploads have started");
+  });
+
+  $('#mp3-uploader').on( "ajax:success", function(e, data){
+    console.log("server was notified of new file on S3; responded with "+data);
+    $("#new_podcast").attr("action","/podcasts/"+data.id);
+  });
+
+  $('#mp3-uploader').on( "ajax:error", function(e, data){
+    console.log("there was an error; responded with "+data);
+  });
+
 });

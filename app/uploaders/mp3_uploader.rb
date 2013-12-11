@@ -2,7 +2,7 @@
 
 class Mp3Uploader < CarrierWave::Uploader::Base
 
-  #include CarrierWaveDirect::Uploader
+  # include CarrierWaveDirect::Uploader
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick

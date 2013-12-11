@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131125140738) do
+ActiveRecord::Schema.define(version: 20131206080309) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20131125140738) do
     t.datetime "updated_at"
     t.datetime "pub_date"
     t.string   "description"
+    t.string   "mp3_url"
   end
 
   create_table "posts", force: true do |t|

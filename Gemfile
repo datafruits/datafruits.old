@@ -24,6 +24,7 @@ gem 'statsd-ruby'
 gem 'httparty'
 gem 'carrierwave'
 gem 'fog'
+gem 's3_direct_upload'
 
 group :production do
   gem 'thin'
@@ -34,6 +35,7 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'spring-commands-cucumber'
   gem 'sqlite3'
+  gem 'byebug'
 end
 
 gem "simple_calendar", "~> 0.1.5"
