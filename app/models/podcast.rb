@@ -1,6 +1,5 @@
 class Podcast < ActiveRecord::Base
   belongs_to :user
-  mount_uploader :mp3, Mp3Uploader
   validates_presence_of :pub_date
 
   def set_file_as_attachment file
