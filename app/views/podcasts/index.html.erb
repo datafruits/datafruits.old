@@ -22,7 +22,7 @@
   <% @podcasts.order("pub_date DESC").each_with_index do |podcast,index| %>
   <tr>
     <td><a href="javascript:;" class="small-player-play" data-index="<%=index%>"></a></td>
-    <td><a href="<%= podcast.mp3.url %>"><%=podcast.title%></a></td>
+    <td><a href="<%= podcast.mp3_url %>"><%=podcast.title%></a></td>
     <% if can? :edit, Podcast %>
       <td><%= link_to "edit", edit_podcast_path(podcast) %></td>
     <% end %>
