@@ -36,6 +36,7 @@ group :development do
   gem 'spring-commands-cucumber'
   gem 'sqlite3'
   gem 'byebug'
+  gem 'coffee-rails-source-maps'
 end
 
 gem "simple_calendar", "~> 0.1.5"
