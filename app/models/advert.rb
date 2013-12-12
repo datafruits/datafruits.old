@@ -8,5 +8,4 @@ class Advert < ActiveRecord::Base
     bucket: 'datafruits.fm',
     path: '/:filename',
     preserve_files: true
-  validates_attachment_presence :mp3
 end

@@ -157,29 +157,5 @@ $(document).ready(function(){
 
   $('.rainbow').rainbow({animate:true,animateInterval:50,pauseLength:500,pad:true,colors:['rgb(153, 204, 255);','rgb(173, 224, 255);','rgb(193, 244, 255);','rgb(213, 264, 255);','rgb(193, 244, 255);','rgb(173, 224, 255);','rgb(153, 204, 255);']});
 
-  $('#mp3-uploader').S3Uploader({
-    allow_multiple_files: false,
-    remove_completed_progress_bar: false,
-    additional_data: {"podcast[pub_date(1i)]":  $("#podcast_pub_date_1i").val(),
-                      "podcast[pub_date(2i)]":  $("#podcast_pub_date_2i").val(),
-                      "podcast[pub_date(3i)]":  $("#podcast_pub_date_3i").val()
-    },
-    done: function(e, data){
-      console.log("done!");
-    }
-  });
-
-  $('#mp3-uploader').on('s3_uploads_start', function(e){
-    console.log("Uploads have started");
-  });
-
-  $('#mp3-uploader').on( "ajax:success", function(e, data){
-    console.log("server was notified of new file on S3; responded with "+data);
-    $("#new_podcast").attr("action","/podcasts/"+data.id);
-  });
-
-  $('#mp3-uploader').on( "ajax:error", function(e, data){
-    console.log("there was an error; responded with "+data);
-  });
 
 });

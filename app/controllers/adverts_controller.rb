@@ -1,58 +1,57 @@
 class AdvertsController < ApplicationController
-  before_action :set_advert, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /adverts
   def index
-    @adverts = Advert.all
   end
 
   # GET /adverts/1
   def show
   end
 
-  # GET /adverts/new
   def new
-    @advert = Advert.new
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @advert }
+    end
   end
-
-  # GET /adverts/1/edit
-  def edit
-  end
-
-  # POST /adverts
   def create
-    @advert = Advert.new(advert_params)
-
-    if @advert.save
-      redirect_to @advert, notice: 'Advert was successfully created.'
-    else
-      render action: 'new'
+    respond_to do |format|
+      if @advert.save
+        format.html { redirect_to @advert, notice: 'Advert was successfully created.' }
+        format.json { render json: @advert, status: :created, location: @advert }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @advert.errors, status: :unprocessable_entity }
+      end
     end
   end
+  def edit
 
-  # PATCH/PUT /adverts/1
+  end
   def update
-    if @advert.update(advert_params)
-      redirect_to @advert, notice: 'Advert was successfully updated.'
-    else
-      render action: 'edit'
+    respond_to do |format|
+      if @advert.update_attributes(advert_params)
+        format.html { redirect_to @advert, notice: 'Advert was successfully created.' }
+        format.json { render json: @advert, status: :created, location: @advert }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @advert.errors, status: :unprocessable_entity }
+      end
     end
   end
-
-  # DELETE /adverts/1
   def destroy
     @advert.destroy
-    redirect_to adverts_url, notice: 'Advert was successfully destroyed.'
+
+    respond_to do |format|
+      format.html { redirect_to adverts_url }
+      format.json { head :no_content }
+    end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_advert
-      @advert = Advert.find(params[:id])
-    end
-
     # Only allow a trusted parameter "white list" through.
     def advert_params
-      params.require(:advert).permit(:title, :mp3)
+      params.require(:advert).permit(:title, :mp3_url)
     end
 end
