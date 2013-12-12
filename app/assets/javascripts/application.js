@@ -52,6 +52,8 @@ $(document).ready(function(){
   };
   var ready = false;
 
+  var playButtonClicked = false;
+
   $("#radio-player").jPlayer({
     ready: function () {
       ready = true;
@@ -75,7 +77,10 @@ $(document).ready(function(){
     },
     error: function(event) {
       console.log("jPlayer error: "+ event.jPlayer.error.type);
-      $(this).jPlayer("setMedia", stream).jPlayer("play");
+
+      if(playButtonClicked == true){
+        $(this).jPlayer("setMedia", stream).jPlayer("play");
+      }
 
       $("jp-pause").hide();
       $("jp-loading").hide();
@@ -90,6 +95,14 @@ $(document).ready(function(){
     },
     solution: "html, flash",
     cssSelectorAncestor: "#jp_container"
+  });
+
+  $('.jp-play').on('click', function(e) {
+    playButtonClicked = true;
+  });
+
+  $('.jp-pause').on('click', function(e) {
+    playButtonClicked = false;
   });
 
   setInterval(function(){
