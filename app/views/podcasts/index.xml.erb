@@ -26,7 +26,7 @@
           <%=podcast.description.to_s%>
         </description>
         <pubDate><%=podcast.created_at.strftime("%a, %d %b %Y %H:%M:%S %Z")%></pubDate>
-        <enclosure url="<%=podcast.mp3.url%>" length="" type="audio/mpeg"/>
+        <enclosure url="<%=podcast.mp3_url%>" length="" type="audio/mpeg"/>
         <guid><%=podcast.mp3.url%></guid>
       </item>
     <% end %>
