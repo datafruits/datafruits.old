@@ -70,6 +70,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'rake'
   gem 'chronic'
+  gem 'fruity_formatter', git: 'git://github.com/datafruits/fruity_formatter.git'
 end
 
 gem 'rails_12factor'

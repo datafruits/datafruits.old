@@ -6,6 +6,13 @@ GIT
       railties (>= 3.2.0, < 5.0)
 
 GIT
+  remote: git://github.com/datafruits/fruity_formatter.git
+  revision: 938e293f258af2f656680137cf5d094b24320408
+  specs:
+    fruity_formatter (0.0.1)
+      rspec
+
+GIT
   remote: git://github.com/mcfiredrill/jplayer-rails.git
   revision: a438318cd8712815297d3dd3c2d23c94ee8315c6
   specs:
@@ -195,6 +202,10 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.1.0)
     redis (3.0.6)
+    rspec (2.14.1)
+      rspec-core (~> 2.14.0)
+      rspec-expectations (~> 2.14.0)
+      rspec-mocks (~> 2.14.0)
     rspec-core (2.14.7)
     rspec-expectations (2.14.4)
       diff-lcs (>= 1.1.3, < 2.0)
@@ -256,7 +267,7 @@ GEM
     vcr (2.7.0)
     warden (1.2.3)
       rack (>= 1.0)
-    webmock (1.16.0)
+    webmock (1.15.2)
       addressable (>= 2.2.7)
       crack (>= 0.3.2)
     xpath (2.0.0)
@@ -284,6 +295,7 @@ DEPENDENCIES
   exception_notification (~> 4.0.0.rc1)
   factory_girl_rails
   fog
+  fruity_formatter!
   gemoji
   github-markdown
   high_voltage
