@@ -31,7 +31,7 @@ group :production do
 end
 
 group :development do
-  gem 'spring'
+  gem 'spring', '~> 1.1.2'
   gem 'spring-commands-rspec'
   gem 'spring-commands-cucumber'
   gem 'sqlite3'
