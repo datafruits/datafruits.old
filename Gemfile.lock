@@ -316,7 +316,7 @@ DEPENDENCIES
   s3_direct_upload
   sass-rails (~> 4.0.0)
   simple_calendar (~> 0.1.5)
-  spring
+  spring (~> 1.1.2)
   spring-commands-cucumber
   spring-commands-rspec
   sqlite3
