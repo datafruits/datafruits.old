@@ -186,7 +186,7 @@ $blue:  #00b4ff;
 
 body {
   @include galaxy-gradient($green, $blue, $yellow, $pink);
-  @include animation(fade 30s infinite);
+  /* @include animation(fade 30s infinite); */ /* this is CRASHING chrome...jesus wtf */
   font-family:'Helvetica Neue', Helvetica, Arial !important;
   font-size:14pt;
   font-weight:bold;
@@ -393,9 +393,9 @@ a.jp-loading {
 }
 
 /* calendar */
-.calendar td { 
-  height: 100px; 
-  width: 14.28%; 
+.calendar td {
+  height: 100px;
+  width: 14.28%;
   text-transform:uppercase;
 }
 .calendar p {
