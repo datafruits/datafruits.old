@@ -66,3 +66,6 @@ group :test do
 end
 
 gem 'rails_12factor'
+
+gem 'rupeepeethree', path: '../rupeepeethree'
+gem 'so_id3', path: '../so_id3'

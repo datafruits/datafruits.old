@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131211163642) do
+ActiveRecord::Schema.define(version: 20140315100133) do
 
   create_table "adverts", force: true do |t|
     t.string   "title"
@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20131211163642) do
   end
 
   create_table "podcasts", force: true do |t|
-    t.string   "title"
     t.integer  "user_id"
     t.string   "mp3"
     t.string   "mp3_content_type"
@@ -36,6 +35,11 @@ ActiveRecord::Schema.define(version: 20131211163642) do
     t.datetime "updated_at"
     t.datetime "pub_date"
     t.string   "mp3_url"
+    t.string   "artist"
+    t.string   "title"
+    t.string   "album"
+    t.integer  "year"
+    t.integer  "track"
   end
 
   create_table "posts", force: true do |t|
