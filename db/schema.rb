@@ -34,18 +34,18 @@ ActiveRecord::Schema.define(version: 20131211163642) do
     t.string   "mp3_content_type"
     t.integer  "mp3_file_size"
     t.datetime "mp3_updated_at"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "pub_date"
-    t.string   "description"
     t.string   "mp3_url"
   end
 
   create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "body"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -56,8 +56,8 @@ ActiveRecord::Schema.define(version: 20131211163642) do
     t.string   "title"
     t.integer  "user_id"
     t.datetime "time"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.text     "description"
     t.string   "image_file_name"
     t.string   "image_content_type"
@@ -69,8 +69,8 @@ ActiveRecord::Schema.define(version: 20131211163642) do
 
   create_table "users", force: true do |t|
     t.string   "username",               default: ""
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
