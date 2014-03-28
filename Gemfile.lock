@@ -12,12 +12,6 @@ GIT
     fruity_formatter (0.0.1)
       rspec
 
-GIT
-  remote: git://github.com/mcfiredrill/jplayer-rails.git
-  revision: a438318cd8712815297d3dd3c2d23c94ee8315c6
-  specs:
-    jplayer-rails (2.4.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -150,6 +144,7 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.6.9)
+    jplayer-rails (2.5.0)
     jquery-fileupload-rails (0.4.1)
       actionpack (>= 3.1)
       railties (>= 3.1)
@@ -301,7 +296,7 @@ DEPENDENCIES
   high_voltage
   html-pipeline
   httparty
-  jplayer-rails!
+  jplayer-rails (= 2.5.0)
   jquery-cookie-rails!
   jquery-fileupload-rails
   jquery-rails

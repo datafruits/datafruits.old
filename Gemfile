@@ -54,7 +54,7 @@ gem 'rspec-rails', :group => [:development, :test]
 gem 'jquery-rails'
 gem 'jquery-cookie-rails', git: 'git://github.com/RyanScottLewis/jquery-cookie-rails'
 
-gem 'jplayer-rails', git: 'git://github.com/mcfiredrill/jplayer-rails.git'
+gem 'jplayer-rails', '2.5.0'
 
 gem 'jquery-fileupload-rails'
 
