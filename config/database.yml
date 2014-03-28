@@ -5,9 +5,7 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
-  database: <%= ENV['DBNAME'] %>
-  user: <%= ENV['PGUSER'] %>
-  password: <%= ENV['PGPASSWORD'] %>
+  database: datafruits
   pool: 5
   timeout: 5000
 
