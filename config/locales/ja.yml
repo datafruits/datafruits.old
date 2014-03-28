@@ -3,6 +3,16 @@ ja:
     confirmations:
       new:
         resend_confirmation_instructions: アカウント確認メール再送
+    failure:
+      already_authenticated: 既にログインしています。
+      inactive: アカウントが有効化されていません。
+      invalid: メールアドレスまたはパスワードが違います。
+      last_attempt: あと一回間違えるとアカウントが凍結されます。
+      locked: アカウントが凍結されています。
+      not_found_in_database: メールアドレスまたはパスワードが違います。
+      timeout: セッションがタイムアウトしました。もう一度ログインしてください。
+      unauthenticated: 続けるにはログインまたはアカウントを登録してください。
+      unconfirmed: 本登録を行ってください。
     mailer:
       confirmation_instructions:
         action: アカウント確認
