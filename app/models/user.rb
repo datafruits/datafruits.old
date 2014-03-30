@@ -47,7 +47,7 @@ class User < ActiveRecord::Base
   validates_presence_of :time_zone
 
   validate :valid_role
-  validates_inclusion_of :time_zone, :in => ActiveSupport::TimeZone.zones_map { |m| m.name }, :message => "is not a valid Time Zone"
+  validates_inclusion_of :time_zone, :in => ActiveSupport::TimeZone.all.map { |m| m.name }, :message => "is not a valid Time Zone"
 
   def self.valid_styles
     VALID_STYLES
