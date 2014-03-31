@@ -1,5 +1,6 @@
 DatafruitsRails::Application.routes.draw do
   resources :adverts
+  resources :metadata, only: [:index]
 
   resources :shows
   devise_for :users, :controllers => { :registrations => "registrations", :sessions => "sessions" }
@@ -10,7 +11,6 @@ DatafruitsRails::Application.routes.draw do
   resources :posts
   resources :podcasts
 
-  get '/metadata', to: 'application#metadata'
   get '/playlist', to: 'application#playlist'
   get '/chatroom', to: 'application#chatroom'
   get '/schedule', to: 'shows#index'
@@ -23,7 +23,7 @@ DatafruitsRails::Application.routes.draw do
   get '/data_dayz' => 'application#data_dayz'
 
   get '/podcast', to: 'podcasts#index'
-  
+
   as :user do
     get "/login" => "sessions#new"
     post "/login" => "sessions#create"

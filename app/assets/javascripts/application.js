@@ -105,17 +105,6 @@ $(document).ready(function(){
     playButtonClicked = false;
   });
 
-  setInterval(function(){
-    $.get("/metadata",function(data){
-      $(".jp-title").html(data.currentsong);
-      if(data.currentsong.indexOf('LIVE') == 0) {
-        $(".jp-title").addClass("crazy");
-      } else {
-        $(".jp-title").removeClass("crazy");
-      }
-    });
-  },5000);
-
 
   $("#user-menu").click(
     function(){
@@ -170,5 +159,14 @@ $(document).ready(function(){
 
   $('.rainbow').rainbow({animate:true,animateInterval:50,pauseLength:500,pad:true,colors:['rgb(153, 204, 255);','rgb(173, 224, 255);','rgb(193, 244, 255);','rgb(213, 264, 255);','rgb(193, 244, 255);','rgb(173, 224, 255);','rgb(153, 204, 255);']});
 
+  var eventSource = new EventSource('/metadata');
+
+  eventSource.onmessage = function(e) {
+    console.log('got message');
+    console.log(e.data);
+    var new_metadata = $.parseJSON(e.data).message;
+    console.log(new_metadata);
+    $(".jp-title").html(new_metadata);
+  };
 
 });

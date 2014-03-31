@@ -14,15 +14,6 @@ class ApplicationController < ActionController::Base
   end
   before_filter :configure_devise_parameters, if: :devise_controller?
 
-  def metadata
-    song = HTTParty.get "http://radio.datafruits.fm/currentsong"
-    respond_to do |format|
-      format.json {
-        render :json => {:currentsong => song}
-      }
-    end
-  end
-
   def chatroom
     respond_to do |format|
       format.html { render "layouts/chatroom" }
