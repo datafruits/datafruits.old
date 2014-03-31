@@ -75,3 +75,5 @@ end
 gem 'rails_12factor'
 
 gem 'ember-rails'
+gem 'ember-source', '1.4.0'
+gem 'ember-data-source', '~> 0.14.0'

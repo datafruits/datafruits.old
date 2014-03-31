@@ -307,7 +307,9 @@ DEPENDENCIES
   detect_timezone_rails (~> 0.0.5)
   devise (~> 3.0.0)
   devise-i18n-views
+  ember-data-source (~> 0.14.0)
   ember-rails
+  ember-source (= 1.4.0)
   exception_notification (~> 4.0.0.rc1)
   factory_girl_rails
   fog
