@@ -20,8 +20,16 @@
 //= require jquery.cookie
 //= require rainbow
 //= require s3_direct_upload
+//= require handlebars
+//= require ember
+//= require ember-data
+//= require_self
+//= require datafruits_rails
 //= require_tree .
 //
+
+window.DatafruitsRails = Ember.Application.create();
+
 function small_top(){
   $("nav").addClass("sticky");
   $(".big-player").hide();

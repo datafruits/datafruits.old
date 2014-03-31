@@ -11,21 +11,6 @@
     <title>D A T A F R U I T S . F M</title>
   </head>
   <body data-controller="<%= controller.controller_path %>" data-action="<%= controller.action_name %>">
-    <!-- Begin MailChimp Signup Form -->
-    <div id="mc_embed_signup">
-    <form action="http://datafruits.us7.list-manage1.com/subscribe/post?u=ad4bf41fe569a0d8e513b3dea&amp;id=4ae348e50b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-      <span class="rainbow">Subscribe to the DATAFRUITS.FM newsletter →</span>
-      <label for="mce-EMAIL">Email Address </label>
-      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-      <span class="tiny">(Free exclusive tracks, mixes & info)</span>
-      <div id="mce-responses">
-        <div class="response" id="mce-error-response" style="display:none"></div>
-        <div class="response" id="mce-success-response" style="display:none"></div>
-      </div>
-    </form>
-    </div>
-    <!--End mc_embed_signup-->
     <div id="radio-player"></div>
     <div id="top">
       <div id="logo">
@@ -79,7 +64,7 @@
       <div id="header">
       </div>
       <div class="clearfix"></div>
-      <%= yield %>
+      <script type="text/x-handlebars">{{outlet main}}</script>
       <footer>
         <ul class="social-icons">
           <li><a href="http://twitter.com/datafruits" class="lsf-icon" title="twitter"></a></li>
