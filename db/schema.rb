@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20131211163642) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "adverts", force: true do |t|
     t.string   "title"
     t.string   "mp3_file_name"
@@ -93,7 +90,7 @@ ActiveRecord::Schema.define(version: 20131211163642) do
     t.text     "style"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

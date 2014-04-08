@@ -1,8 +1,8 @@
-#ActiveSupport::Notifications.subscribe do |name, start, finish, id, payload|  
-#  Rails.logger.info(["notification:", name, start, finish, id, payload].join(" "))  
+#ActiveSupport::Notifications.subscribe do |name, start, finish, id, payload|
+#  Rails.logger.info(["notification:", name, start, finish, id, payload].join(" "))
 #end
 
-ActiveSupport::Notifications.subscribe "users.login" do |name, start, finish, id, payload|  
+ActiveSupport::Notifications.subscribe "users.login" do |name, start, finish, id, payload|
   Rails.logger.info name
   METRICS.increment('users.login')
 end
