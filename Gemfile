@@ -61,7 +61,7 @@ gem 'rails-assets-jquery-pjax'
 group :test do
   gem 'capybara'
   gem 'capybara-webkit'
-  gem 'database_rewinder'
+  gem 'database_rewinder', '~> 0.0.3'
   gem 'timecop'
   gem 'webmock'
   gem 'vcr'
