@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/datafruits/fruity_formatter.git
-  revision: 938e293f258af2f656680137cf5d094b24320408
-  specs:
-    fruity_formatter (0.0.1)
-      rspec
-
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -116,6 +109,8 @@ GEM
       nokogiri (~> 1.5)
       ruby-hmac
     formatador (0.2.4)
+    fruity_formatter (0.0.1)
+      rspec
     gemoji (1.5.0)
     github-markdown (0.5.3)
     high_voltage (2.1.0)
@@ -281,7 +276,7 @@ DEPENDENCIES
   exception_notification (~> 4.0.0.rc1)
   factory_girl_rails
   fog
-  fruity_formatter!
+  fruity_formatter (~> 0.0.1)
   gemoji
   github-markdown
   high_voltage
