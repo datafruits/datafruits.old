@@ -6,14 +6,6 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_locale
 
-  # params for cancan and devise
-  before_filter do
-    resource = controller_name.singularize.to_sym
-    method = "#{resource}_params"
-    params[resource] &&= send(method) if respond_to?(method, true)
-  end
-  before_filter :configure_devise_parameters, if: :devise_controller?
-
   layout :determine_layout
 
   def metadata
@@ -146,13 +138,5 @@ class ApplicationController < ActionController::Base
     else
       'application'
     end
-  end
-
-  protected
-  def configure_devise_parameters
-    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password, :password_confirmation,
-                                                           :remember_me, :password_hash, :password_salt,
-                                                           :username, :role, :avatar, :login, :role_ids,
-                                                           :time_zone) }
   end
 end
