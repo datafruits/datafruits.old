@@ -7,7 +7,7 @@ ruby "2.1.1"
 
 gem 'pg'
 gem 'high_voltage'
-gem 'devise', '~> 3.0.0'
+gem 'devise', '~> 3.2.4'
 gem 'devise-i18n-views'
 gem 'nokogiri'
 gem 'aws-sdk'
