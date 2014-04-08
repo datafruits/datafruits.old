@@ -42,9 +42,6 @@ gem 'sass-rails',   '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'bourbon'
 
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', :platforms => :ruby
-
 gem 'uglifier', '>= 1.0.3'
 gem 'detect_timezone_rails', '~> 0.0.5'
 gem 'rspec-rails', '~> 2.14.2', :group => [:development, :test]
@@ -63,7 +60,7 @@ group :test do
   gem 'database_rewinder', '~> 0.0.3'
   gem 'timecop'
   gem 'webmock'
-  gem 'vcr'
+  gem 'vcr', '~> 2.9.0'
   gem 'factory_girl_rails'
   gem 'rake'
   gem 'chronic'
