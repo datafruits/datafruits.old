@@ -3,9 +3,6 @@ source 'https://rails-assets.org/'
 
 gem 'rails', '4.1.0.rc2'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 ruby "2.1.1"
 
 gem 'pg'
@@ -51,7 +48,7 @@ gem 'bourbon'
 
 gem 'uglifier', '>= 1.0.3'
 gem 'detect_timezone_rails', '~> 0.0.5'
-gem 'rspec-rails', :group => [:development, :test]
+gem 'rspec-rails', '~> 2.14.2', :group => [:development, :test]
 gem 'jquery-rails'
 gem 'jquery-cookie-rails', git: 'git://github.com/RyanScottLewis/jquery-cookie-rails'
 
