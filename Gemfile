@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org/'
 
 gem 'rails', '4.1.0.rc2'
 
@@ -25,6 +26,7 @@ gem 'httparty'
 gem 'carrierwave'
 gem 'fog'
 gem 's3_direct_upload'
+gem 'rails-i18n'
 
 group :production do
   gem 'thin'
@@ -39,7 +41,7 @@ group :development do
   gem 'coffee-rails-source-maps'
 end
 
-gem "simple_calendar", "~> 0.1.5"
+gem "simple_calendar", "~> 0.1.10"
 
 gem 'sass-rails',   '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
