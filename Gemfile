@@ -3,8 +3,6 @@ source 'https://rails-assets.org/'
 
 gem 'rails', '4.1.0.rc2'
 
-ruby "2.1.1"
-
 gem 'pg'
 gem 'high_voltage'
 gem 'devise', '~> 3.2.4'
