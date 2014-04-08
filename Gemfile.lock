@@ -93,10 +93,10 @@ GEM
       activesupport (>= 3.0.4)
     excon (0.25.3)
     execjs (2.0.2)
-    factory_girl (4.3.0)
+    factory_girl (4.4.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.3.0)
-      factory_girl (~> 4.3.0)
+    factory_girl_rails (4.4.1)
+      factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
     fog (1.15.0)
       builder
@@ -274,7 +274,7 @@ DEPENDENCIES
   devise (~> 3.2.4)
   devise-i18n-views
   exception_notification (~> 4.0.0.rc1)
-  factory_girl_rails
+  factory_girl_rails (~> 4.4.1)
   fog
   fruity_formatter (~> 0.0.1)
   gemoji

@@ -59,7 +59,7 @@ group :test do
   gem 'timecop'
   gem 'webmock'
   gem 'vcr', '~> 2.9.0'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '~> 4.4.1'
   gem 'rake'
   gem 'chronic'
   gem 'fruity_formatter', '~> 0.0.1'
