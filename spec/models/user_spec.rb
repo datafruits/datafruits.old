@@ -2,13 +2,11 @@ require 'spec_helper'
 
 describe User do
   it "sets the avatar" do
-    VCR.use_cassette 'avatar_upload' do
-      u = create :user
-      u.avatar = File.new "./spec/fixtures/test.png"
-      u.save!
-      u.reload
-      u.avatar.url.should match(/test\.png/)
-    end
+    u = create :user
+    u.avatar = File.new "./spec/fixtures/test.png"
+    u.save!
+    u.reload
+    u.avatar.url.should match(/test\.png/)
   end
   it "assigns roles" do
     u = create :user

@@ -33,4 +33,7 @@ DatafruitsRails::Application.configure do
   config.eager_load = false
 
   # config.log_level = :debug
+  Paperclip::Attachment.default_options.merge!({
+    :storage => :filesystem
+  })
 end

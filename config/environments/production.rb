@@ -83,4 +83,12 @@ DatafruitsRails::Application.configure do
   }
 
   config.eager_load = true
+  Paperclip::Attachment.default_options.merge!({
+    :storage => :s3,
+    s3_credentials: {
+      access_key_id: ENV['S3_KEY'],
+      secret_access_key: ENV['S3_SECRET']
+    },
+    bucket: 'datafruits.fm'
+  })
 end

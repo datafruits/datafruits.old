@@ -31,13 +31,7 @@ class User < ActiveRecord::Base
   has_many :podcasts
   has_attached_file :avatar,
     styles: { :thumb => "x120" },
-    storage: :s3,
-    :path => "/:style/:filename",
-    s3_credentials: {
-      access_key_id: ENV['S3_KEY'],
-      secret_access_key: ENV['S3_SECRET']
-    },
-    bucket: 'datafruits.fm'
+    path: ":style/:filename"
 
   validates_presence_of :username
   validates_uniqueness_of :username
