@@ -35,7 +35,6 @@ end
 group :development do
   gem 'spring', '~> 1.1.2'
   gem 'spring-commands-rspec'
-  gem 'spring-commands-cucumber'
   gem 'sqlite3'
   gem 'byebug'
   gem 'coffee-rails-source-maps'
@@ -63,7 +62,6 @@ gem 'jquery-fileupload-rails'
 gem 'rails-assets-jquery-pjax'
 
 group :test do
-  gem 'cucumber-rails', :require => false
   gem 'capybara'
   gem 'capybara-webkit'
   gem 'database_rewinder'
