@@ -60,6 +60,8 @@ gem 'jplayer-rails', '2.5.0'
 
 gem 'jquery-fileupload-rails'
 
+gem 'rails-assets-jquery-pjax'
+
 group :test do
   gem 'cucumber-rails', :require => false
   gem 'capybara'

@@ -20,6 +20,7 @@
 //= require jquery.cookie
 //= require rainbow
 //= require s3_direct_upload
+//= require jquery-pjax
 //= require_tree .
 //
 function small_top(){
@@ -172,3 +173,5 @@ $(document).ready(function(){
 
 
 });
+
+$(document).pjax('a', '[data-pjax-container]');

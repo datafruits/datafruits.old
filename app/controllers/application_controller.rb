@@ -14,6 +14,8 @@ class ApplicationController < ActionController::Base
   end
   before_filter :configure_devise_parameters, if: :devise_controller?
 
+  layout :determine_layout
+
   def metadata
     song = HTTParty.get "http://radio.datafruits.fm/currentsong"
     respond_to do |format|
@@ -136,6 +138,14 @@ class ApplicationController < ActionController::Base
       end
     end
     slots
+  end
+
+  def determine_layout
+    if request.headers['X-PJAX']
+      false
+    else
+      'application'
+    end
   end
 
   protected

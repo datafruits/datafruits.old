@@ -15,15 +15,15 @@ DatafruitsRails::Application.routes.draw do
   get '/chatroom', to: 'application#chatroom'
   get '/schedule', to: 'shows#index'
   get '/timetable', to: 'shows#index'
-  get '/listen' => 'high_voltage/pages#show', :id => 'listen'
-  get '/about' => 'high_voltage/pages#show', :id => 'about'
-  get '/contact' => 'high_voltage/pages#show', :id => 'about'
-  get '/help' => 'high_voltage/pages#show', :id => 'help'
+  get '/listen' => 'pages#show', :id => 'listen'
+  get '/about' => 'pages#show', :id => 'about'
+  get '/contact' => 'pages#show', :id => 'about'
+  get '/help' => 'pages#show', :id => 'help'
   get '/data_dayz_sign_up' => 'application#data_dayz_sign_up'
   get '/data_dayz' => 'application#data_dayz'
 
   get '/podcast', to: 'podcasts#index'
-  
+
   as :user do
     get "/login" => "sessions#new"
     post "/login" => "sessions#create"
