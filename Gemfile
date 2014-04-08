@@ -50,7 +50,7 @@ gem 'uglifier', '>= 1.0.3'
 gem 'detect_timezone_rails', '~> 0.0.5'
 gem 'rspec-rails', '~> 2.14.2', :group => [:development, :test]
 gem 'jquery-rails'
-gem 'jquery-cookie-rails', git: 'git://github.com/RyanScottLewis/jquery-cookie-rails'
+gem 'jquery-cookie-rails', '~> 1.3.1.1'
 
 gem 'jplayer-rails', '2.5.0'
 

@@ -1,11 +1,4 @@
 GIT
-  remote: git://github.com/RyanScottLewis/jquery-cookie-rails
-  revision: 159ce256cebfe24ee4dab6602dc6799676b0de96
-  specs:
-    jquery-cookie-rails (1.3.1.1)
-      railties (>= 3.2.0, < 5.0)
-
-GIT
   remote: git://github.com/datafruits/fruity_formatter.git
   revision: 938e293f258af2f656680137cf5d094b24320408
   specs:
@@ -134,6 +127,8 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (0.6.9)
     jplayer-rails (2.5.0)
+    jquery-cookie-rails (1.3.1.1)
+      railties (>= 3.2.0, < 5.0)
     jquery-fileupload-rails (0.4.1)
       actionpack (>= 3.1)
       railties (>= 3.1)
@@ -292,7 +287,7 @@ DEPENDENCIES
   html-pipeline
   httparty
   jplayer-rails (= 2.5.0)
-  jquery-cookie-rails!
+  jquery-cookie-rails (~> 1.3.1.1)
   jquery-fileupload-rails
   jquery-rails
   nokogiri
