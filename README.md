@@ -3,3 +3,4 @@ channel](https://kiwiirc.com/buttons/irc.esper.net/datafruits.png)](https://kiwi
 
 [![Build Status](https://travis-ci.org/datafruits/datafruits.png)](https://travis-ci.org/datafruits/datafruits)
 [![Dependency Status](https://img.shields.io/gemnasium/datafruits/datafruits.svg)](https://gemnasium.com/datafruits/datafruits)
+[![HuBoard badge](http://img.shields.io/badge/Hu-Board-7965cc.svg)](https://huboard.com/datafruits/datafruits)
