@@ -19,5 +19,5 @@ $('[data-controller=adverts]').ready ->
     $("#status").html("complete!")
 
   $('#mp3-uploader').on "ajax:error", (e, data) ->
-    console.log("there was an error; responded with "+data)
+    console.log("there was an error; responded with "+ JSON.stringify(data))
     $("#status").html("error! :(")
