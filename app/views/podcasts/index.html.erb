@@ -3,7 +3,7 @@
     var podcasts = <%= @podcasts.to_json.html_safe %>
     $('.small-player-play').click( function(){
       var podcast = podcasts[$(this).data('index')];
-      var url = podcast.url;
+      var url = podcast.mp3_url;
       var title = podcast.title;
       console.log(url);
       console.log(title);
