@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org/'
 
-gem 'rails', '4.1.0.rc2'
+gem 'rails', '4.1.0'
 
 gem 'pg'
 gem 'high_voltage'
