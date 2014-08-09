@@ -11,7 +11,7 @@ class Ability
       cannot [:create,:new,:edit,:update,:destroy], Podcast
     elsif user.dj?
       can :manage, Show, :user_id => user.id
-      cannot [:create,:new,:edit,:update,:destroy], Podcast
+      can [:create,:new,:edit,:update], Podcast
     end
     can :read, Podcast
     can :read, Show
