@@ -174,4 +174,4 @@ $(document).ready(function(){
 
 });
 
-$(document).pjax('a', '[data-pjax-container]');
+//$(document).pjax('a', '[data-pjax-container]');
