@@ -5,7 +5,7 @@ gem 'rails', '4.1.1'
 
 gem 'pg'
 gem 'high_voltage'
-gem 'devise', '~> 3.2.4'
+gem 'devise', '~> 3.4.0'
 gem 'devise-i18n-views'
 gem 'aws-sdk', '~> 1.38.0'
 gem 'paperclip'
