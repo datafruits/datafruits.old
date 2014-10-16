@@ -59,7 +59,7 @@ class UsersController < ApplicationController
       end
     end
     respond_to do |format|
-      if @user.update_attributes(params[:user])
+      if @user.update_attributes(user_params)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { head :no_content }
       else
