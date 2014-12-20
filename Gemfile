@@ -38,7 +38,7 @@ end
 
 gem "simple_calendar", "~> 0.1.10"
 
-gem 'sass-rails',   '~> 4.0.0'
+gem 'sass-rails',   '~> 5.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'bourbon'
 
