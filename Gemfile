@@ -3,11 +3,11 @@ source 'https://rails-assets.org/'
 
 ruby '2.1.5'
 
-gem 'rails', '4.1.8'
+gem 'rails', '4.2.0'
 
 gem 'pg'
 gem 'high_voltage'
-gem 'devise', '~> 3.4.0'
+gem 'devise', '~> 3.4.1'
 gem 'devise-i18n-views'
 gem 'aws-sdk', '~> 1.38.0'
 gem 'paperclip'
