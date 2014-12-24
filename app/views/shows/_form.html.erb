@@ -15,6 +15,9 @@
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
+  <div class="note">
+    Your current time zone is set to <%= current_user.time_zone %>. You can change it by <%= link_to 'editing your profile.', "/users/edit" %>
+  </div>
   <div class="field">
     <%= f.label :start_time %><br />
     <%= f.datetime_select :time %>
