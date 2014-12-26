@@ -1,2 +1,1 @@
-web: bundle exec script/rails server -p $PORT thin -e $RACK_ENV
-console: script/rails c
+web: bundle exec unicorn -p $PORT -c ./config/unicorn.rb

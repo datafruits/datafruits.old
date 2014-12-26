@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org/'
 
-ruby '2.1.5'
+ruby '2.2.0'
 
 gem 'rails', '4.2.0'
 
@@ -24,9 +24,7 @@ gem 'fog'
 gem 's3_direct_upload', '~> 0.1.7'
 gem 'rails-i18n'
 
-group :production do
-  gem 'thin'
-end
+gem 'unicorn'
 
 group :development do
   gem 'spring', '~> 1.1.2'
