@@ -22,7 +22,7 @@ DatafruitsRails::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
 
   # wat
-  config.serve_static_assets = false
+  config.serve_static_files = false
 
   # Do not compress assets
   config.assets.compress = false
